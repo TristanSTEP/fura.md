@@ -17,19 +17,35 @@
             </h1>
             <form action="" class="formZero">
                 <div class="registerInp">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Ex: John">
-                    <label for="lastname">Lastname</label>
-                    <input type="text" name="lastname" id="lastname" placeholder="Ex: Smith">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Ex: johnsmith@gmail.com">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
-                    <label for="phone">Phone Number</label>
-                    <input type="number" name="phone" id="phone" placeholder="(373) 60050303">
-                    <input type="file" name="images[]" id="images" multiple accept="image/webp">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="">
+                        <label for="name" class="form-label">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="lastname" id="lastname" placeholder="">
+                        <label for="lastname" class="form-label">Lastname</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="">
+                        <label for="email" class="form-label">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" placeholder="">
+                        <label for="password" class="form-label">Password</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="phone" id="phone" placeholder="">
+                        <label for="phone" class="form-label">Phone Number</label>
+
+                    </div>
+                    <div class="form">
+                        <div class="file-upload-wrapper" data-text="Select your image!">
+                            <input type="file" name="images[]" id="images" multiple accept="image/webp">
+                        </div>
+                    </div>
+                    <button class="createAcc">Create Account</button>
                 </div>
-                <button>Create Account</button>
+
             </form>
         </div>
     </main>

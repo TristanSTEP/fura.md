@@ -21,38 +21,223 @@ main .register {
   justify-content: center;
 }
 main .register h1 {
-  width: 100%;
   font-size: 2.5rem;
-  text-align: center;
+  margin-bottom: 20px;
 }
-main .register .formZero {
+main .registerInp {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f1f4ff;
-  padding: 10px;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
 }
-main .register .formZero .registerInp {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+main .registerInp .form-group {
+  position: relative;
+  margin: 12px 0;
 }
-main .register .formZero .registerInp label {
+main .registerInp .form-group input {
+  padding: 8px 10px;
   font-size: 1.5rem;
+  border-radius: 5px;
+  border: #acacac solid 2px;
+  background-color: transparent;
+  color: black;
+  transition: 0.15s all ease;
+  outline-color: #0437f2;
+  width: 250px;
 }
-main .register .formZero .registerInp input {
+main .registerInp .form-group input::-moz-placeholder {
+  color: transparent;
+}
+main .registerInp .form-group input::placeholder {
+  color: transparent;
+}
+main .registerInp .form-group .form-label {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  font-size: 2rem;
+  padding: 0 10px;
+  color: #acacac;
+  pointer-events: none;
+  transition: 0.15s all ease;
+}
+main .registerInp .form-group input:not(:-moz-placeholder-shown) + .form-label {
+  transform: translate(5px, -22px);
+  background-color: #0437f2;
+  font-size: 14px;
+  color: #eee;
+  border-radius: 5px;
+}
+main .registerInp .form-group input:focus + .form-label,
+main .registerInp .form-group input:not(:placeholder-shown) + .form-label {
+  transform: translate(5px, -22px);
+  background-color: #0437f2;
+  font-size: 14px;
+  color: #eee;
+  border-radius: 5px;
+}
+main .registerInp .createAcc {
+  height: 42px;
+  width: 150px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #0437f2;
   border: none;
-  outline: none;
-  min-width: 300px;
-  font-size: 1rem;
-  border-radius: 10px;
-  background: #ffffff;
+  cursor: pointer;
+  color: white;
   font-size: 1.5rem;
-  text-align: center;
+}
+main .registerInp .form {
+  width: 400px;
+}
+main .registerInp .file-upload-wrapper {
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+main .registerInp .file-upload-wrapper:after {
+  content: attr(data-text);
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  padding: 10px 15px;
+  display: block;
+  width: calc(100% - 40px);
+  pointer-events: none;
+  z-index: 20;
+  height: 40px;
+  line-height: 40px;
+  color: #999;
+  border-radius: 5px 10px 10px 5px;
+  font-weight: 300;
+}
+main .registerInp .file-upload-wrapper:before {
+  content: "Upload";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 60px;
+  background: #4daf7c;
+  color: #fff;
+  font-weight: 700;
+  z-index: 25;
+  font-size: 16px;
+  line-height: 60px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  pointer-events: none;
+  border-radius: 0 5px 5px 0;
+}
+main .registerInp .file-upload-wrapper:hover:before {
+  background: #3d8c63;
+}
+main .registerInp .file-upload-wrapper input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+main .registerInp img {
+  height: 1.5rem;
+  width: auto;
+}
+main .registerInp .form {
+  width: 250px;
+  margin: 10px;
+}
+main .registerInp .file-upload-wrapper {
+  position: relative;
+  width: 100%;
+  height: 42px;
+}
+main .registerInp .file-upload-wrapper:after {
+  content: attr(data-text);
+  font-size: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #0437f2;
+  background: none;
+  padding: 10px 10px;
+  display: block;
+  width: calc(100% - 40px);
+  pointer-events: none;
+  z-index: 20;
+  height: 20px;
+  line-height: 22px;
+  color: #999;
+  border-radius: 5px 10px 10px 5px;
+  font-weight: 300;
+}
+main .registerInp .file-upload-wrapper:before {
+  content: "Upload";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 42px;
+  background: #0437f2;
+  color: #fff;
+  font-weight: 700;
+  z-index: 25;
+  font-size: 14px;
+  line-height: 42px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  pointer-events: none;
+  border-radius: 0 5px 5px 0;
+}
+main .registerInp .file-upload-wrapper:hover:before {
+  background: #032cc0;
+}
+main .registerInp .file-upload-wrapper input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  height: 42px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+main .registerInp img {
+  height: 1.5rem;
+  width: auto;
+}
+main #login-button {
+  height: 42px;
+  width: 75px;
+  border-radius: 10px;
+  background-color: #0437f2;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 #login-container {
@@ -75,6 +260,7 @@ main .register .formZero .registerInp input {
   background-color: transparent;
   color: black;
   transition: 0.15s all ease;
+  width: 250px;
 }
 #login-container .form-group input::-moz-placeholder {
   color: transparent;
@@ -118,7 +304,8 @@ main .register .formZero .registerInp input {
   font-size: 1.5rem;
 }
 
-.dont-have-account p, .dont-have-account a {
+.dont-have-account p,
+.dont-have-account a {
   font-size: 1.3rem;
   display: flex;
   align-items: center;
