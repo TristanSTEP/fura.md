@@ -207,6 +207,8 @@ main {
 #main-create {
     @include flex(column, center, center);
     gap: $gap;
+    width: 100vw;
+    height: 100vh;
     h1 {
         font-size: $titleSize;
         letter-spacing: 2px;
