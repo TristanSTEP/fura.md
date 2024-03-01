@@ -290,6 +290,8 @@ main .search-load form button i {
 }
 #main-create #form-create .label-create-image i {
   font-size: calc(2.5rem + 10px);
+  color: #0437F2;
+  cursor: pointer;
 }
 #main-create #form-create button {
   padding: 10px;

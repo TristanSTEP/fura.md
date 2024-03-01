@@ -289,6 +289,8 @@ main {
             }
             i {
                 font-size: calc($titleSize + 10px);
+                color: $blue;
+                cursor: pointer;
             }
         }
         button {
