@@ -89,16 +89,12 @@ main {
 
         input {
             padding: 8px 10px;
-            font-size: 18px;
+            font-size: $subtitleSize;
             border-radius: 5px;
             border: #acacac solid 2px;
             background-color: transparent;
-            color: #eee;
+            color: black;
             transition: 0.15s all ease;
-        }
-
-        input:focus {
-            border-color: #eee;
         }
 
         input::placeholder {
@@ -109,7 +105,7 @@ main {
             position: absolute;
             top: 9px;
             left: 0;
-            font-size: 18px;
+            font-size: calc($subtitleSize + .5rem);
             padding: 0 10px;
             color: #acacac;
             pointer-events: none;
@@ -119,9 +115,30 @@ main {
         input:focus + .form-label,
         input:not(:placeholder-shown) + .form-label {
             transform: translate(5px, -22px);
-            background-color: black;
+            background-color: $blue;
             font-size: 14px;
             color: #eee;
+            border-radius: 5px;
         }
     }
+
+    #login-button {
+        height: 42px;
+        width: 75px;
+        border-radius: $borderRadius;
+        background-color: $blue;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: $subtitleSize
+    }
+}
+.dont-have-account {
+    p, a {
+        font-size: calc($smallText + .5rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }

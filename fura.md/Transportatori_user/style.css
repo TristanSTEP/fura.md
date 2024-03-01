@@ -69,15 +69,12 @@ main .register .formZero .registerInp input {
 }
 #login-container .form-group input {
   padding: 8px 10px;
-  font-size: 18px;
+  font-size: 1.5rem;
   border-radius: 5px;
   border: #acacac solid 2px;
   background-color: transparent;
-  color: #eee;
+  color: black;
   transition: 0.15s all ease;
-}
-#login-container .form-group input:focus {
-  border-color: #eee;
 }
 #login-container .form-group input::-moz-placeholder {
   color: transparent;
@@ -89,7 +86,7 @@ main .register .formZero .registerInp input {
   position: absolute;
   top: 9px;
   left: 0;
-  font-size: 18px;
+  font-size: 2rem;
   padding: 0 10px;
   color: #acacac;
   pointer-events: none;
@@ -97,14 +94,33 @@ main .register .formZero .registerInp input {
 }
 #login-container .form-group input:not(:-moz-placeholder-shown) + .form-label {
   transform: translate(5px, -22px);
-  background-color: black;
+  background-color: #0437f2;
   font-size: 14px;
   color: #eee;
+  border-radius: 5px;
 }
 #login-container .form-group input:focus + .form-label,
 #login-container .form-group input:not(:placeholder-shown) + .form-label {
   transform: translate(5px, -22px);
-  background-color: black;
+  background-color: #0437f2;
   font-size: 14px;
   color: #eee;
+  border-radius: 5px;
+}
+#login-container #login-button {
+  height: 42px;
+  width: 75px;
+  border-radius: 10px;
+  background-color: #0437f2;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.dont-have-account p, .dont-have-account a {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
