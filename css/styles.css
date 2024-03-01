@@ -144,6 +144,20 @@ main .search-load form button i {
   align-items: center;
   gap: 20px;
 }
+.list #label-index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
+}
+.list #label-index h3 {
+  font-size: 1.5rem;
+}
 .list #provider-card {
   width: 100%;
   box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
@@ -181,6 +195,11 @@ main .search-load form button i {
 }
 .list #provider-card .action-buttons i:hover {
   color: #587cff;
+}
+.list #provider-card .action-buttons button {
+  background: none;
+  outline: none;
+  border: none;
 }
 
 #main-create {
@@ -313,4 +332,52 @@ main .search-load form button i {
   color: #f1f4ff;
   box-shadow: 0 0 10px #f1f4ff;
   cursor: pointer;
+}
+
+#pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 550px;
+  background: #f1f4ff;
+  padding: 20px;
+  border-radius: 10px;
+}
+#pop-up .row-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#pop-up .row-one h2 {
+  font-size: calc(2.5rem + 10px);
+}
+#pop-up .row-one button {
+  background-color: #0437F2;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 10px;
+  width: 34px;
+  font-size: 1.25rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+#pop-up h3 {
+  font-size: 1.5rem;
+}
+#pop-up p {
+  font-size: 1.5rem;
+}
+#pop-up #details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#pop-up #details img {
+  border-radius: 10px;
 }/*# sourceMappingURL=styles.css.map */

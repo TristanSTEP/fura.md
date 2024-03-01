@@ -161,6 +161,17 @@ main {
     display: flex;
     @include flex(column, space-between, center);
     gap: 20px;
+    #label-index {
+        @include flex(row, space-between, center);
+        width: 600px;
+        background-color: white;
+        border-radius: $borderRadius;
+        padding: $padding;
+        box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+        h3 {
+            font-size: $subtitleSize;
+        }
+    }
 
     #provider-card {
         width: 100%;
@@ -198,6 +209,12 @@ main {
             i:hover {
                 color: #587cff;
             }
+            button {
+                background: none;
+                outline: none;
+                border: none;
+            }
+
         }
     }
 }
@@ -318,3 +335,50 @@ main {
 }
 
 // furnizor-users end m
+
+
+// pop-up view provider 
+
+#pop-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 550px;
+    background: $backgroundColor;
+    padding: calc($padding + 10px);
+    border-radius: $borderRadius;
+    .row-one {
+        @include flex(row,space-between,center);
+        margin-bottom: 10px;
+
+        h2 {
+            font-size: calc($titleSize + 10px);
+        }
+
+        button {
+            background-color: $blue;
+            color: white;
+            outline: none;
+            border: none;
+            padding: $padding;
+            width: 34px;
+            font-size: $iconSize;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+    }
+    h3 {
+        font-size: $subtitleSize;
+    }
+    p {
+        font-size: $subtitleSize;
+    }
+    #details {
+        @include flex(row, space-between, center);
+        img {
+            border-radius: $borderRadius;
+        }
+    }
+}
