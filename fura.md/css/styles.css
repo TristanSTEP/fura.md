@@ -71,4 +71,114 @@ main .search-load form button {
 }
 main .search-load form button i {
   font-size: 1.25rem;
+}
+
+#main-create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#main-create #form-create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #f1f4ff;
+}
+#main-create #form-create #create-name-lastname {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 500px;
+  gap: 10px;
+}
+#main-create #form-create #create-name-lastname .label-create-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+#main-create #form-create #create-name-lastname .label-create-name p {
+  font-size: 2rem;
+  padding: 0 10px;
+  font-weight: 500;
+}
+#main-create #form-create #create-name-lastname .label-create-name input {
+  padding: 0 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f1f4ff;
+  width: 100%;
+  height: 40px;
+  font-size: 1.5rem;
+  background: white;
+}
+#main-create #form-create .label-create {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+#main-create #form-create .label-create p {
+  font-size: 2rem;
+  padding: 0 10px;
+  font-weight: 500;
+}
+#main-create #form-create .label-create input {
+  padding: 0 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f1f4ff;
+  min-width: 500px;
+  height: 40px;
+  font-size: 1.5rem;
+  background: white;
+}
+#main-create #form-create .label-create select {
+  border: none;
+  border-bottom: 1px solid #f1f4ff;
+  padding: 10px;
+  outline: none;
+  min-width: 500px;
+  height: 40px;
+  font-size: 1.5rem;
+  background: white;
+}
+#main-create #form-create .label-create-image {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#main-create #form-create .label-create-image p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+#main-create #form-create .label-create-image i {
+  font-size: calc(2.5rem + 10px);
+}
+#main-create #form-create button {
+  padding: 10px;
+  min-width: 500px;
+  height: 50px;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  border-radius: 10px;
+  background-color: #0437F2;
+  border: none;
+  font-weight: bold;
+  color: #f1f4ff;
 }/*# sourceMappingURL=styles.css.map */

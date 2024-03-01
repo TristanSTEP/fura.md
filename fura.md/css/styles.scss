@@ -89,3 +89,97 @@ main {
         }
     }
 }
+
+// furnizor-users start m
+#main-create {
+    @include flex(column, center, center);
+    gap: $gap;
+    #form-create {
+        @include flex(column, center, center);
+        gap: calc($gap * 2);
+        width: max-content;
+        padding: calc($padding * 2);
+        border-radius: $borderRadius;
+        box-shadow: 0 0 15px $backgroundColor;
+        #create-name-lastname {
+            @include flex(row, flex-start, flex-start);
+            width: 500px;
+            gap: $gap;
+            .label-create-name {
+                @include flex(column, flex-start, flex-start);
+                gap: $gap;
+                width: 100%;
+                p {
+                    font-size: calc($subtitleSize + 0.5rem);
+                    padding: 0 $padding;
+                    font-weight: 500;
+                }
+                input {
+                    padding: 0 $padding;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid $backgroundColor;
+                    width: 100%;
+                    height: 40px;
+                    font-size: $subtitleSize;
+                    background: white;
+                }
+            }
+        }
+        .label-create {
+            @include flex(column, flex-start, flex-start);
+            gap: $gap;
+            p {
+                font-size: calc($subtitleSize + 0.5rem);
+                padding: 0 $padding;
+                font-weight: 500;
+            }
+            input {
+                padding: 0 $padding;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid $backgroundColor;
+                min-width: 500px;
+                height: 40px;
+                font-size: $subtitleSize;
+                background: white;
+            }
+            select {
+                border: none;
+                border-bottom: 1px solid $backgroundColor;
+                padding: $padding;
+                outline: none;
+                min-width: 500px;
+                height: 40px;
+                font-size: $subtitleSize;
+                background: white;
+            }
+        }
+        .label-create-image {
+            width: 100%;
+            padding: $padding;
+            @include flex(row, space-between, flex-start);
+            p {
+                font-size: calc($subtitleSize + 0.5rem);
+                font-weight: 500;
+            }
+            i {
+                font-size: calc($titleSize + 10px);
+            }
+        }
+        button {
+            padding: $padding;
+            min-width: 500px;
+            height: 50px;
+            letter-spacing: 3px;
+            font-size: calc($subtitleSize + 0.5rem);
+            border-radius: $borderRadius;
+            background-color: $blue;
+            border: none;
+            font-weight: bold;
+            color: $backgroundColor;
+        }
+    }
+}
+
+// furnizor-users end m
