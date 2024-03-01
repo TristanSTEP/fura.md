@@ -98,16 +98,19 @@ main .search-load form button i {
   margin-bottom: 20px;
 }
 #provider-div .heading #searches .search {
-  gap: 4px;
+  justify-content: space-between;
   display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 4px;
   overflow: hidden;
 }
 #provider-div .heading #searches .search input {
-  border: 2px solid rgb(240, 240, 240);
+  width: 220px;
+  border: 2px solid #f0f0f0;
   background-color: #ffffff;
   padding: 8px;
-  font-size: 16px;
+  font-size: calc(1rem + 6px);
   outline: none;
   border-radius: 4px;
 }
@@ -148,7 +151,7 @@ main .search-load form button i {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgb(240, 240, 240);
+  border: 1px solid #f0f0f0;
   padding: 20px 40px;
   border-radius: 10px;
 }
@@ -172,7 +175,7 @@ main .search-load form button i {
   gap: 20px;
 }
 .list #provider-card .action-buttons i {
-  font-size: 1.25rem;
+  font-size: calc(1.25rem + 6px);
   color: #0437F2;
   cursor: pointer;
 }

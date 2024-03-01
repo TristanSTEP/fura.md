@@ -8,13 +8,13 @@
 }
 
 $blue: #0437F2; // Accent color
-$secondary: #e5ff00;
+$secondary: #e5ff00; // Complementary Color
 $textColor: black;
 $textColor2: rgb(111, 111, 111);
 $backgroundColor: #f1f4ff;
 $padding: 10px;
 $borderRadius: 10px;
-$borderColor: rgb(240, 240, 240);
+$borderColor: #f0f0f0;
 $gap: 10px;
 $titleSize: 2.5rem;
 $subtitleSize: 1.5rem;
@@ -112,22 +112,26 @@ main {
             margin-top: 25px;
             overflow: hidden;
             margin-bottom: 20px;
+
             .search {
-                gap: 4px;
+                justify-content: space-between;
                 display: flex;
+                width: fit-content;
                 border-radius: 4px;
                 overflow: hidden;
 
             }
 
             .search input {
+                width: 220px;
                 border: 2px solid $borderColor;
                 background-color: #ffffff;
-                padding: 8px;
-                font-size: 16px;
+                padding: calc($padding - 2px);
+                font-size: calc($text + 6px);
                 outline: none;
-                border-radius: 4px;
+                border-radius: calc($borderRadius - 6px);
             }
+
             .search input:focus {
                 border: 2px solid $blue;
             }
@@ -151,41 +155,48 @@ main {
     }
 
 }
+
 .list {
     width: 1000px;
     display: flex;
     @include flex(column, space-between, center);
     gap: 20px;
 
-    #provider-card{
+    #provider-card {
         width: 100%;
         box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
         @include flex(row, space-between, center);
         border: 1px solid $borderColor;
         padding: 20px 40px;
         border-radius: $borderRadius;
+
         h2 {
             font-size: 22px;
             font-weight: 600;
         }
+
         h3 {
             font-size: 16px;
             font-weight: normal;
         }
+
         p {
             font-size: $subtitleSize;
             font-weight: 600;
         }
+
         .action-buttons {
             @include flex(row, center, center);
             gap: 20px;
+
             i {
-                font-size: $iconSize;
+                font-size: calc($iconSize + 6px);
                 color: $blue;
                 cursor: pointer;
-            }    
+            }
+
             i:hover {
-                color:#587cff;
+                color: #587cff;
             }
         }
     }
