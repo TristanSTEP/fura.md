@@ -417,37 +417,30 @@ main {
 // read.html furnizor-users start
 
 #main-account {
-    margin-top: 80px;
-    @include flex(row, center, center);
-
+    width: 100vw;
+    overflow-x: hidden;
     #all-inclusive {
         width: 80%;
-        min-height: 80%;
-        box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+        margin: 50px auto;
+        box-shadow: $cardShadow;
         border-radius: $borderRadius;
-        padding: calc($padding * 2);
-
+        padding: calc($padding * 4) calc($padding * 3);
         #m-data {
-            // border: 1px solid red;
-            width: max-content;
-
-            // @include flex(column, center, center);
+            width: 460px;
             #m-data-avatar {
                 @include flex(column, center, center);
-
-
                 h2 {
                     font-size: $titleSize;
                     padding: calc($padding * 2) $padding;
                 }
             }
-
             #update-delete {
                 @include flex(column, center,center);
-                
+                gap: calc($gap * 2);
                 padding: $padding;
-
                 button {
+                    @include flex(row, center, center);
+                    gap: $gap;
                     font-size: calc($text + 6px);
                     font-weight: 600;
                     padding: 6px 22px;
@@ -457,64 +450,66 @@ main {
                     outline: none;
                     border: none;
                     cursor: pointer;
+                    i {
+                        font-size: $subtitleSize;
+                    }
                 }
-                
-
                 #edit-anim-form {
-                @include flex(column, center,center);
-                gap: calc($gap + 4px);
-                    
-
+                    @include flex(column, center, center);
+                    gap: calc($gap + 10px);
+                    padding: calc($padding * 2);
+                    box-shadow: $cardShadow;
+                    border-radius: $borderRadius;
                     .edit-label-form {
-                        @include flex(column, center,center);
-                        gap: calc($gap - 2px);
-                        margin-top: 10px;
+                        @include flex(column, flex-start, flex-start);
+                        gap: $gap;
+                        margin: 15px 0;
+                        width: 100%;
                         font-size: calc($text + 2px);
-                        p{
-                        font-size: calc($text + 4px);
-
+                        p {
+                            font-size: calc($subtitleSize + 2px);
+                            padding: 0 $padding;
+                            font-weight: 400;
                         }
-
                         input {
-                            border: 2px solid $borderColor;
-                            background-color: #ffffff;
-                            padding: calc($padding - 2px);
-                            font-size: calc($text + 6px);
+                            padding: 0 $padding;
                             outline: none;
-                            border-radius: calc($borderRadius - 6px);
+                            border: none;
+                            border-bottom: 1px solid $backgroundColor;
+                            width: 100%;
+                            height: 35px;
+                            font-size: $subtitleSize;
+                            background: white;
+                            transition: 0.3s ease-in-out;
                         }
                         input:focus {
-                            border: 2px solid $blue;
-                        }
-                        input:last-child{
-                            width: 218px;
+                            border-bottom: 1px solid $blue;
                         }
                     }
                     #profile-action {
-                        @include flex(column, center, center);
-                        gap: $gap;
-
+                        width: 100%;
+                        @include flex(column, flex-start, flex-start);
+                        gap: calc($gap * 2);
                         #delete {
-                            @include flex(row, space-between, center);
-                            gap: 4px;
+                            @include flex(row, center, center);
+                            gap: $gap;
                             background: none;
-                            color: black;
-                            border: 2px solid black;
+                            width: 190px;
+                            border: 1px solid red;
+                            color: red;
                             i {
                                 font-size: calc($text + 6px);
                             }
                         }
-                        #delete:hover {
-                            background: none;
-                            color: red;
-                            border: 2px solid red;
-                        }
                         #quick-actions{
+                            width: 100%;
+                            @include flex(row, space-between, center);
+                            gap: $gap;
+                            button {
+                                width: 190px;
+                            }
                             #cancel {
                                 background-color: rgb(179, 179, 179);
-                            }
-                            #cancel:hover {
-                                background-color: rgb(129, 129, 129);
                             }
                         }
                     }
