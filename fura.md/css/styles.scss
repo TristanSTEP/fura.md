@@ -89,3 +89,85 @@ main {
         }
     }
 }
+
+.adauga-marfa{
+    height: 100vh;
+    width: 100vw;
+    
+    form{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: $gap;
+        height: 90vh;
+        width: 80vw;
+        margin: auto;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        background-color: aqua;
+
+        .up-div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: inherit;
+            background-color: aquamarine;
+            height: 35vh;
+
+            .incarcare-div, .descarcare-div, .truck-type-div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: $gap;
+
+
+                .tara-incarcare-div, .oras-incarcare-div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .tara-descarcare-div, .oras-descarcare-div, .tip-camion, .tip-incarcare, .tip-transport{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                 select {
+                    width: 250px;
+                    height: 30px;
+                    border-radius: $borderRadius;
+                    
+                }
+                input {
+                    width: 250px;
+                    height: 30px;
+                    border-radius: $borderRadius;
+                }
+                
+            }
+        }
+        .middle-div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: inherit;
+            background-color: red;
+            height: 35vh;
+        }
+        .bottom-div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: inherit;
+            background-color: seagreen;
+            height: 25vh;
+        }
+    }
+}
