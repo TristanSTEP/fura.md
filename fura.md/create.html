@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -69,20 +69,34 @@
         </ul>
     </section>
 
-    <section id="hero">
-        <main>
-            <div class="search-load">
-                <h1>Search for load</h1>
-                <form action="">
-                    <div class="form-group">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <input type="text" name="from-location" placeholder="From">
-                    </div>
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+    <section class="form-holder">
+        <h2>Insert Truck Data</h2>
+        <br>
+        <form action="" method="POST">
+            <div>
+                <label for="truck-brand">Truck Brand:</label>
+                <input type="text" id="truck-brand" name="truck-brand" required>
             </div>
-        </main>
+            <div>
+                <label for="truck-model">Truck Model:</label>
+                <input type="text" id="truck-model" name="truck-model" required>
+            </div>
+            <div>
+                <label for="truck-year">Truck Year:</label>
+                <input type="number" id="truck-year" name="truck-year" min="1900" max="2099" required>
+            </div>
+            <div>
+                <label for="truck-color">Truck Color:</label>
+                <input type="text" id="truck-color" name="truck-color">
+            </div>
+            <div>
+                <label for="truck-type">Truck Type:</label>
+                <input type="text" id="truck-type" name="truck-type">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </section>
+
 
     <script>
         let menuBar = document.querySelector(".menu-btn");

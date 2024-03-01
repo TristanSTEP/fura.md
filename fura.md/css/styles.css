@@ -4,7 +4,29 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  font-size: 10px;
+  font-size: 15px;
+  list-style: none;
+  text-decoration: none;
+  transition: 0.3s linear;
+}
+
+
+#hero {
+  position: relative; 
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/pngwing.com.png");
+  background-position: top 25% right 0;
+  background-size: cover;
+  opacity: 0.2; /* Setează opacitatea pentru pseudoelement */
+  z-index: -1; /* Asigură că pseudoelementul este poziționat sub conținutul din #hero */
 }
 
 main {
@@ -72,3 +94,200 @@ main .search-load form button {
 main .search-load form button i {
   font-size: 1.25rem;
 }/*# sourceMappingURL=styles.css.map */
+
+
+/* sidebar */
+
+:root {
+  --light: #f9f9f9;
+  --blue: blue;
+  --light-blue: #cfe8ff;
+  --grey: #eee;
+  --dark-grey: #aaaaaa;
+  
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--light);
+  height: 100%;
+  width: 280px;
+  z-index: 2000;
+  font-family: var(--lato);
+  transition: 0.3s ease;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.sidebar.hide {
+  width: 60px;
+}
+
+
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: 700;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--light);
+  z-index: 500;
+  padding-bottom: 20px;
+  box-sizing: content-box;
+}
+
+.sidebar .logo i {
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar .side-menu {
+  width: 100%;
+  margin-top: 48px;
+}
+
+.sidebar .side-menu li {
+  height: 48px;
+  margin-left: 6px;
+  background: transparent;
+  border-radius: 48px 0 0 48px;
+  padding: 4px;
+}
+
+.sidebar .side-menu li.active {
+  position: relative;
+  background: var(--grey);
+}
+
+.sidebar .side-menu li a {
+  height: 100%;
+  width: 100%;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  border-radius: 48px;
+  font-size: 16px;
+  color: var(--dark);
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.sidebar.hide .side-menu li a {
+  width: calc(48px - (4px * 2));
+  transition: 0.3s ease;
+}
+
+.sidebar .side-menu li.active a {
+  color: var(--blue);
+}
+
+.sidebar .side-menu.top li a:hover {
+  color: var(--blue);
+}
+
+.sidebar .side-menu li a.logout {
+  color: var(--red);
+}
+
+.sidebar .side-menu li a i {
+  min-width: calc(60px - ((4px + 6px) * 2));
+  display: flex;
+  justify-content: center;
+}
+
+/* crud_CSS */
+
+.form-holder {
+  width: 600px;
+  margin: 25px auto;
+}
+
+.form-holder h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.form-holder form {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.form-holder form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-holder form label,
+.form-holder form input,
+.form-holder form button {
+    font-size: 18px;
+}
+
+.form-holder form input,
+.form-holder form select,
+.form-holder form button {
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    background-color: #f1f4ff;
+    border-radius: 10px;
+}
+
+.form-holder form button {
+  background-color: blue;
+  color: white;
+}
+
+
+/* media for search */
+
+@media (max-width: 477px) {
+  main .search-load h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  main .search-load form .form-group input {
+    border: none;
+    outline: none;
+    min-width: 200px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background: none;
+    font-size: 1rem;
+  }
+
+  main {
+    margin-left: 25px;
+  }
+
+  /* create */
+  .form-holder {
+    max-width: 300px;
+    margin-left: 70px;
+    
+  }
+
+
+  .form-holder h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  main .search-load h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+
