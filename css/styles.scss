@@ -220,7 +220,7 @@ main {
 }
 
 
-// furnizor-users start m
+// create.html start m
 #main-create {
     @include flex(column, center, center);
     gap: $gap;
@@ -328,7 +328,7 @@ main {
     }
 }
 
-// furnizor-users end m
+// create.html end m
 
 
 // pop-up view provider 
@@ -376,3 +376,14 @@ main {
         }
     }
 }
+
+
+// read.html furnizor-users start
+
+#main-account {
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+// read.html furnizor-users end

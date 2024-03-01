@@ -374,4 +374,9 @@ main .search-load form button i {
 }
 #pop-up #details img {
   border-radius: 10px;
+}
+
+#main-account {
+  width: 100vw;
+  height: 100vh;
 }/*# sourceMappingURL=styles.css.map */
