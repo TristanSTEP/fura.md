@@ -15,9 +15,9 @@ $padding: 10px;
 $borderRadius: 10px;
 $gap: 10px;
 $titleSize: 2.5rem;
-$subtitleSize: 1.5rem;
-$text: 1rem;
-$smallText: 0.8rem;
+$subtitleSize: 2rem;
+$text: 2rem;
+$smallText: 2rem;
 $iconSize: 1.25rem;
 
 * {
@@ -25,8 +25,10 @@ $iconSize: 1.25rem;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    font-size: 10px;
+    font-size: 20px;
 }
+
+
 
 main {
     height: 100vh;
@@ -89,3 +91,6 @@ main {
         }
     }
 }
+
+
+
