@@ -209,6 +209,7 @@ main {
     gap: $gap;
     h1 {
         font-size: $titleSize;
+        letter-spacing: 2px;
     }
     #form-create {
         @include flex(column, center, center);
@@ -277,6 +278,10 @@ main {
                 height: 40px;
                 font-size: $subtitleSize;
                 background: white;
+                option {
+                    font-size: $subtitleSize;
+                    padding: $padding;
+                }
             }
         }
         .label-create-image {

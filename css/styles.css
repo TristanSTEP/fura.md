@@ -192,6 +192,7 @@ main .search-load form button i {
 }
 #main-create h1 {
   font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 #main-create #form-create {
   display: flex;
@@ -275,6 +276,10 @@ main .search-load form button i {
   height: 40px;
   font-size: 1.5rem;
   background: white;
+}
+#main-create #form-create .label-create select option {
+  font-size: 1.5rem;
+  padding: 10px;
 }
 #main-create #form-create .label-create-image {
   width: 100%;
