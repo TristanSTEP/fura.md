@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$blue: #0437F2; // Accent color
+$textColor: black;
+$textColor2: rgb(111, 111, 111);
+$backgroundColor: #f1f4ff;
+$padding: 10px;
+$borderRadius: 10px;
+$gap: 10px;
+$titleSize: 2.5rem;
+$subtitleSize: 1.5rem;
+$text: 1rem;
+$smallText: 0.8rem;
+$iconSize: 1.25rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+}
+
+main{
+    height: 100vh;
+    width: 100wh;
+    div{
+        padding: $padding;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            width: 100%;
+            font-size: $titleSize;
+            text-align: center
+        }
+    }
+}
