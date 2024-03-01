@@ -260,7 +260,7 @@ input::-webkit-inner-spin-button {
   background-color: transparent;
   color: black;
   transition: 0.15s all ease;
-  width: 250px;
+  outline-color: #0437f2;
 }
 #login-container .form-group input::-moz-placeholder {
   color: transparent;
@@ -284,6 +284,7 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
   color: #eee;
   border-radius: 5px;
+  outline-color: #0437f2;
 }
 #login-container .form-group input:focus + .form-label,
 #login-container .form-group input:not(:placeholder-shown) + .form-label {
@@ -292,6 +293,7 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
   color: #eee;
   border-radius: 5px;
+  outline-color: #0437f2;
 }
 #login-container #login-button {
   height: 42px;
