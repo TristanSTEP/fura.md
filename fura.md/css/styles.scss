@@ -89,3 +89,228 @@ main {
         }
     }
 }
+
+#see-products{
+    height: 100vh;
+    width: 100vw;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    #products{
+        width: 1400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            color: black;
+            font-size: $titleSize;
+        }
+
+
+        form {
+            width: 100%;
+            height: 260px;
+            background-color: #eeeef0;
+            border: 1px solid #3498db;
+            padding: $padding;
+
+            #form_1 {
+                width: 1368px;
+                height: 58px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                #form_11 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    label {
+                        font-size: $subtitleSize;
+                        color: black;
+                    }
+
+                    select {
+                        width: 680px;
+                        height: 40px;
+                    }
+                }
+
+                #form_12 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    label {
+                        font-size: $subtitleSize;
+                        color: black;
+                    }
+
+                    select {
+                        width: 680px;
+                        height: 40px;
+                    }
+                }
+            }
+
+            #form_2 {
+                width: 1368px;
+                height: 58px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                #form_21 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    label {
+                        font-size: $subtitleSize;
+                        color: black;
+                    }
+
+                    input {
+                        width: 336px;
+                        height: 40px;
+                    }
+                }
+
+                #form_22 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    label {
+                        font-size: $subtitleSize;
+                        color: black;
+                    }
+
+                    input {
+                        width: 336px;
+                        height: 40px;
+                    }
+                }
+
+                #form_23 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    label {
+                        font-size: $subtitleSize;
+                        color: black;
+                    }
+
+                    input {
+                        width: 336px;
+                        height: 40px;
+                    }
+                }
+
+                #form_24 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    label {
+                        font-size: $subtitleSize;
+                        color: black;
+                    }
+
+                    input {
+                        width: 336px;
+                        height: 40px;
+                    }
+                }
+            }
+
+            #form_3 {
+                width: 1368px;
+                height: 58px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                #form_31 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    label {
+                        font-size: $subtitleSize;
+                        color: black;
+                    }
+
+                    select {
+                        width: 680px;
+                        height: 40px;
+                    }
+                }
+
+                #form_32 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    label {
+                        font-size: $subtitleSize;
+                        color: black;
+                    }
+
+                    input {
+                        width: 680px;
+                        height: 40px;
+                    }
+                }
+
+
+            }
+
+            #butoane {
+                width: 1368px;
+                height: 58px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                #btn_1 {
+                    width: 336px;
+                    height: 40px;
+                    background-color: #93D292;
+                }
+
+                #btn_2 {
+                    width: 336px;
+                    height: 40px;
+                    background-color: #ECCF73;
+                }
+
+                #btn_3 {
+                    width: 680px;
+                    height: 40px;
+                    background-color: #BBC8D4;
+                }
+            }
+        }
+    }
+}

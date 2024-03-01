@@ -71,4 +71,192 @@ main .search-load form button {
 }
 main .search-load form button i {
   font-size: 1.25rem;
+}
+
+#see-products {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f1f4ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#see-products #products {
+  width: 1400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#see-products #products h2 {
+  color: black;
+  font-size: 2.5rem;
+}
+#see-products #products form {
+  width: 100%;
+  height: 260px;
+  background-color: #eeeef0;
+  border: 1px solid #3498db;
+  padding: 10px;
+}
+#see-products #products form #form_1 {
+  width: 1368px;
+  height: 58px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#see-products #products form #form_1 #form_11 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#see-products #products form #form_1 #form_11 label {
+  font-size: 1.5rem;
+  color: black;
+}
+#see-products #products form #form_1 #form_11 select {
+  width: 680px;
+  height: 40px;
+}
+#see-products #products form #form_1 #form_12 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#see-products #products form #form_1 #form_12 label {
+  font-size: 1.5rem;
+  color: black;
+}
+#see-products #products form #form_1 #form_12 select {
+  width: 680px;
+  height: 40px;
+}
+#see-products #products form #form_2 {
+  width: 1368px;
+  height: 58px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#see-products #products form #form_2 #form_21 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#see-products #products form #form_2 #form_21 label {
+  font-size: 1.5rem;
+  color: black;
+}
+#see-products #products form #form_2 #form_21 input {
+  width: 336px;
+  height: 40px;
+}
+#see-products #products form #form_2 #form_22 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#see-products #products form #form_2 #form_22 label {
+  font-size: 1.5rem;
+  color: black;
+}
+#see-products #products form #form_2 #form_22 input {
+  width: 336px;
+  height: 40px;
+}
+#see-products #products form #form_2 #form_23 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#see-products #products form #form_2 #form_23 label {
+  font-size: 1.5rem;
+  color: black;
+}
+#see-products #products form #form_2 #form_23 input {
+  width: 336px;
+  height: 40px;
+}
+#see-products #products form #form_2 #form_24 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#see-products #products form #form_2 #form_24 label {
+  font-size: 1.5rem;
+  color: black;
+}
+#see-products #products form #form_2 #form_24 input {
+  width: 336px;
+  height: 40px;
+}
+#see-products #products form #form_3 {
+  width: 1368px;
+  height: 58px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#see-products #products form #form_3 #form_31 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#see-products #products form #form_3 #form_31 label {
+  font-size: 1.5rem;
+  color: black;
+}
+#see-products #products form #form_3 #form_31 select {
+  width: 680px;
+  height: 40px;
+}
+#see-products #products form #form_3 #form_32 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#see-products #products form #form_3 #form_32 label {
+  font-size: 1.5rem;
+  color: black;
+}
+#see-products #products form #form_3 #form_32 input {
+  width: 680px;
+  height: 40px;
+}
+#see-products #products form #butoane {
+  width: 1368px;
+  height: 58px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#see-products #products form #butoane #btn_1 {
+  width: 336px;
+  height: 40px;
+  background-color: #93D292;
+}
+#see-products #products form #butoane #btn_2 {
+  width: 336px;
+  height: 40px;
+  background-color: #ECCF73;
+}
+#see-products #products form #butoane #btn_3 {
+  width: 680px;
+  height: 40px;
+  background-color: #BBC8D4;
 }/*# sourceMappingURL=styles.css.map */
