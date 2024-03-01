@@ -75,6 +75,7 @@ main .register .formZero .registerInp input {
   background-color: transparent;
   color: black;
   transition: 0.15s all ease;
+  outline-color: #0437f2;
 }
 #login-container .form-group input::-moz-placeholder {
   color: transparent;
@@ -98,6 +99,7 @@ main .register .formZero .registerInp input {
   font-size: 14px;
   color: #eee;
   border-radius: 5px;
+  outline-color: #0437f2;
 }
 #login-container .form-group input:focus + .form-label,
 #login-container .form-group input:not(:placeholder-shown) + .form-label {
@@ -106,6 +108,7 @@ main .register .formZero .registerInp input {
   font-size: 14px;
   color: #eee;
   border-radius: 5px;
+  outline-color: #0437f2;
 }
 #login-container #login-button {
   height: 42px;

@@ -95,6 +95,7 @@ main {
             background-color: transparent;
             color: black;
             transition: 0.15s all ease;
+            outline-color: $blue;
         }
 
         input::placeholder {
@@ -119,6 +120,7 @@ main {
             font-size: 14px;
             color: #eee;
             border-radius: 5px;
+            outline-color: $blue;
         }
     }
 
