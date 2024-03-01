@@ -236,7 +236,7 @@ main {
         width: max-content;
         padding: calc($padding * 2);
         border-radius: $borderRadius;
-        box-shadow: 0 0 15px $backgroundColor;
+        box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
         #create-name-lastname {
             @include flex(row, flex-start, flex-start);
             width: 500px;
@@ -322,7 +322,7 @@ main {
             border: none;
             font-weight: bold;
             color: $backgroundColor;
-            box-shadow: 0 0 10px $backgroundColor;
+            box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
             cursor: pointer;
         }
     }

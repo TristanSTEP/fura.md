@@ -225,7 +225,7 @@ main .search-load form button i {
   width: max-content;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 15px #f1f4ff;
+  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
 }
 #main-create #form-create #create-name-lastname {
   display: flex;
@@ -324,7 +324,7 @@ main .search-load form button i {
   border: none;
   font-weight: bold;
   color: #f1f4ff;
-  box-shadow: 0 0 10px #f1f4ff;
+  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
   cursor: pointer;
 }
 
