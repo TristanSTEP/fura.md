@@ -329,8 +329,12 @@ main .search-load form button i {
 }
 
 #pop-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1000px;
@@ -338,18 +342,12 @@ main .search-load form button i {
   background: #f1f4ff;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
+  border: 1px solid #e9e9e9;
 }
-#pop-up .row-one {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-#pop-up .row-one h2 {
-  font-size: calc(2.5rem + 10px);
-}
-#pop-up .row-one button {
+#pop-up button {
+  position: relative;
+  left: 95%;
   background-color: #0437F2;
   color: white;
   outline: none;
@@ -360,25 +358,37 @@ main .search-load form button i {
   border-radius: 100%;
   cursor: pointer;
 }
-#pop-up h3 {
+#pop-up #popup-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+#pop-up #popup-content h2 {
+  font-size: calc(2.5rem + 10px);
+}
+#pop-up #popup-content h3 {
+  margin-top: 20px;
   font-size: 1.5rem;
 }
-#pop-up p {
+#pop-up #popup-content p {
+  margin-top: 20px;
   font-size: 1.5rem;
 }
-#pop-up #details {
+#pop-up #popup-content #details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#pop-up #details img {
+#pop-up #popup-content #details img {
   border-radius: 10px;
 }
 
 #main-account {
-  width: 100vw;
-  height: 100vh;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -392,37 +402,98 @@ main .search-load form button i {
   padding: 20px;
 }
 #main-account #all-inclusive #m-data {
-  border: 1px solid red;
   width: -moz-max-content;
   width: max-content;
 }
 #main-account #all-inclusive #m-data #m-data-avatar {
-  width: 100%;
-}
-#main-account #all-inclusive #m-data #m-data-avatar #profile-avatar {
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  background-color: #f1f4ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #main-account #all-inclusive #m-data #m-data-avatar h2 {
   font-size: 2.5rem;
   padding: 20px 10px;
 }
 #main-account #all-inclusive #m-data #update-delete {
-  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
 }
 #main-account #all-inclusive #m-data #update-delete button {
-  font-size: 1.5rem;
+  font-size: calc(1rem + 6px);
+  font-weight: 600;
+  padding: 6px 22px;
+  border-radius: 4px;
+  background-color: #0437F2;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 #main-account #all-inclusive #m-data #update-delete #edit-anim-form {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
 }
 #main-account #all-inclusive #m-data #update-delete #edit-anim-form .edit-label-form {
-  border: 1px solid yellowgreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: calc(1rem + 2px);
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form .edit-label-form p {
+  font-size: calc(1rem + 4px);
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form .edit-label-form input {
+  border: 2px solid #f0f0f0;
+  background-color: #ffffff;
+  padding: 8px;
+  font-size: calc(1rem + 6px);
+  outline: none;
+  border-radius: 4px;
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form .edit-label-form input:focus {
+  border: 2px solid #0437F2;
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form .edit-label-form input:last-child {
+  width: 218px;
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form #profile-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form #profile-action #delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  color: black;
+  border: 2px solid black;
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form #profile-action #delete i {
+  font-size: calc(1rem + 6px);
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form #profile-action #delete:hover {
+  background: none;
+  color: red;
+  border: 2px solid red;
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form #profile-action #quick-actions #cancel {
+  background-color: rgb(179, 179, 179);
+}
+#main-account #all-inclusive #m-data #update-delete #edit-anim-form #profile-action #quick-actions #cancel:hover {
+  background-color: rgb(129, 129, 129);
 }/*# sourceMappingURL=styles.css.map */

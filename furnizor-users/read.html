@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
     <main id="main-account">
         <div id="all-inclusive">
             <div id="m-data">
                 <div id="m-data-avatar">
-                    <div id="profile-avatar"></div>
-                    <h2>Marius Utica</h2>
+                    <img src="https://elouwerse.nl/placecircle/200">
+                    <h2>Macaron</h2>
                 </div>
                 <div id="update-delete">
                     <button>Edit profile</button>
                     <form id="edit-anim-form">
-    
+
                         <label class="edit-label-form" for="name">
                             <p>Name:</p>
                             <input type="text" name="name" placeholder="Name...">
                         </label>
-    
+
                         <label class="edit-label-form" for="lastname">
                             <p>Lastname:</p>
                             <input type="text" name="lastname" placeholder="Lastname...">
                         </label>
-    
+
                         <label class="edit-label-form" for="email">
                             <p>Email:</p>
                             <input type="email" name="email" placeholder="Email...">
                         </label>
-    
+
                         <label class="edit-label-form" for="password">
                             <p>Password:</p>
                             <input type="password" name="password" placeholder="Password...">
                         </label>
-    
+
                         <label class="edit-label-form" for="password2">
                             <p>Verify password:</p>
                             <input type="password" name="password2" placeholder="Verify password...">
                         </label>
-    
+
                         <label class="edit-label-form" for="phone">
                             <p>Phone number:</p>
                             <input type="text" name="phone" placeholder="Phone number...">
                         </label>
-    
+
                         <label class="edit-label-form" for="image">
                             <p>Profile image:</p>
                             <input type="file" name="image" accept="image/*">
                         </label>
-    
-                        <button>Delete profile</button>
-                        <button>Save changes</button>
-                        <button>Cancel</button>
+                        <div id="profile-action">
+                            <button id="delete"><i class="fa-regular fa-trash-can"></i>Delete profile</button>
+                            <div id="quick-actions">
+                                <button>Save changes</button>
+                                <button id="cancel">Cancel</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </main>
 </body>
+
 </html>

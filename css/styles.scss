@@ -21,6 +21,7 @@ $subtitleSize: 1.5rem;
 $text: 1rem;
 $smallText: 0.8rem;
 $iconSize: 1.25rem;
+$cardShadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
 
 * {
     margin: 0;
@@ -161,6 +162,7 @@ main {
     display: flex;
     @include flex(column, space-between, center);
     gap: 20px;
+
     #label-index {
         @include flex(row, space-between, center);
         width: 600px;
@@ -168,6 +170,7 @@ main {
         border-radius: $borderRadius;
         padding: $padding;
         box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+
         h3 {
             font-size: $subtitleSize;
         }
@@ -209,6 +212,7 @@ main {
             i:hover {
                 color: #587cff;
             }
+
             button {
                 background: none;
                 outline: none;
@@ -227,9 +231,11 @@ main {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+
     h1 {
         font-size: $titleSize;
     }
+
     #form-create {
         @include flex(column, center, center);
         gap: calc($gap * 2);
@@ -237,19 +243,23 @@ main {
         padding: calc($padding * 2);
         border-radius: $borderRadius;
         box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+
         #create-name-lastname {
             @include flex(row, flex-start, flex-start);
             width: 500px;
             gap: $gap;
+
             .label-create-name {
                 @include flex(column, flex-start, flex-start);
                 gap: $gap;
                 width: 100%;
+
                 p {
                     font-size: calc($subtitleSize + 0.5rem);
                     padding: 0 $padding;
                     font-weight: 500;
                 }
+
                 input {
                     padding: 0 $padding;
                     outline: none;
@@ -261,19 +271,23 @@ main {
                     background: white;
                     transition: 0.3s ease-in-out;
                 }
+
                 input:focus {
-                    border-bottom: 1px solid $blue; 
+                    border-bottom: 1px solid $blue;
                 }
             }
         }
+
         .label-create {
             @include flex(column, flex-start, flex-start);
             gap: $gap;
+
             p {
                 font-size: calc($subtitleSize + 0.5rem);
                 padding: 0 $padding;
                 font-weight: 500;
             }
+
             input {
                 padding: 0 $padding;
                 outline: none;
@@ -285,9 +299,11 @@ main {
                 background: white;
                 transition: 0.3s ease-in-out;
             }
+
             input:focus {
                 border-bottom: 1px solid $blue;
             }
+
             select {
                 border: none;
                 border-bottom: 1px solid $backgroundColor;
@@ -297,21 +313,25 @@ main {
                 height: 40px;
                 font-size: $subtitleSize;
                 background: white;
+
                 option {
                     font-size: $subtitleSize;
                     padding: $padding;
                 }
             }
         }
+
         .label-create-image {
             width: 100%;
             padding: $padding;
             @include flex(row, space-between, flex-start);
+
             p {
                 font-size: calc($subtitleSize + 0.5rem);
                 font-weight: 500;
             }
         }
+
         button {
             padding: $padding;
             min-width: 500px;
@@ -334,8 +354,9 @@ main {
 // pop-up view provider 
 
 #pop-up {
+    @include flex(column, space-between, center);
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1000px;
@@ -343,36 +364,51 @@ main {
     background: $backgroundColor;
     padding: calc($padding + 10px);
     border-radius: $borderRadius;
-    .row-one {
-        @include flex(row,space-between,center);
+    box-shadow: $cardShadow;
+    border: 1px solid #e9e9e9;
+
+    button {
+        position: relative;
+        left: 95%;
+        background-color: $blue;
+        color: white;
+        outline: none;
+        border: none;
+        padding: $padding;
+        width: 34px;
+        font-size: $iconSize;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    #popup-content {
+        @include flex(row, space-between, flex-start);
+        margin-top: 30px;
         margin-bottom: 10px;
 
         h2 {
             font-size: calc($titleSize + 10px);
         }
 
-        button {
-            background-color: $blue;
-            color: white;
-            outline: none;
-            border: none;
-            padding: $padding;
-            width: 34px;
-            font-size: $iconSize;
-            border-radius: 100%;
-            cursor: pointer;
+
+
+
+        h3 {
+            margin-top: 20px;
+            font-size: $subtitleSize;
         }
-    }
-    h3 {
-        font-size: $subtitleSize;
-    }
-    p {
-        font-size: $subtitleSize;
-    }
-    #details {
-        @include flex(row, space-between, center);
-        img {
-            border-radius: $borderRadius;
+
+        p {
+            margin-top: 20px;
+            font-size: $subtitleSize;
+        }
+
+        #details {
+            @include flex(row, space-between, center);
+
+            img {
+                border-radius: $borderRadius;
+            }
         }
     }
 }
@@ -381,43 +417,106 @@ main {
 // read.html furnizor-users start
 
 #main-account {
-    width: 100vw;
-    height: 100vh;
+    margin-top: 80px;
     @include flex(row, center, center);
+
     #all-inclusive {
         width: 80%;
         min-height: 80%;
         box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
         border-radius: $borderRadius;
         padding: calc($padding * 2);
+
         #m-data {
-            border: 1px solid red;
+            // border: 1px solid red;
             width: max-content;
+
             // @include flex(column, center, center);
             #m-data-avatar {
-                width: 100%;
-                #profile-avatar {
-                    width: 300px;
-                    height: 300px;
-                    border-radius: 100%;
-                    background-color: $backgroundColor;
-                }
+                @include flex(column, center, center);
+
+
                 h2 {
                     font-size: $titleSize;
                     padding: calc($padding * 2) $padding;
                 }
             }
+
             #update-delete {
-                border: 1px solid green;
+                @include flex(column, center,center);
+                
                 padding: $padding;
+
                 button {
-                    font-size: $subtitleSize;
+                    font-size: calc($text + 6px);
+                    font-weight: 600;
+                    padding: 6px 22px;
+                    border-radius: calc($borderRadius - 6px);
+                    background-color: $blue;
+                    color: white;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
                 }
+                
+
                 #edit-anim-form {
-                    border: 1px solid blue;
-                    @include flex(column, flex-start, flex-start);
+                @include flex(column, center,center);
+                gap: calc($gap + 4px);
+                    
+
                     .edit-label-form {
-                        border: 1px solid yellowgreen;
+                        @include flex(column, center,center);
+                        gap: calc($gap - 2px);
+                        margin-top: 10px;
+                        font-size: calc($text + 2px);
+                        p{
+                        font-size: calc($text + 4px);
+
+                        }
+
+                        input {
+                            border: 2px solid $borderColor;
+                            background-color: #ffffff;
+                            padding: calc($padding - 2px);
+                            font-size: calc($text + 6px);
+                            outline: none;
+                            border-radius: calc($borderRadius - 6px);
+                        }
+                        input:focus {
+                            border: 2px solid $blue;
+                        }
+                        input:last-child{
+                            width: 218px;
+                        }
+                    }
+                    #profile-action {
+                        @include flex(column, center, center);
+                        gap: $gap;
+
+                        #delete {
+                            @include flex(row, space-between, center);
+                            gap: 4px;
+                            background: none;
+                            color: black;
+                            border: 2px solid black;
+                            i {
+                                font-size: calc($text + 6px);
+                            }
+                        }
+                        #delete:hover {
+                            background: none;
+                            color: red;
+                            border: 2px solid red;
+                        }
+                        #quick-actions{
+                            #cancel {
+                                background-color: rgb(179, 179, 179);
+                            }
+                            #cancel:hover {
+                                background-color: rgb(129, 129, 129);
+                            }
+                        }
                     }
                 }
             }
