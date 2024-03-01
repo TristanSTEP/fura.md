@@ -207,6 +207,9 @@ main {
 #main-create {
     @include flex(column, center, center);
     gap: $gap;
+    h1 {
+        font-size: $titleSize;
+    }
     #form-create {
         @include flex(column, center, center);
         gap: calc($gap * 2);
@@ -236,6 +239,10 @@ main {
                     height: 40px;
                     font-size: $subtitleSize;
                     background: white;
+                    transition: 0.3s ease-in-out;
+                }
+                input:focus {
+                    border-bottom: 1px solid $blue; 
                 }
             }
         }
@@ -256,6 +263,10 @@ main {
                 height: 40px;
                 font-size: $subtitleSize;
                 background: white;
+                transition: 0.3s ease-in-out;
+            }
+            input:focus {
+                border-bottom: 1px solid $blue;
             }
             select {
                 border: none;
@@ -291,6 +302,8 @@ main {
             border: none;
             font-weight: bold;
             color: $backgroundColor;
+            box-shadow: 0 0 10px $backgroundColor;
+            cursor: pointer;
         }
     }
 }

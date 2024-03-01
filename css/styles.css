@@ -190,6 +190,9 @@ main .search-load form button i {
   align-items: center;
   gap: 10px;
 }
+#main-create h1 {
+  font-size: 2.5rem;
+}
 #main-create #form-create {
   display: flex;
   flex-direction: column;
@@ -232,6 +235,10 @@ main .search-load form button i {
   height: 40px;
   font-size: 1.5rem;
   background: white;
+  transition: 0.3s ease-in-out;
+}
+#main-create #form-create #create-name-lastname .label-create-name input:focus {
+  border-bottom: 1px solid #0437F2;
 }
 #main-create #form-create .label-create {
   display: flex;
@@ -254,6 +261,10 @@ main .search-load form button i {
   height: 40px;
   font-size: 1.5rem;
   background: white;
+  transition: 0.3s ease-in-out;
+}
+#main-create #form-create .label-create input:focus {
+  border-bottom: 1px solid #0437F2;
 }
 #main-create #form-create .label-create select {
   border: none;
@@ -291,4 +302,6 @@ main .search-load form button i {
   border: none;
   font-weight: bold;
   color: #f1f4ff;
+  box-shadow: 0 0 10px #f1f4ff;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
