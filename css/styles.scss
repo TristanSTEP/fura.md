@@ -226,9 +226,9 @@ main {
     gap: $gap;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     h1 {
         font-size: $titleSize;
-        letter-spacing: 2px;
     }
     #form-create {
         @include flex(column, center, center);
@@ -311,17 +311,11 @@ main {
                 font-size: calc($subtitleSize + 0.5rem);
                 font-weight: 500;
             }
-            i {
-                font-size: calc($titleSize + 10px);
-                color: $blue;
-                cursor: pointer;
-            }
         }
         button {
             padding: $padding;
             min-width: 500px;
             height: 50px;
-            letter-spacing: 3px;
             font-size: calc($subtitleSize + 0.5rem);
             border-radius: $borderRadius;
             background-color: $blue;
