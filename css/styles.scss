@@ -383,7 +383,46 @@ main {
 #main-account {
     width: 100vw;
     height: 100vh;
-    
+    @include flex(row, center, center);
+    #all-inclusive {
+        width: 80%;
+        min-height: 80%;
+        box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+        border-radius: $borderRadius;
+        padding: calc($padding * 2);
+        #m-data {
+            border: 1px solid red;
+            width: max-content;
+            // @include flex(column, center, center);
+            #m-data-avatar {
+                width: 100%;
+                #profile-avatar {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 100%;
+                    background-color: $backgroundColor;
+                }
+                h2 {
+                    font-size: $titleSize;
+                    padding: calc($padding * 2) $padding;
+                }
+            }
+            #update-delete {
+                border: 1px solid green;
+                padding: $padding;
+                button {
+                    font-size: $subtitleSize;
+                }
+                #edit-anim-form {
+                    border: 1px solid blue;
+                    @include flex(column, flex-start, flex-start);
+                    .edit-label-form {
+                        border: 1px solid yellowgreen;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // read.html furnizor-users end
