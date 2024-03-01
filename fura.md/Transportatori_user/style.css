@@ -25,6 +25,35 @@ main .register h1 {
   font-size: 2.5rem;
   text-align: center;
 }
+main .register .formZero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f4ff;
+  padding: 10px;
+  border-radius: 10px;
+}
+main .register .formZero .registerInp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+main .register .formZero .registerInp label {
+  font-size: 1.5rem;
+}
+main .register .formZero .registerInp input {
+  border: none;
+  outline: none;
+  min-width: 300px;
+  font-size: 1rem;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+}
 
 #login-container {
   display: flex;
