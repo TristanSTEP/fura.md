@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+}
+main .search-load {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main .search-load h1 {
+  width: 100%;
+  font-size: 2.5rem;
+  text-align: center;
+}
+main .search-load form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f4ff;
+  padding: 10px;
+  border-radius: 10px;
+}
+main .search-load form .form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f4ff;
+  gap: 10px;
+}
+main .search-load form .form-group i {
+  font-size: 1.5rem;
+  color: #0437F2;
+}
+main .search-load form .form-group input {
+  border: none;
+  outline: none;
+  min-width: 500px;
+  font-size: 1rem;
+  border-radius: 10px;
+  background: none;
+  font-size: 1.5rem;
+}
+main .search-load form button {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  background-color: #0437F2;
+  border: none;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .search-load form button i {
+  font-size: 1.25rem;
+}/*# sourceMappingURL=styles.css.map */
