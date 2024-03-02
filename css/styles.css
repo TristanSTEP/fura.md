@@ -194,6 +194,7 @@ main .search-load form button i {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
+  box-shadow: 0 0 15px hsla(226, 100%, 50%, 0.158);
 }
 #provider-div .heading .form-group input {
   border: none;
@@ -210,16 +211,26 @@ main .search-load form button i {
   width: 50px;
   border-radius: 10px;
   background-color: #0437F2;
-  border: none;
+  border: 2px solid #0437F2;
   cursor: pointer;
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition: all 0.15s ease-in-out;
 }
 #provider-div .heading .form-group button i {
   font-size: 1.25rem;
+  transition: all 0.15s ease-in-out;
+}
+#provider-div .heading .form-group button:hover {
+  border: 2px solid #0437F2;
+  background-color: white;
+  color: #0437F2;
+}
+#provider-div .heading .form-group button:hover i {
+  scale: 1.5;
 }
 #provider-div .list {
   display: flex;
@@ -248,6 +259,23 @@ main .search-load form button i {
   align-items: center;
   gap: 20px;
 }
+#provider-div .list #provider-user .avatar-name #avatar {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #0437F2;
+  border-radius: 100%;
+  overflow: hidden;
+}
+#provider-div .list #provider-user .avatar-name #avatar:hover img {
+  transform: scale(1.1);
+}
+#provider-div .list #provider-user .avatar-name #avatar img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.15s ease-in;
+}
 #provider-div .list #provider-user .avatar-name h2 {
   font-size: calc(1rem + 8px);
 }
@@ -263,26 +291,72 @@ main .search-load form button i {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
-#provider-div .list #provider-user .action-buttons i {
+#provider-div .list #provider-user .action-buttons a {
+  text-decoration: none;
+  color: #0437F2;
+}
+#provider-div .list #provider-user .action-buttons a i {
   font-size: 1.25rem;
+  cursor: pointer;
 }
 #provider-div .list #provider-user .action-buttons button {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 10px;
-  background-color: #0437F2;
+  background-color: white;
   border: none;
   cursor: pointer;
-  color: white;
+  color: #0437F2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s ease-in-out;
+  border: 2px solid #0437F2;
+}
+#provider-div .list #provider-user .action-buttons button i {
+  font-size: 1.25rem;
+}
+#provider-div .list #provider-user .mail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+#provider-div .list #provider-user .phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+#provider-div #pop-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #f1f4ff;
+  padding: 25px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#provider-div #pop-up #popup-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#provider-div .list #provider-user .action-buttons button i {
-  font-size: 1.25rem;
+#provider-div #pop-up #popup-content img {
+  border-radius: 10px;
 }
 
 #main-create {

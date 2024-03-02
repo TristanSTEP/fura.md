@@ -204,9 +204,11 @@ main {
     .heading {
         @include flex(column, center, center);
         gap: calc($gap + 20px);
+
         h1 {
             font-size: $titleSize;
         }
+
         .form-group {
             @include flex(row, center, center);
             background-color: $backgroundColor;
@@ -214,6 +216,7 @@ main {
             border-radius: $borderRadius;
             width: fit-content;
             margin: auto;
+            box-shadow: 0 0 15px hsla(226, 100%, 50%, 0.158);
 
             input {
                 border: none;
@@ -231,21 +234,36 @@ main {
                 width: 50px;
                 border-radius: $borderRadius;
                 background-color: $blue;
-                border: none;
+                border: 2px solid $blue;
                 cursor: pointer;
                 color: white;
                 @include flex(row, center, center);
+                transition: all 0.15s ease-in-out;
 
                 i {
                     font-size: $iconSize;
+                    transition: all 0.15s ease-in-out;
+
+                }
+
+                &:hover {
+                    border: 2px solid $blue;
+                    background-color: white;
+                    color: $blue;
+
+                    i {
+                        scale: 1.5;
+                        $color: $blue;
+                    }
                 }
             }
         }
     }
+
     .list {
         @include flex(column, center, center);
         gap: $gap;
-        
+
         #provider-user {
             @include flex(row, space-between, center);
             // @include grid(4);
@@ -255,43 +273,117 @@ main {
             border-radius: $borderRadius;
             padding: $padding;
             background-color: $backgroundColor;
+
             .avatar-name {
                 @include flex(row, center, center);
                 gap: calc($gap + 10px);
+// NU LUCREAZA hover
+                #avatar {
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid $blue;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        transition: transform 0.15s ease-in;
+                    }
+                }
+
+
                 h2 {
                     font-size: calc($text + 8px);
                 }
             }
+
             h3 {
                 font-size: calc($text + 6px);
                 font-weight: 500;
             }
+
             p {
                 font-size: calc($text + 6px);
             }
+
             .action-buttons {
                 @include flex(row, center, center);
-                gap:$gap;
-                i {
-                    font-size: $iconSize;
+                gap: calc($gap + 10px);
+
+                a {
+                    text-decoration: none;
+                    color: $blue;
+
+                    i {
+                        font-size: $iconSize;
+                        cursor: pointer;
+                    }
                 }
+
                 button {
-                    height: 50px;
-                    width: 50px;
+                    height: 40px;
+                    width: 40px;
                     border-radius: $borderRadius;
-                    background-color: $blue;
+                    background-color: white;
                     border: none;
                     cursor: pointer;
-                    color: white;
+                    color: $blue;
                     @include flex(row, center, center);
-    
+                    transition: all 0.15s ease-in-out;
+                    border: 2px solid $blue;
+
                     i {
                         font-size: $iconSize;
                     }
+
+                    // &:hover {
+                    //     border: 2px solid $blue;
+                    //     background-color: white;
+                    //     color: $blue;
+                    // }
                 }
             }
-        }
 
+            .mail {
+                @include flex(row, center, center);
+                gap: calc($gap - 4px);
+            }
+
+            .phone {
+                @include flex(row, center, center);
+                gap: calc($gap - 4px);
+            }
+        }
+    }
+
+    // pop-up georgeXdev start
+    #pop-up {
+        @include flex(row, center, center);
+        width: 800px;
+        height: fit-content;
+        background-color: $backgroundColor;
+        padding: calc($padding + 15px);
+        border-radius: $borderRadius;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        #popup-content {
+            @include flex(row, center, center);
+
+            img {
+                border-radius: $borderRadius;
+
+            }
+        }
     }
 }
 
