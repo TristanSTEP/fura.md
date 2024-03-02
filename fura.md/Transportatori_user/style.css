@@ -24,6 +24,15 @@ main .register h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
+main .oldUser {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+main .oldUser p, main .oldUser a {
+  font-size: 1.5rem;
+}
 main .registerInp {
   display: flex;
   justify-content: center;
