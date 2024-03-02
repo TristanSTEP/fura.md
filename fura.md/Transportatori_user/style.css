@@ -270,6 +270,7 @@ input::-webkit-inner-spin-button {
   color: black;
   transition: 0.15s all ease;
   outline-color: #0437f2;
+  width: 250px;
 }
 #login-container .form-group input::-moz-placeholder {
   color: transparent;

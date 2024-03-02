@@ -297,6 +297,7 @@ input::-webkit-inner-spin-button {
             color: black;
             transition: 0.15s all ease;
             outline-color: $blue;
+            width: 250px;
         }
 
         input::placeholder {
