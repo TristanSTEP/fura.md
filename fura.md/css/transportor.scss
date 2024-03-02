@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+$blue: #0437F2; // Accent color
+$textColor: black;
+$textColor2: rgb(111, 111, 111);
+$backgroundColor: #f1f4ff;
+$padding: 10px;
+$borderRadius: 10px;
+$gap: 10px;
+$titleSize: 2.5rem;
+$subtitleSize: 1.5rem;
+$text: 1rem;
+$smallText: 0.8rem;
+$iconSize: 1.25rem;
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .carrier {
+        background-color: $backgroundColor;
+        width: 400px;
+        height: 450px;
+        border-radius: $borderRadius;
+        display: flex;
+        // justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        padding: $padding;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+        position: relative;
+
+
+
+        .top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+
+
+            i {
+                left: 20px;
+                position: absolute;
+                font-size: $iconSize;
+                width: 40px;
+                height: 40px;
+                background-color: $blue;
+                border-radius: $borderRadius;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+
+
+
+
+        }
+
+
+        h1 {
+            color: $blue;
+            font-size: $titleSize;
+            padding: $padding;
+        }
+
+
+
+
+
+
+        img {
+            height: 150px;
+
+        }
+
+        .info {
+            display: flex;
+            align-items: left;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 300px;
+            gap: 15px;
+
+
+
+            p {
+                color: $textColor;
+                font-size: $text;
+                text-align: left;
+                left: 0;
+                position: static;
+
+
+                // text-align: start;
+
+            }
+
+        }
+
+    }
+}

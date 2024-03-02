@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .carrier {
+  background-color: #f1f4ff;
+  width: 400px;
+  height: 450px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+main .carrier .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .carrier .top i {
+  left: 20px;
+  position: absolute;
+  font-size: 1.25rem;
+  width: 40px;
+  height: 40px;
+  background-color: #0437F2;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .carrier h1 {
+  color: #0437F2;
+  font-size: 2.5rem;
+  padding: 10px;
+}
+main .carrier img {
+  height: 150px;
+}
+main .carrier .info {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 300px;
+  gap: 15px;
+}
+main .carrier .info p {
+  color: black;
+  font-size: 1rem;
+  text-align: left;
+  left: 0;
+  position: static;
+}/*# sourceMappingURL=transportor.css.map */
