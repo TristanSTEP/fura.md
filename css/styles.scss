@@ -36,13 +36,6 @@ $minWidth: 250px;
     font-size: 10px;
 }
 
-.assets {
-    padding: $padding;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 25px;
 
     i {
         font-size: $iconSize;
@@ -133,7 +126,7 @@ $minWidth: 250px;
             color: $blue;
         }
     }
-}
+
 
 main {
     height: 100vh;
@@ -199,67 +192,7 @@ main {
 // TRISTAN ASSETS
 
 
-// main {
-//     height: 100vh;
-//     width: 100vw;
-
-//     .search-load {
-//         padding: $padding;
-//         height: 100%;
-//         width: 100%;
-//         @include flex(column, center, center);
-//         gap: $gap;
-
-//         h1 {
-//             width: 100%;
-//             font-size: $titleSize;
-//             text-align: center
-//         }
-
-//         form {
-//             @include flex(row, center, center);
-//             background-color: $backgroundColor;
-//             padding: $padding;
-//             border-radius: $borderRadius;
-
-//             .form-group {
-//                 @include flex(row, center, center);
-//                 background-color: $backgroundColor;
-//                 gap: $gap;
-
-//                 i {
-//                     font-size: $subtitleSize;
-//                     color: $blue;
-//                 }
-
-//                 input {
-//                     border: none;
-//                     outline: none;
-//                     min-width: 500px;
-//                     font-size: $subtitleSize;
-//                     border-radius: $borderRadius;
-//                     background: none;
-//                     font-size: $subtitleSize;
-//                 }
-//             }
-
-//             button {
-//                 height: 50px;
-//                 width: 50px;
-//                 border-radius: $borderRadius;
-//                 background-color: $blue;
-//                 border: none;
-//                 cursor: pointer;
-//                 color: white;
-//                 @include flex(row, center, center);
-
-//                 i {
-//                     font-size: $iconSize;
-//                 }
-//             }
-//         }
-//     }
-// }
+// // g-code
 
 // #provider-div {
 //     @include flex(column, center, center);
@@ -396,128 +329,96 @@ main {
 
 
 // // create.html start m
-// #main-create {
-//     @include flex(column, center, center);
-//     gap: $gap;
-//     width: 100vw;
-//     height: 100vh;
-//     overflow: hidden;
+#main-create {
+    @include flex(column, center, center);
+    gap: $gap;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    h1 {
+        font-size: $titleSize;
+    }
+    #form-create {
+        @include flex(column, center, center);
+        gap: calc($gap * 2);
+        width: max-content;
+        padding: calc($padding * 2);
+        border-radius: $borderRadius;
+        box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+        #create-name-lastname {
+            @include flex(row, flex-start, flex-start);
+            width: 500px;
+            gap: $gap;
+        }
+        .label-create {
+            @include flex(column, flex-start, flex-start);
+            gap: $gap;
 
-//     h1 {
-//         font-size: $titleSize;
-//     }
+            p {
+                font-size: calc($subtitleSize + 0.5rem);
+                padding: 0 $padding;
+                font-weight: 500;
+            }
 
-//     #form-create {
-//         @include flex(column, center, center);
-//         gap: calc($gap * 2);
-//         width: max-content;
-//         padding: calc($padding * 2);
-//         border-radius: $borderRadius;
-//         box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+            input {
+                padding: 0 $padding;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid $backgroundColor;
+                min-width: 500px;
+                height: 40px;
+                font-size: $subtitleSize;
+                background: white;
+                transition: 0.3s ease-in-out;
+            }
 
-//         #create-name-lastname {
-//             @include flex(row, flex-start, flex-start);
-//             width: 500px;
-//             gap: $gap;
+            input:focus {
+                border-bottom: 1px solid $blue;
+            }
 
-//             .label-create-name {
-//                 @include flex(column, flex-start, flex-start);
-//                 gap: $gap;
-//                 width: 100%;
+            select {
+                border: none;
+                border-bottom: 1px solid $backgroundColor;
+                padding: $padding;
+                outline: none;
+                min-width: 500px;
+                height: 40px;
+                font-size: $subtitleSize;
+                background: white;
 
-//                 p {
-//                     font-size: calc($subtitleSize + 0.5rem);
-//                     padding: 0 $padding;
-//                     font-weight: 500;
-//                 }
+                option {
+                    font-size: $subtitleSize;
+                    padding: $padding;
+                }
+            }
+        }
 
-//                 input {
-//                     padding: 0 $padding;
-//                     outline: none;
-//                     border: none;
-//                     border-bottom: 1px solid $backgroundColor;
-//                     width: 100%;
-//                     height: 40px;
-//                     font-size: $subtitleSize;
-//                     background: white;
-//                     transition: 0.3s ease-in-out;
-//                 }
+        .label-create-image {
+            width: 100%;
+            padding: $padding;
+            @include flex(row, space-between, flex-start);
 
-//                 input:focus {
-//                     border-bottom: 1px solid $blue;
-//                 }
-//             }
-//         }
+            p {
+                font-size: calc($subtitleSize + 0.5rem);
+                font-weight: 500;
+            }
+        }
 
-//         .label-create {
-//             @include flex(column, flex-start, flex-start);
-//             gap: $gap;
-
-//             p {
-//                 font-size: calc($subtitleSize + 0.5rem);
-//                 padding: 0 $padding;
-//                 font-weight: 500;
-//             }
-
-//             input {
-//                 padding: 0 $padding;
-//                 outline: none;
-//                 border: none;
-//                 border-bottom: 1px solid $backgroundColor;
-//                 min-width: 500px;
-//                 height: 40px;
-//                 font-size: $subtitleSize;
-//                 background: white;
-//                 transition: 0.3s ease-in-out;
-//             }
-
-//             input:focus {
-//                 border-bottom: 1px solid $blue;
-//             }
-
-//             select {
-//                 border: none;
-//                 border-bottom: 1px solid $backgroundColor;
-//                 padding: $padding;
-//                 outline: none;
-//                 min-width: 500px;
-//                 height: 40px;
-//                 font-size: $subtitleSize;
-//                 background: white;
-
-//                 option {
-//                     font-size: $subtitleSize;
-//                     padding: $padding;
-//                 }
-//             }
-//         }
-
-//         .label-create-image {
-//             width: 100%;
-//             padding: $padding;
-//             @include flex(row, space-between, flex-start);
-
-//             p {
-//                 font-size: calc($subtitleSize + 0.5rem);
-//                 font-weight: 500;
-//             }
-//         }
-
-//         button {
-//             padding: $padding;
-//             min-width: 500px;
-//             height: 50px;
-//             font-size: calc($subtitleSize + 0.5rem);
-//             border-radius: $borderRadius;
-//             background-color: $blue;
-//             border: none;
-//             font-weight: bold;
-//             color: $backgroundColor;
-//             box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
-//             cursor: pointer;
-//         }
-//     }
-// }
+        button {
+            padding: $padding;
+            min-width: 500px;
+            height: 50px;
+            font-size: calc($subtitleSize + 0.5rem);
+            border-radius: $borderRadius;
+            background-color: $blue;
+            border: none;
+            font-weight: bold;
+            color: $backgroundColor;
+            box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+            cursor: pointer;
+        }
+    }
+}
 
 // // create.html end m
 
