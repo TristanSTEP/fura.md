@@ -37,97 +37,99 @@ $minWidth: 250px;
 }
 
 
-    i {
-        font-size: $iconSize;
-    }
+i {
+    font-size: $iconSize;
+}
 
-    .input,
-    .image-input,
-    .button {
-        padding: $padding;
-        background-color: $backgroundColor;
-        border: 1px solid $backgroundColor;
-        outline: none;
-        transition: border-color 0.15s ease-in;
-        border-radius: $borderRadius;
-        font-size: $inputTextSize;
-        min-width: $minWidth;
-    
-        &:focus {
-            border: 1px solid $blue;
-        }
+.input,
+.image-input,
+.button {
+    padding: $padding;
+    background-color: $backgroundColor;
+    border: 1px solid $backgroundColor;
+    outline: none;
+    transition: border-color 0.15s ease-in;
+    border-radius: $borderRadius;
+    font-size: $inputTextSize;
+    min-width: $minWidth;
 
-        input {
-            display: none;
-        }
-    }
-
-    .image-input { 
-        transition: box-shadow 0.15s ease-in;
-
-        &:hover {
-            cursor: pointer;
-            box-shadow: 0 0 5px $blue;
-        }
-
-        label {
-            @include flex(row, center, center);
-            gap: $gap;
-            font-size: $inputTextSize;
-            cursor: pointer;
-        }
-    }
-
-    .row-box {
-        @include grid(3);
-        gap: $gap;
-        border-radius: $borderRadius;
-        padding: $padding;
-        background-color: $backgroundColor;
-
-        p {
-            font-size: 1.25rem;
-        }
-    }
-
-    .avatar {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
+    &:focus {
         border: 1px solid $blue;
-        overflow: hidden;
-
-        &:hover {
-            img {
-                transform: scale(1.1);
-            }
-        }
-
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            transition: transform 0.15s ease-in;
-        }
     }
 
-    .button {
-        background-color: $blue;
-        color: white;
+    input {
+        display: none;
+    }
+}
+
+.image-input {
+    transition: box-shadow 0.15s ease-in;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 5px $blue;
+    }
+
+    label {
         @include flex(row, center, center);
         gap: $gap;
         font-size: $inputTextSize;
         cursor: pointer;
-        border: 1px solid $blue;
-        transition: all 0.15s ease-in;
+    }
+}
 
-        &:hover {
-            background-color: white;
-            color: $blue;
+.row-box {
+    @include grid(3);
+    gap: $gap;
+    border-radius: $borderRadius;
+    padding: $padding;
+    background-color: $backgroundColor;
+
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+.avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid $blue;
+    overflow: hidden;
+
+    &:hover {
+        img {
+            transform: scale(1.1);
         }
     }
 
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.15s ease-in;
+    }
+}
 
+.button {
+    background-color: $blue;
+    color: white;
+    @include flex(row, center, center);
+    gap: $gap;
+    font-size: $inputTextSize;
+    cursor: pointer;
+    border: 1px solid $blue;
+    transition: all 0.15s ease-in;
+
+    &:hover {
+        background-color: white;
+        color: $blue;
+    }
+}
+
+// TRISTAN ASSETS
+
+// main index tristan
 main {
     height: 100vh;
     width: 100vw;
@@ -181,7 +183,7 @@ main {
                 cursor: pointer;
                 color: white;
                 @include flex(row, center, center);
-                
+
                 i {
                     font-size: $iconSize;
                 }
@@ -189,143 +191,116 @@ main {
         }
     }
 }
-// TRISTAN ASSETS
+
+// main index tristan finish
+
+// provider-users-list.html  start g
+
+#provider-div {
+    @include flex(column, center, center);
+    gap: calc($gap + 10px);
+    margin-top: 40px;
+
+    .heading {
+        @include flex(column, center, center);
+        gap: calc($gap + 20px);
+        h1 {
+            font-size: $titleSize;
+        }
+        .form-group {
+            @include flex(row, center, center);
+            background-color: $backgroundColor;
+            padding: $padding;
+            border-radius: $borderRadius;
+            width: fit-content;
+            margin: auto;
+
+            input {
+                border: none;
+                outline: none;
+                min-width: 500px;
+                font-size: $text;
+                padding-left: 6px;
+                border-radius: $borderRadius;
+                background: none;
+                font-size: $subtitleSize;
+            }
+
+            button {
+                height: 50px;
+                width: 50px;
+                border-radius: $borderRadius;
+                background-color: $blue;
+                border: none;
+                cursor: pointer;
+                color: white;
+                @include flex(row, center, center);
+
+                i {
+                    font-size: $iconSize;
+                }
+            }
+        }
+    }
+    .list {
+        @include flex(column, center, center);
+        gap: $gap;
+        
+        #provider-user {
+            @include flex(row, space-between, center);
+            // @include grid(4);
+            align-items: center;
+            width: fit-content;
+            gap: calc($gap + 40px);
+            border-radius: $borderRadius;
+            padding: $padding;
+            background-color: $backgroundColor;
+            .avatar-name {
+                @include flex(row, center, center);
+                gap: calc($gap + 10px);
+                h2 {
+                    font-size: calc($text + 8px);
+                }
+            }
+            h3 {
+                font-size: calc($text + 6px);
+                font-weight: 500;
+            }
+            p {
+                font-size: calc($text + 6px);
+            }
+            .action-buttons {
+                @include flex(row, center, center);
+                gap:$gap;
+                i {
+                    font-size: $iconSize;
+                }
+                button {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: $borderRadius;
+                    background-color: $blue;
+                    border: none;
+                    cursor: pointer;
+                    color: white;
+                    @include flex(row, center, center);
+    
+                    i {
+                        font-size: $iconSize;
+                    }
+                }
+            }
+        }
+
+    }
+}
 
 
-// // g-code
-
-// #provider-div {
-//     @include flex(column, center, center);
-//     width: 1200px;
-//     margin: auto;
 
 
-//     .heading {
-//         h1 {
-//             font-weight: 800;
-//             font-size: 40px;
-//             padding: 10px;
-//             text-align: center;
-//         }
 
-//         #searches {
-//             @include flex(row, center, center);
-//             gap: 20px;
-//             margin-top: 25px;
-//             overflow: hidden;
-//             margin-bottom: 20px;
 
-//             .search {
-//                 justify-content: space-between;
-//                 display: flex;
-//                 width: fit-content;
-//                 border-radius: 4px;
-//                 gap: 4px;
-//                 background-color: $backgroundColor;
-//                 overflow: hidden;
 
-//             }
-
-//             .search input {
-//                 width: 220px;
-//                 border: 2px solid $borderColor;
-//                 background-color: $backgroundColor;
-//                 padding: calc($padding - 2px);
-//                 font-size: calc($text + 6px);
-//                 outline: none;
-//                 border-radius: calc($borderRadius - 6px);
-//             }
-
-//             .search input:focus {
-//                 border: 2px solid $blue;
-//                 background-color: white;
-//             }
-
-//             .search button {
-//                 @include flex(row, center, center);
-//                 cursor: pointer;
-//                 border-radius: 4px;
-//                 padding: 8px 20px;
-//                 border: none;
-//                 background-color: $blue;
-//                 color: white;
-//                 font-weight: normal;
-
-//                 i {
-//                     text-align: center;
-//                     font-size: $iconSize;
-//                 }
-//             }
-//         }
-//     }
-
-// }
-
-// .list {
-//     width: 1000px;
-//     display: flex;
-//     @include flex(column, space-between, center);
-//     gap: 20px;
-
-//     #label-index {
-//         @include flex(row, space-between, center);
-//         width: 600px;
-//         background-color: white;
-//         border-radius: $borderRadius;
-//         padding: $padding;
-//         box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
-
-//         h3 {
-//             font-size: $subtitleSize;
-//         }
-//     }
-
-//     #provider-card {
-//         width: 100%;
-//         box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
-//         @include flex(row, space-between, center);
-//         border: 1px solid $borderColor;
-//         padding: 20px 40px;
-//         border-radius: $borderRadius;
-
-//         h2 {
-//             font-size: 22px;
-//             font-weight: 600;
-//         }
-
-//         h3 {
-//             font-size: 16px;
-//             font-weight: normal;
-//         }
-
-//         p {
-//             font-size: $subtitleSize;
-//             font-weight: 600;
-//         }
-
-//         .action-buttons {
-//             @include flex(row, center, center);
-//             gap: 20px;
-
-//             i {
-//                 font-size: calc($iconSize + 6px);
-//                 color: $blue;
-//                 cursor: pointer;
-//             }
-
-//             i:hover {
-//                 color: #587cff;
-//             }
-
-//             button {
-//                 background: none;
-//                 outline: none;
-//                 border: none;
-//             }
-
-//         }
-//     }
-// }
 
 
 // // create.html start m
@@ -335,9 +310,11 @@ main {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+
     h1 {
         font-size: $titleSize;
     }
+
     #form-create {
         @include flex(column, center, center);
         gap: calc($gap * 2);
@@ -345,11 +322,13 @@ main {
         padding: calc($padding * 2);
         border-radius: $borderRadius;
         box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+
         #create-name-lastname {
             @include flex(row, flex-start, flex-start);
             width: 500px;
             gap: $gap;
         }
+
         .label-create {
             @include flex(column, flex-start, flex-start);
             gap: $gap;
@@ -420,6 +399,7 @@ main {
     }
 }
 
+
 // // create.html end m
 
 
@@ -474,7 +454,7 @@ main {
 //             font-size: calc($titleSize + 10px);
 //         }
 
-        
+
 //         #text-content {
 //             @include flex(column, space-between, flex-start);
 //             gap: $gap;
