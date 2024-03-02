@@ -14,7 +14,7 @@ $textColor2: rgb(111, 111, 111);
 $backgroundColor: #f1f4ff;
 $padding: 10px;
 $borderRadius: 10px;
-$borderColor: #f0f0f0;
+$borderColor: #cdd8ff;
 $gap: 10px;
 $titleSize: 2.5rem;
 $subtitleSize: 1.5rem;
@@ -119,6 +119,8 @@ main {
                 display: flex;
                 width: fit-content;
                 border-radius: 4px;
+                gap: 4px;
+                background-color: $backgroundColor;
                 overflow: hidden;
 
             }
@@ -126,7 +128,7 @@ main {
             .search input {
                 width: 220px;
                 border: 2px solid $borderColor;
-                background-color: #ffffff;
+                background-color: $backgroundColor;
                 padding: calc($padding - 2px);
                 font-size: calc($text + 6px);
                 outline: none;
@@ -135,6 +137,7 @@ main {
 
             .search input:focus {
                 border: 2px solid $blue;
+                background-color: white;
             }
 
             .search button {
@@ -370,15 +373,27 @@ main {
     button {
         position: relative;
         left: 95%;
-        background-color: $blue;
-        color: white;
+        border: 2px solid $blue;
+        background: none;
+        color: $blue;
         outline: none;
-        border: none;
-        padding: $padding;
-        width: 34px;
+        padding: 6px 9px;
+        width: fit-content;
+        height: fit-content;
         font-size: $iconSize;
-        border-radius: 100%;
+        border-radius: 200px;
         cursor: pointer;
+        i {
+            font-size: 18px;
+        }
+
+        &:hover {
+            background-color: $blue;
+
+            i {
+                color: white;
+            }
+        }
     }
 
     #popup-content {
@@ -390,17 +405,24 @@ main {
             font-size: calc($titleSize + 10px);
         }
 
+        
+        #text-content {
+            @include flex(column, space-between, flex-start);
+            gap: $gap;
+            a {
+                text-decoration: none;
+                font-size: calc($text + 6px);
+            }
 
+            h3 {
+                margin-top: 20px;
+                font-size: $subtitleSize;
+            }
 
-
-        h3 {
-            margin-top: 20px;
-            font-size: $subtitleSize;
-        }
-
-        p {
-            margin-top: 20px;
-            font-size: $subtitleSize;
+            p {
+                margin-top: 20px;
+                font-size: $subtitleSize;
+            }
         }
 
         #details {
@@ -419,25 +441,31 @@ main {
 #main-account {
     width: 100vw;
     overflow-x: hidden;
+
     #all-inclusive {
         width: 80%;
         margin: 50px auto;
         box-shadow: $cardShadow;
         border-radius: $borderRadius;
         padding: calc($padding * 4) calc($padding * 3);
+
         #m-data {
             width: 460px;
+
             #m-data-avatar {
                 @include flex(column, center, center);
+
                 h2 {
                     font-size: $titleSize;
                     padding: calc($padding * 2) $padding;
                 }
             }
+
             #update-delete {
-                @include flex(column, center,center);
+                @include flex(column, center, center);
                 gap: calc($gap * 2);
                 padding: $padding;
+
                 button {
                     @include flex(row, center, center);
                     gap: $gap;
@@ -450,27 +478,32 @@ main {
                     outline: none;
                     border: none;
                     cursor: pointer;
+
                     i {
                         font-size: $subtitleSize;
                     }
                 }
+
                 #edit-anim-form {
                     @include flex(column, center, center);
                     gap: calc($gap + 10px);
                     padding: calc($padding * 2);
                     box-shadow: $cardShadow;
                     border-radius: $borderRadius;
+
                     .edit-label-form {
                         @include flex(column, flex-start, flex-start);
                         gap: $gap;
                         margin: 15px 0;
                         width: 100%;
                         font-size: calc($text + 2px);
+
                         p {
                             font-size: calc($subtitleSize + 2px);
                             padding: 0 $padding;
                             font-weight: 400;
                         }
+
                         input {
                             padding: 0 $padding;
                             outline: none;
@@ -482,14 +515,17 @@ main {
                             background: white;
                             transition: 0.3s ease-in-out;
                         }
+
                         input:focus {
                             border-bottom: 1px solid $blue;
                         }
                     }
+
                     #profile-action {
                         width: 100%;
                         @include flex(column, flex-start, flex-start);
                         gap: calc($gap * 2);
+
                         #delete {
                             @include flex(row, center, center);
                             gap: $gap;
@@ -497,17 +533,21 @@ main {
                             width: 190px;
                             border: 1px solid red;
                             color: red;
+
                             i {
                                 font-size: calc($text + 6px);
                             }
                         }
-                        #quick-actions{
+
+                        #quick-actions {
                             width: 100%;
                             @include flex(row, space-between, center);
                             gap: $gap;
+
                             button {
                                 width: 190px;
                             }
+
                             #cancel {
                                 background-color: rgb(179, 179, 179);
                             }

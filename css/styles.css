@@ -103,12 +103,14 @@ main .search-load form button i {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 4px;
+  gap: 4px;
+  background-color: #f1f4ff;
   overflow: hidden;
 }
 #provider-div .heading #searches .search input {
   width: 220px;
-  border: 2px solid #f0f0f0;
-  background-color: #ffffff;
+  border: 2px solid #cdd8ff;
+  background-color: #f1f4ff;
   padding: 8px;
   font-size: calc(1rem + 6px);
   outline: none;
@@ -116,6 +118,7 @@ main .search-load form button i {
 }
 #provider-div .heading #searches .search input:focus {
   border: 2px solid #0437F2;
+  background-color: white;
 }
 #provider-div .heading #searches .search button {
   display: flex;
@@ -165,7 +168,7 @@ main .search-load form button i {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #cdd8ff;
   padding: 20px 40px;
   border-radius: 10px;
 }
@@ -348,15 +351,27 @@ main .search-load form button i {
 #pop-up button {
   position: relative;
   left: 95%;
-  background-color: #0437F2;
-  color: white;
+  border: 2px solid #0437F2;
+  background: none;
+  color: #0437F2;
   outline: none;
-  border: none;
-  padding: 10px;
-  width: 34px;
+  padding: 6px 9px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   font-size: 1.25rem;
-  border-radius: 100%;
+  border-radius: 200px;
   cursor: pointer;
+}
+#pop-up button i {
+  font-size: 18px;
+}
+#pop-up button:hover {
+  background-color: #0437F2;
+}
+#pop-up button:hover i {
+  color: white;
 }
 #pop-up #popup-content {
   display: flex;
@@ -369,11 +384,22 @@ main .search-load form button i {
 #pop-up #popup-content h2 {
   font-size: calc(2.5rem + 10px);
 }
-#pop-up #popup-content h3 {
+#pop-up #popup-content #text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+#pop-up #popup-content #text-content a {
+  text-decoration: none;
+  font-size: calc(1rem + 6px);
+}
+#pop-up #popup-content #text-content h3 {
   margin-top: 20px;
   font-size: 1.5rem;
 }
-#pop-up #popup-content p {
+#pop-up #popup-content #text-content p {
   margin-top: 20px;
   font-size: 1.5rem;
 }
