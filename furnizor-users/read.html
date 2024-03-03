@@ -14,60 +14,61 @@
 
 <body>
     <main class="assets" id="main-account">
-        <div id="all-inclusive">
-            <div id="m-data">
-                <div class='avatar' id="m-data-avatar">
-                    <img src="https://elouwerse.nl/placecircle/200">
-                    <h2>Macaron</h2>
-                </div>
-                <div id="update-delete">
-                    <button id="edit-btn"><i class="fa-solid fa-pencil"></i>Edit profile</button>
-                    <form id="edit-anim-form" style="display: none;">
-
-                        <label class="edit-label-form" for="name">
-                            <p>Name:</p>
-                            <input type="text" name="name" placeholder="Name...">
-                        </label>
-
-                        <label class="edit-label-form" for="lastname">
-                            <p>Lastname:</p>
-                            <input type="text" name="lastname" placeholder="Lastname...">
-                        </label>
-
-                        <label class="edit-label-form" for="email">
-                            <p>Email:</p>
-                            <input type="email" name="email" placeholder="Email...">
-                        </label>
-
-                        <label class="edit-label-form" for="password">
-                            <p>Password:</p>
-                            <input type="password" name="password" placeholder="Password...">
-                        </label>
-
-                        <label class="edit-label-form" for="password2">
-                            <p>Verify password:</p>
-                            <input type="password" name="password2" placeholder="Verify password...">
-                        </label>
-
-                        <label class="edit-label-form" for="phone">
-                            <p>Phone number:</p>
-                            <input type="text" name="phone" placeholder="Phone number...">
-                        </label>
-
-                        <label class="edit-label-form" for="image">
-                            <p>Profile image:</p>
-                            <input type="file" name="image" accept="image/*">
-                        </label>
-                        <div id="profile-action">
-                            <button id="delete"><i class="fa-regular fa-trash-can"></i>Delete profile</button>
-                            <div id="quick-actions">
-                                <button>Save changes</button>
-                                <button type="button" id="cancel">Cancel</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+        <div id="profile-management">
+            <div class='avatar'>
+                <img src="https://elouwerse.nl/placecircle/200">
             </div>
+            <h2>Macaron Croasan</h2>
+            <div id="update-delete">
+                <button class="button"><i class="fa-solid fa-pencil"></i>Edit profile</button>
+                <form id="edit-anim-form" style="display: none;">
+
+                    <label class="edit-label-form" for="name">
+                        <p>Name:</p>
+                        <input type="text" name="name" placeholder="Name...">
+                    </label>
+
+                    <label class="edit-label-form" for="lastname">
+                        <p>Lastname:</p>
+                        <input type="text" name="lastname" placeholder="Lastname...">
+                    </label>
+
+                    <label class="edit-label-form" for="email">
+                        <p>Email:</p>
+                        <input type="email" name="email" placeholder="Email...">
+                    </label>
+
+                    <label class="edit-label-form" for="password">
+                        <p>Password:</p>
+                        <input type="password" name="password" placeholder="Password...">
+                    </label>
+
+                    <label class="edit-label-form" for="password2">
+                        <p>Verify password:</p>
+                        <input type="password" name="password2" placeholder="Verify password...">
+                    </label>
+
+                    <label class="edit-label-form" for="phone">
+                        <p>Phone number:</p>
+                        <input type="text" name="phone" placeholder="Phone number...">
+                    </label>
+
+                    <label class="edit-label-form" for="image">
+                        <p>Profile image:</p>
+                        <input type="file" name="image" accept="image/*">
+                    </label>
+                    <div id="profile-action">
+                        <button id="delete"><i class="fa-regular fa-trash-can"></i>Delete profile</button>
+                        <div id="quick-actions">
+                            <button>Save changes</button>
+                            <button type="button" id="cancel">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="profile-view">
+            <div id="square"></div>
         </div>
     </main>
 </body>
