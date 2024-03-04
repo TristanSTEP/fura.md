@@ -407,8 +407,8 @@ main .search-load form button i {
   align-items: center;
   gap: 10px;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 #main-create h1 {
   font-size: 2.5rem;
@@ -461,6 +461,27 @@ main .search-load form button i {
   gap: 20px;
 }
 
+@media (max-width: 650px) {
+  #form-create {
+    width: 100% !important;
+    height: 100%;
+    box-shadow: none;
+  }
+  #form-inside-row {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+  #upload-image-div {
+    height: 230px !important;
+  }
+}
+@media (max-height: 700px) {
+  #main-create {
+    height: 800px;
+  }
+}
 #main-account {
   width: 1200px;
   margin: auto;

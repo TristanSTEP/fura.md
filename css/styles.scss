@@ -441,13 +441,13 @@ main {
 
 
 
-// // create.html start m
+// create.html start m
 #main-create {
     @include flex(column, center, center);
     gap: $gap;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
     h1 {
         font-size: $titleSize;
     }
@@ -484,8 +484,27 @@ main {
     }
 }
 
-
-// // create.html end m
+// responsive read.html m start
+@media (max-width: 650px) {
+    #form-create {
+        width: 100% !important;
+        height: 100%;
+        box-shadow: none;
+    }
+    #form-inside-row {
+        @include flex(column !important, center, center);
+    }
+    #upload-image-div {
+        height: 230px !important;
+    }
+}
+@media (max-height: 700px) {
+    #main-create {
+        height: 800px;
+    }
+}
+// responsive read.html m end
+// create.html end m
 
 // read.html furnizor-users start georgeXdev
 
