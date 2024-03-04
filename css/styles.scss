@@ -27,6 +27,8 @@ $iconSize: 1.25rem;
 $inputTextSize: 1.25rem;
 $minWidth: 250px;
 
+$box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+
 
 * {
     margin: 0;
@@ -446,91 +448,38 @@ main {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-
     h1 {
         font-size: $titleSize;
     }
-
     #form-create {
         @include flex(column, center, center);
-        gap: calc($gap * 2);
+        gap: calc($gap * 3);
         width: max-content;
-        padding: calc($padding * 2);
+        padding: calc($padding * 3);
         border-radius: $borderRadius;
-        box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
-
-        #create-name-lastname {
-            @include flex(row, flex-start, flex-start);
-            width: 500px;
-            gap: $gap;
-        }
-
-        .label-create {
-            @include flex(column, flex-start, flex-start);
-            gap: $gap;
-
-            p {
-                font-size: calc($subtitleSize + 0.5rem);
-                padding: 0 $padding;
-                font-weight: 500;
-            }
-
-            input {
-                padding: 0 $padding;
-                outline: none;
-                border: none;
-                border-bottom: 1px solid $backgroundColor;
-                min-width: 500px;
-                height: 40px;
-                font-size: $subtitleSize;
-                background: white;
-                transition: 0.3s ease-in-out;
-            }
-
-            input:focus {
-                border-bottom: 1px solid $blue;
-            }
-
-            select {
-                border: none;
-                border-bottom: 1px solid $backgroundColor;
-                padding: $padding;
-                outline: none;
-                min-width: 500px;
-                height: 40px;
-                font-size: $subtitleSize;
-                background: white;
-
-                option {
-                    font-size: $subtitleSize;
-                    padding: $padding;
+        box-shadow: $box-shadow;
+        #form-inside-row {
+            @include flex(row, center, center);
+            gap: calc($gap * 2);
+            #upload-image-div {
+                @include flex(column, flex-end, center);
+                height: 100%;
+                gap: calc($gap * 2);
+                #tipa-image {
+                    @include flex(row, center, center);
+                    height: 100%;
+                    width: 100%;
+                    border-radius: $borderRadius;
+                    background-color: $backgroundColor;
+                    p {
+                        font-size: $subtitleSize;
+                    }
                 }
             }
-        }
-
-        .label-create-image {
-            width: 100%;
-            padding: $padding;
-            @include flex(row, space-between, flex-start);
-
-            p {
-                font-size: calc($subtitleSize + 0.5rem);
-                font-weight: 500;
+            #inputs {
+                @include flex(column, center, center);
+                gap: calc($gap * 2);
             }
-        }
-
-        button {
-            padding: $padding;
-            min-width: 500px;
-            height: 50px;
-            font-size: calc($subtitleSize + 0.5rem);
-            border-radius: $borderRadius;
-            background-color: $blue;
-            border: none;
-            font-weight: bold;
-            color: $backgroundColor;
-            box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
-            cursor: pointer;
         }
     }
 }
