@@ -214,11 +214,11 @@ main {
         .form-group {
             @include flex(row, center, center);
             background-color: $backgroundColor;
-            padding: $padding;
+            padding: calc($padding + 10px);
             border-radius: $borderRadius;
             width: fit-content;
             margin: auto;
-            box-shadow: 0 0 15px hsla(226, 100%, 50%, 0.158);
+            box-shadow: $box-shadow;
 
             input {
                 border: none;
@@ -273,8 +273,10 @@ main {
             width: fit-content;
             gap: calc($gap + 40px);
             border-radius: $borderRadius;
+            border: 2px solid $backgroundColor;
+            box-shadow: 0 5px 15px #0438f211;
             padding: $padding;
-            background-color: $backgroundColor;
+            background-color: white;
 
             .avatar-name {
                 @include flex(row, center, center);
@@ -334,7 +336,7 @@ main {
                 button {
                     height: 40px;
                     width: 40px;
-                    border-radius: $borderRadius;
+                    border-radius: 100%;
                     background-color: white;
                     border: none;
                     cursor: pointer;
@@ -347,11 +349,11 @@ main {
                         font-size: $iconSize;
                     }
 
-                    // &:hover {
-                    //     border: 2px solid $blue;
-                    //     background-color: white;
-                    //     color: $blue;
-                    // }
+                    &:hover {
+                        border: 2px solid $blue;
+                        background-color: $blue;
+                        color: white;
+                    }
                 }
             }
 
@@ -376,6 +378,7 @@ main {
         padding: calc($padding + 15px);
         border-radius: $borderRadius;
         position: absolute;
+        box-shadow: $box-shadow;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -448,9 +451,11 @@ main {
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
+
     h1 {
         font-size: $titleSize;
     }
+
     #form-create {
         @include flex(column, center, center);
         gap: calc($gap * 3);
@@ -458,24 +463,29 @@ main {
         padding: calc($padding * 3);
         border-radius: $borderRadius;
         box-shadow: $box-shadow;
+
         #form-inside-row {
             @include flex(row, center, center);
             gap: calc($gap * 2);
+
             #upload-image-div {
                 @include flex(column, flex-end, center);
                 height: 100%;
                 gap: calc($gap * 2);
+
                 #tipa-image {
                     @include flex(row, center, center);
                     height: 100%;
                     width: 100%;
                     border-radius: $borderRadius;
                     background-color: $backgroundColor;
+
                     p {
                         font-size: $subtitleSize;
                     }
                 }
             }
+
             #inputs {
                 @include flex(column, center, center);
                 gap: calc($gap * 2);
@@ -491,18 +501,22 @@ main {
         height: 100%;
         box-shadow: none;
     }
+
     #form-inside-row {
         @include flex(column !important, center, center);
     }
+
     #upload-image-div {
         height: 230px !important;
     }
 }
+
 @media (max-height: 700px) {
     #main-create {
         height: 800px;
     }
 }
+
 // responsive read.html m end
 // create.html end m
 
@@ -521,21 +535,21 @@ main {
         height: 500px;
         background-color: $blue;
     }
+
     // placeholder
 
     #profile-management {
         .avatar {
             @include flex(column, center, center);
         }
+
         h2 {
             font-size: $subtitleSize;
             font-weight: 500;
         }
 
         #update-delete {
-            button {
-                
-            }
+            button {}
         }
     }
 

@@ -189,12 +189,12 @@ main .search-load form button i {
   justify-content: center;
   align-items: center;
   background-color: #f1f4ff;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  box-shadow: 0 0 15px hsla(226, 100%, 50%, 0.158);
+  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
 }
 #provider-div .heading .form-group input {
   border: none;
@@ -249,8 +249,10 @@ main .search-load form button i {
   width: fit-content;
   gap: 50px;
   border-radius: 10px;
+  border: 2px solid #f1f4ff;
+  box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
   padding: 10px;
-  background-color: #f1f4ff;
+  background-color: white;
 }
 #provider-div .list #provider-user .avatar-name {
   display: flex;
@@ -304,7 +306,7 @@ main .search-load form button i {
 #provider-div .list #provider-user .action-buttons button {
   height: 40px;
   width: 40px;
-  border-radius: 10px;
+  border-radius: 100%;
   background-color: white;
   border: none;
   cursor: pointer;
@@ -318,6 +320,11 @@ main .search-load form button i {
 }
 #provider-div .list #provider-user .action-buttons button i {
   font-size: 1.25rem;
+}
+#provider-div .list #provider-user .action-buttons button:hover {
+  border: 2px solid #0437F2;
+  background-color: #0437F2;
+  color: white;
 }
 #provider-div .list #provider-user .mail {
   display: flex;
@@ -345,6 +352,7 @@ main .search-load form button i {
   padding: 25px;
   border-radius: 10px;
   position: absolute;
+  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
