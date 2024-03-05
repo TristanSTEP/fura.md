@@ -517,7 +517,7 @@ main {
     }
 }
 
-// responsive read.html m end
+// responsive create.html m end
 // create.html end m
 
 // read.html furnizor-users start georgeXdev
@@ -533,26 +533,39 @@ main {
     #square {
         width: 500px;
         height: 500px;
-        background-color: $blue;
+        background-color: #859fff;
+        border-radius: 10px;
     }
 
     // placeholder
 
     #profile-management {
-        .avatar {
-            @include flex(column, center, center);
+        #profile-avatar {
+            @include flex(row, center, center);
+            gap: $gap;
+            margin-bottom: $gap;
+            .avatar {
+                @include flex(column, center, center);
+            }
+
+            #profile-avatar-text {
+                @include flex(column, center, flex-start);
+                gap: $gap;
+
+                h2 {
+                    font-size: calc($subtitleSize + 6px);
+                    font-weight: 600;
+                }
+
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                }
+            }
         }
 
-        h2 {
-            font-size: $subtitleSize;
-            font-weight: 500;
-        }
-
-        #update-delete {
-            button {}
-        }
+        #update-delete {}
     }
-
 
 }
 
@@ -603,76 +616,7 @@ main {
 //                     }
 //                 }
 
-//                 #edit-anim-form {
-//                     @include flex(column, center, center);
-//                     gap: calc($gap + 10px);
-//                     padding: calc($padding * 2);
-//                     box-shadow: $cardShadow;
-//                     border-radius: $borderRadius;
 
-//                     .edit-label-form {
-//                         @include flex(column, flex-start, flex-start);
-//                         gap: $gap;
-//                         margin: 15px 0;
-//                         width: 100%;
-//                         font-size: calc($text + 2px);
-
-//                         p {
-//                             font-size: calc($subtitleSize + 2px);
-//                             padding: 0 $padding;
-//                             font-weight: 400;
-//                         }
-
-//                         input {
-//                             padding: 0 $padding;
-//                             outline: none;
-//                             border: none;
-//                             border-bottom: 1px solid $backgroundColor;
-//                             width: 100%;
-//                             height: 35px;
-//                             font-size: $subtitleSize;
-//                             background: white;
-//                             transition: 0.3s ease-in-out;
-//                         }
-
-//                         input:focus {
-//                             border-bottom: 1px solid $blue;
-//                         }
-//                     }
-
-//                     #profile-action {
-//                         width: 100%;
-//                         @include flex(column, flex-start, flex-start);
-//                         gap: calc($gap * 2);
-
-//                         #delete {
-//                             @include flex(row, center, center);
-//                             gap: $gap;
-//                             background: none;
-//                             width: 190px;
-//                             border: 1px solid red;
-//                             color: red;
-
-//                             i {
-//                                 font-size: calc($text + 6px);
-//                             }
-//                         }
-
-//                         #quick-actions {
-//                             width: 100%;
-//                             @include flex(row, space-between, center);
-//                             gap: $gap;
-
-//                             button {
-//                                 width: 190px;
-//                             }
-
-//                             #cancel {
-//                                 background-color: rgb(179, 179, 179);
-//                             }
-//                         }
-//                     }
-//                 }
 //             }
 //         }
 //     }

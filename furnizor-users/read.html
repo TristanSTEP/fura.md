@@ -15,22 +15,27 @@
 <body>
     <main class="assets" id="main-account">
         <div id="profile-management">
-            <div class='avatar'>
-                <img src="https://elouwerse.nl/placecircle/200">
+            <div id="profile-avatar">
+                <div class='avatar'>
+                    <img src="https://elouwerse.nl/placecircle/200">
+                </div>
+                <div id="profile-avatar-text">
+                    <h2>Macaron Croasan</h2>
+                    <h3>Online provider</h3>
+                </div>
             </div>
-            <h2>Macaron Croasan</h2>
             <div id="update-delete">
                 <button id='edit-btn' class="button"><i class="fa-solid fa-pencil"></i>Edit profile</button>
-                <form id="edit-anim-form" style="display: none;">
+                <form id="form-read" style="display: none;">
 
                     <label class="edit-label-form" for="name">
                         <p>Name:</p>
-                        <input type="text" name="name" placeholder="Name...">
+                        <input type="text" name="name" placeholder="First name">
                     </label>
 
                     <label class="edit-label-form" for="lastname">
                         <p>Lastname:</p>
-                        <input type="text" name="lastname" placeholder="Lastname...">
+                        <input type="text" name="lastname" placeholder="Last name">
                     </label>
 
                     <label class="edit-label-form" for="email">

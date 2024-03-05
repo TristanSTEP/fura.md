@@ -1,6 +1,6 @@
 // update in read.html start
 
-let form = document.getElementById("edit-anim-form");
+let form = document.getElementById("form-read");
 let cancelBtn = document.getElementById("cancel");
 let openBtn = document.getElementById("edit-btn");
 
