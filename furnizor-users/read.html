@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <main class="assets" id="main-account">
+    <main id="main-account">
         <div id="profile-management">
             <div id="profile-avatar">
                 <div class='avatar'>
@@ -27,47 +27,20 @@
             <div id="update-delete">
                 <button id='edit-btn' class="button"><i class="fa-solid fa-pencil"></i>Edit profile</button>
                 <form id="form-read" style="display: none;">
-
-                    <label class="edit-label-form" for="name">
-                        <p>Name:</p>
-                        <input type="text" name="name" placeholder="First name">
-                    </label>
-
-                    <label class="edit-label-form" for="lastname">
-                        <p>Lastname:</p>
-                        <input type="text" name="lastname" placeholder="Last name">
-                    </label>
-
-                    <label class="edit-label-form" for="email">
-                        <p>Email:</p>
-                        <input type="email" name="email" placeholder="Email...">
-                    </label>
-
-                    <label class="edit-label-form" for="password">
-                        <p>Password:</p>
-                        <input type="password" name="password" placeholder="Password...">
-                    </label>
-
-                    <label class="edit-label-form" for="password2">
-                        <p>Verify password:</p>
-                        <input type="password" name="password2" placeholder="Verify password...">
-                    </label>
-
-                    <label class="edit-label-form" for="phone">
-                        <p>Phone number:</p>
-                        <input type="text" name="phone" placeholder="Phone number...">
-                    </label>
-
-                    <label class="edit-label-form" for="image">
-                        <p>Profile image:</p>
-                        <input type="file" name="image" accept="image/*">
-                    </label>
+                    <div id="form-read-inputs">
+                        <input class="input" type="text" name="name" placeholder="Name..." required>
+                        <input class="input" type="email" name="email" placeholder="Email..." required>
+                        <input class="input" type="lastname" name="lastname" placeholder="Lastname..." required>
+                        <input class="input" type="password" name="password" placeholder="Password..." required>
+                        <input class="input" type="text" name="phone" placeholder="Phone number..." required>
+                        <input class="input" type="password" name="password2" placeholder="Verify password..." required>
+                    </div>
                     <div id="profile-action">
-                        <button id="delete"><i class="fa-regular fa-trash-can"></i>Delete profile</button>
                         <div id="quick-actions">
                             <button>Save changes</button>
                             <button type="button" id="cancel">Cancel</button>
                         </div>
+                        <button id="delete"><i class="fa-regular fa-trash-can"></i>Delete profile</button>
                     </div>
                 </form>
             </div>

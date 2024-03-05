@@ -449,7 +449,7 @@ main {
     @include flex(column, center, center);
     gap: $gap;
     width: 100vw;
-    min-height: 100vh;
+    max-height: 100vh;
     overflow-x: hidden;
 
     h1 {
@@ -513,7 +513,7 @@ main {
 
 @media (max-height: 700px) {
     #main-create {
-        height: 800px;
+        height: 900px;
     }
 }
 
@@ -540,16 +540,19 @@ main {
     // placeholder
 
     #profile-management {
+        @include flex(column, flex-start, flex-start);
+
         #profile-avatar {
             @include flex(row, center, center);
             gap: $gap;
             margin-bottom: $gap;
+
             .avatar {
-                @include flex(column, center, center);
+                @include flex(column, flex-start, flex-start);
             }
 
             #profile-avatar-text {
-                @include flex(column, center, flex-start);
+                @include flex(column, flex-start, flex-start);
                 gap: $gap;
 
                 h2 {
@@ -564,7 +567,39 @@ main {
             }
         }
 
-        #update-delete {}
+        #update-delete {
+            @include flex(column, center, flex-start);
+            gap: $gap;
+
+
+            #form-read {
+                @include flex(column, center, flex-start);
+                border: 1px solid red;
+                gap: 20px;
+
+
+                #form-read-inputs {
+                    @include grid(2);
+                    gap: $gap;
+                    transition-delay: 0.25s;
+                    transition: all 0.5s ease-in-out;
+                    border: 1px solid blue;
+
+                }
+
+                #profile-action {
+                    @include flex(column, center, center);
+                    border: 1px solid yellowgreen;
+
+                    #quick-actions {
+                        @include flex(row, center, center);
+                        gap: 30px;
+                    }
+                }
+            }
+
+
+        }
     }
 
 }
