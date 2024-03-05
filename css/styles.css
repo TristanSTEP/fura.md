@@ -553,8 +553,7 @@ main .search-load form button i {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  border: 1px solid red;
-  gap: 20px;
+  gap: 30px;
 }
 #main-account #profile-management #update-delete #form-read #form-read-inputs {
   display: grid;
@@ -562,19 +561,80 @@ main .search-load form button i {
   gap: 10px;
   transition-delay: 0.25s;
   transition: all 0.5s ease-in-out;
-  border: 1px solid blue;
+  margin-bottom: 15px;
 }
 #main-account #profile-management #update-delete #form-read #profile-action {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  border: 1px solid yellowgreen;
+  align-items: flex-start;
 }
 #main-account #profile-management #update-delete #form-read #profile-action #quick-actions {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
+}
+#main-account #profile-management #update-delete #form-read #profile-action #quick-actions #save {
+  background-color: #04AA6D;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #04AA6D;
+  padding: 10px 0px;
+  outline: none;
+  width: 250px;
+  transition: all 0.15s ease-in;
+}
+#main-account #profile-management #update-delete #form-read #profile-action #quick-actions #save:hover {
+  background-color: white;
+  color: rgb(68, 68, 68);
+}
+#main-account #profile-management #update-delete #form-read #profile-action #quick-actions #cancel {
+  background-color: #1D2A35;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid rgb(95, 95, 95);
+  padding: 10px 100px;
+  outline: none;
+  transition: all 0.15s ease-in;
+}
+#main-account #profile-management #update-delete #form-read #profile-action #quick-actions #cancel:hover {
+  background-color: white;
+  color: #1D2A35;
+}
+#main-account #profile-management #update-delete #form-read #profile-action #delete {
+  margin-top: 15px;
+  background-color: red;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid red;
+  padding: 10px 72px;
+  outline: none;
+  transition: all 0.15s ease-in;
+}
+#main-account #profile-management #update-delete #form-read #profile-action #delete:hover {
+  background-color: white;
+  color: red;
 }/*# sourceMappingURL=styles.css.map */
