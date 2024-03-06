@@ -488,160 +488,15 @@ main {
 
 // read.html furnizor-users start georgeXdev
 
+
+
+
 #main-account {
-    width: 1200px;
+    width: 1000px;
     margin: auto;
     @include flex(row, space-between, flex start);
     margin-top: 50px;
-    overflow-x: hidden;
-
-    // placeholder
-    #square {
-        width: 500px;
-        height: 500px;
-        background-color: #859fff;
-        border-radius: 10px;
-    }
-
-    // placeholder
-
-    #profile-management {
-        @include flex(column, flex-start, flex-start);
-
-        #profile-avatar {
-            @include flex(row, center, center);
-            gap: $gap;
-            margin-bottom: $gap;
-
-            .avatar {
-                @include flex(column, flex-start, flex-start);
-            }
-
-            #profile-avatar-text {
-                @include flex(column, flex-start, flex-start);
-                gap: $gap;
-
-                h2 {
-                    font-size: calc($subtitleSize + 6px);
-                    font-weight: 600;
-                }
-
-                h3 {
-                    font-size: 1.6rem;
-                    font-weight: 400;
-                }
-            }
-        }
-
-        #update-delete {
-            @include flex(column, center, flex-start);
-            gap: $gap;
-
-
-            #form-read {
-                @include flex(column, center, flex-start);
-                // border: 1px solid red;
-                gap: 30px;
-
-                // comit evenining
-                #form-read-inputs {
-                    @include grid(2);
-                    gap: $gap;
-                    transition-delay: 0.25s;
-                    transition: all 0.5s ease-in-out;
-                    // border: 1px solid blue;
-                    margin-bottom: 15px;
-
-                }
-
-
-                #profile-action {
-                    @include flex(column, center, flex-start);
-
-                    #quick-actions {
-                        @include flex(row, center, center);
-                        gap: $gap;
-
-                        #save {
-                            background-color: #04AA6D;
-                            color: white;
-                            @include flex(row, center, center);
-                            gap: $gap;
-                            border-radius: $borderRadius;
-                            font-size: $inputTextSize;
-                            cursor: pointer;
-                            border: 1px solid #04AA6D;
-                            padding: 10px 0px;
-                            outline: none;
-                            width: 250px;
-
-                            transition: all 0.15s ease-in;
-
-                            &:hover {
-                                background-color: white;
-                                color: rgb(68, 68, 68);
-                            }
-                        }
-
-                        #cancel {
-                            background-color: #1D2A35;
-                            color: white;
-                            @include flex(row, center, center);
-                            gap: $gap;
-                            border-radius: $borderRadius;
-                            font-size: $inputTextSize;
-                            cursor: pointer;
-                            border: 1px solid rgb(95, 95, 95);
-                            padding: 10px 100px;
-                            outline: none;
-
-                            transition: all 0.15s ease-in;
-
-                            &:hover {
-                                background-color: white;
-                                color: #1D2A35;
-                            }
-                        }
-                    }
-
-                    #delete {
-
-                        margin-top: 15px;
-                        background-color: red;
-                        color: white;
-                        @include flex(row, center, center);
-                        gap: $gap;
-                        border-radius: $borderRadius;
-                        font-size: $inputTextSize;
-                        cursor: pointer;
-                        border: 1px solid red;
-                        padding: 10px 72px;
-                        outline: none;
-
-                        transition: all 0.15s ease-in;
-
-                        &:hover {
-                            background-color: white;
-                            color: red;
-                        }
-                    }
-                }
-            }
-
-
-        }
-    }
-
-}
-
-
-// read.html furnizor-users start georgeXdev
-#main-account {
-    width: 1200px;
-    margin: auto;
-    @include flex(row, space-between, flex start);
-    margin-top: 50px;
-    overflow-x: hidden;
+    overflow-x: visible;
 
     #profile-management {
         @include flex(column, flex-start, flex-start);
@@ -772,17 +627,41 @@ main {
 
     // placeholder
     #square {
-        width: 800px;
-        height: 500px;
-        background-color: #fff;
+        width: 600px;
+        height: 550px;
+        background-color: white;
         border-radius: 10px;
         padding: calc($padding + 30px);
-        border: 1px solid #858fff;
-        box-shadow: 0 0 15px #0438f211;
+        border: 1px solid #dde0ff;
+        box-shadow: $box-shadow;
 
         #text-content {
             @include flex(column, center, flex-start);
-            gap: $gap;
+            gap: calc($gap + 20px);
+
+            h1 {
+                font-size: calc($titleSize + 6px);
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: calc($text + 8px);
+                font-weight: normal;
+                @include flex(row, center, center);
+                gap: calc($gap - 4px);
+
+                i {
+                    font-size: calc($iconSize + 6px);
+                }
+            }
+
+            p {
+                width: 450px;
+                font-size: calc($text + 6px);
+                font-weight: 300;
+            }
+
         }
     }
 }
