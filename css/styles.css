@@ -454,23 +454,34 @@ main .search-load form button i {
     height: 900px;
   }
 }
-#main-account {
+#read {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 20px;
+}
+#read #main-account {
   width: 1000px;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex start;
-  margin-top: 50px;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow-x: visible;
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  border: 1px solid #dde0ff;
+  box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
 }
-#main-account #profile-management {
+#read #main-account #profile-management {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-#main-account #profile-management #profile-avatar {
+#read #main-account #profile-management #profile-avatar {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -478,42 +489,45 @@ main .search-load form button i {
   gap: 10px;
   margin-bottom: 10px;
 }
-#main-account #profile-management #profile-avatar .avatar {
+#read #main-account #profile-management #profile-avatar .avatar {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-#main-account #profile-management #profile-avatar #profile-avatar-text {
+#read #main-account #profile-management #profile-avatar #profile-avatar-text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
 }
-#main-account #profile-management #profile-avatar #profile-avatar-text h2 {
+#read #main-account #profile-management #profile-avatar #profile-avatar-text h2 {
   font-size: calc(1.5rem + 6px);
   font-weight: 600;
 }
-#main-account #profile-management #profile-avatar #profile-avatar-text h3 {
+#read #main-account #profile-management #profile-avatar #profile-avatar-text h3 {
   font-size: 1.6rem;
   font-weight: 400;
 }
-#main-account #profile-management #update-delete {
+#read #main-account #profile-management #update-delete {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
 }
-#main-account #profile-management #update-delete #form-read {
+#read #main-account #profile-management #update-delete h2 {
+  font-size: calc(1rem + 6px);
+}
+#read #main-account #profile-management #update-delete #form-read {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
 }
-#main-account #profile-management #update-delete #form-read #form-read-inputs {
+#read #main-account #profile-management #update-delete #form-read #form-read-inputs {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 10px;
@@ -521,27 +535,26 @@ main .search-load form button i {
   transition: all 0.5s ease-in-out;
   margin-bottom: 15px;
 }
-#main-account #profile-management #update-delete #form-read #profile-action {
+#read #main-account #profile-management #update-delete #form-read #profile-action {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-#main-account #profile-management #update-delete #form-read #profile-action #quick-actions {
+#read #main-account #profile-management #update-delete #form-read #profile-action #quick-actions {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-#main-account #profile-management #update-delete #form-read #profile-action #quick-actions #save {
+#read #main-account #profile-management #update-delete #form-read #profile-action #quick-actions #save {
   background-color: white;
   color: #0437F2;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border-radius: 10px;
   font-size: 1.25rem;
   cursor: pointer;
@@ -551,19 +564,18 @@ main .search-load form button i {
   width: 250px;
   transition: all 0.15s ease-in;
 }
-#main-account #profile-management #update-delete #form-read #profile-action #quick-actions #save:hover {
+#read #main-account #profile-management #update-delete #form-read #profile-action #quick-actions #save:hover {
   background-color: #0437F2;
   border: 1px solid #0437F2;
   color: white;
 }
-#main-account #profile-management #update-delete #form-read #profile-action #quick-actions #cancel {
+#read #main-account #profile-management #update-delete #form-read #profile-action #quick-actions #cancel {
   background-color: #fff;
   color: #1D2A35;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border-radius: 10px;
   font-size: 1.25rem;
   cursor: pointer;
@@ -572,12 +584,11 @@ main .search-load form button i {
   outline: none;
   transition: all 0.15s ease-in;
 }
-#main-account #profile-management #update-delete #form-read #profile-action #quick-actions #cancel:hover {
+#read #main-account #profile-management #update-delete #form-read #profile-action #quick-actions #cancel:hover {
   background-color: #1D2A35;
   color: #fff;
 }
-#main-account #profile-management #update-delete #form-read #profile-action #delete {
-  margin-top: 15px;
+#read #main-account #profile-management #update-delete #delete {
   background-color: white;
   color: #000;
   display: flex;
@@ -593,30 +604,21 @@ main .search-load form button i {
   outline: none;
   transition: all 0.15s ease-in;
 }
-#main-account #profile-management #update-delete #form-read #profile-action #delete:hover {
+#read #main-account #profile-management #update-delete #delete:hover {
   border-color: red;
   color: red;
 }
-#main-account #square {
-  width: 600px;
-  height: 550px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 40px;
-  border: 1px solid #dde0ff;
-  box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
-}
-#main-account #square #text-content {
+#read #main-account .profile-view #square #text-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 30px;
+  gap: 20px;
 }
-#main-account #square #text-content h1 {
+#read #main-account .profile-view #square #text-content h1 {
   font-size: calc(2.5rem + 6px);
 }
-#main-account #square #text-content a {
+#read #main-account .profile-view #square #text-content a {
   text-decoration: none;
   color: black;
   font-size: calc(1rem + 8px);
@@ -625,13 +627,70 @@ main .search-load form button i {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
-#main-account #square #text-content a i {
+#read #main-account .profile-view #square #text-content a i {
   font-size: calc(1.25rem + 6px);
 }
-#main-account #square #text-content p {
+#read #main-account .profile-view #square #text-content p {
   width: 450px;
   font-size: calc(1rem + 6px);
   font-weight: 300;
+}
+#read #main-account #confirm-delete-popup {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4862745098);
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#read #main-account #confirm-delete-popup .delete-popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  align-self: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 30px;
+  background: #f1f4ff;
+  gap: 18px;
+}
+#read #main-account #confirm-delete-popup .delete-popup-content p {
+  font-size: calc(1rem + 6px);
+}
+#read #main-account #confirm-delete-popup .delete-popup-content #confirm-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#read #main-account #confirm-delete-popup .delete-popup-content #confirm-buttons #confirm-yes {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.25rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+#read #main-account #confirm-delete-popup .delete-popup-content #confirm-buttons #confirm-no {
+  padding: 12px 32px;
+  border-radius: 10px;
+  background-color: #0437F2;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
