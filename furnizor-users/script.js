@@ -1,4 +1,4 @@
-document.getElementById('openPopupButton').addEventListener('click', function() {
+document.querySelector('.openPopupButton').addEventListener('click', function() {
     document.getElementById('pop-up').style.display = 'block';
 });
 

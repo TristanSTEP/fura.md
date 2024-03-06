@@ -12,29 +12,79 @@
 </head>
 <body>
     <div id="provider-div">
-        <div class="heading">
-            <h1>Providers list</h1>
-            <div class="form-group">
-                <input type="search" name="searchProvider" placeholder="Looking for a provider?" id="">
+        <div id="provider-heading-f">
+            <h1>Provider users list</h1>
+            <div id="provider-filters">
+                <form action="" method="">
+                    <select name="" class="input">
+                        <option value="">Alphabetically(ABC)</option>
+                        <option value="">Alphabetically(CBA)</option>
+                        <option value="">3 variant</option>
+                    </select>
+                    <div id="buttons">
+                        <button class="button">Apply filters</button>
+                        <button class="button">Clear filters</button>
+                    </div>
+                </form>
+                <input class='input' type="search" name="searchProvider" placeholder="Search...">
             </div>
         </div>
         <div class="list">
-            <div id="provider-user">
+            <!-- first user -->
+            <div class="provider-user">
                 <div class="avatar-name">
-                    <div id="avatar">
+                    <div class="avatar">
                         <img src="https://elouwerse.nl/placecircle/50">
                     </div>
-                        <h2>Macaron Croasan</h2>
+                    <h2>Macaron Croasan</h2>
                 </div>
-                <div class="mail">
-                    <h3>goshaz@gmail.com</h3>
+                <div class="provider-data">
+                    <p>goshaz@gmail.com</p>
                 </div>
-                <div class="phone">
+                <div class="provider-data">
                     <p>+373(60)05 31-05</p>
                 </div>
                 <div class="action-buttons">
                     <a href="./read.html"><i class="fa-solid fa-user"></i></a>
-                    <button id="openPopupButton"><i class="fa-solid fa-eye"></i></button>
+                    <button class="openPopupButton"><i class="fa-solid fa-eye"></i></button>
+                </div>
+            </div>
+            <!-- second user -->
+            <div class="provider-user">
+                <div class="avatar-name">
+                    <div class="avatar">
+                        <img src="https://elouwerse.nl/placecircle/50">
+                    </div>
+                    <h2>Marius Utica</h2>
+                </div>
+                <div class="provider-data">
+                    <p>wakandanotforever@gmail.com</p>
+                </div>
+                <div class="provider-data">
+                    <p>+373(60)05 31-01</p>
+                </div>
+                <div class="action-buttons">
+                    <a href="./read.html"><i class="fa-solid fa-user"></i></a>
+                    <button class="openPopupButton"><i class="fa-solid fa-eye"></i></button>
+                </div>
+            </div>
+            <!-- last user -->
+            <div class="provider-user">
+                <div class="avatar-name">
+                    <div class="avatar">
+                        <img src="https://elouwerse.nl/placecircle/50">
+                    </div>
+                    <h2>Ghenadii Ugandanknukles</h2>
+                </div>
+                <div class="provider-data">
+                    <p>Ugandanknuklessekta@gmail.com</p>
+                </div>
+                <div class="provider-data">
+                    <p>+373(60)05 00-00-00-00</p>
+                </div>
+                <div class="action-buttons">
+                    <a href="./read.html"><i class="fa-solid fa-user"></i></a>
+                    <button class="openPopupButton"><i class="fa-solid fa-eye"></i></button>
                 </div>
             </div>
         </div>
