@@ -17,6 +17,7 @@
                     <div class="tara-incarcare-div">
                         <label for="from-country">Tara de incarcare</label>
                         <select name="" id="from-country">
+                            <option value="" disabled selected>Selecteaza tara</option>
                             <option value="moldova">Moldova</option>
                             <option value="moldova">Romania</option>
                             <option value="moldova">Turcia</option>
@@ -26,13 +27,15 @@
                     <div class="oras-incarcare-div">
                         <label for="from-city">Orasul de incarcare</label>
                         <select name="" id="from-city">
+                            <option value="" disabled selected>Selecteaza orasul</option>
                             <option value="chisinau">Chisinau</option>
                             <option value="bucuresti">Bucuresti</option>
                             <option value="istanbul">Istanbul</option>
                         </select>
                     </div>
                     <div class="data-incarcare">
-                        <input type="date">
+                        <label for="">De la:</label>
+                        <input type="date" placeholder="dd-mm-yyyy">
                     </div>
                 </div>
                 
@@ -40,6 +43,7 @@
                     <div class="tara-descarcare-div">
                         <label for="to-country">Tara de descarcare</label>
                         <select name="" id="to-country">
+                            <option value="" disabled selected>Selecteaza tara</option>
                             <option value="moldova">Moldova</option>
                             <option value="moldova">Romania</option>
                             <option value="moldova">Turcia</option>
@@ -49,13 +53,15 @@
                     <div class="oras-descarcare-div">
                         <label for="to-city">Orasul de descarcare</label>
                         <select name="" id="to-city">
+                            <option value="" selected disabled>Selecteaza orasul</option>
                             <option value="chisinau">Chisinau</option>
                             <option value="bucuresti">Bucuresti</option>
                             <option value="istanbul">Istanbul</option>
                         </select>
                     </div>
                     <div class="data-descarcare">
-                        <input type="date">
+                        <label for="">Pana la:</label>
+                        <input type="date" placeholder="dd-mm-yyyy">
                     </div>
                 </div>
 
@@ -90,36 +96,46 @@
 
             <h1>Detalii marfa</h1>
             <div class="middle-div">
-                <div class="greutate">
-                    <label for="">Greutate</label>
-                    <input type="number">
+                <div class="second_middle_div">
+                    <div class="greutate">
+                        <label for="">Greutate</label>
+                        <input type="number" placeholder="Kg">
+                    </div>
+    
+                    <div class="volumul-marfii">
+                        <label for="">Volum marfa M<sup>3</sup>:</label>
+                        <input type="number" placeholder="Introduce-ti volumul">
+                    </div>
+    
+                    <div class="natura-marfii">
+                        <label for="">Natura marfii</label>
+                        <input type="text" placeholder="Natura marfii">
+                    </div>
                 </div>
+                
+                <div class="second2_middle_div">
 
-                <div class="volumul-marfii">
-                    <label for="">Volum marfa</label>
-                    <input type="number">
-                </div>
+                    <div class="comentarii">
+                        <label for="">Comentarii</label>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Scrie comantariu aici"></textarea>
+                    </div>
 
-                <div class="natura-marfii">
-                    <label for="">Natura marfii</label>
-                    <input type="text">
-                    <label for="">ADR</label>
-                    <input type="checkbox">
+                    <div class="price-div">
+                        <div class="price_div_div">
+                            <label for="">Pret</label>
+                            <input id="price" type="number" placeholder="Pret ">
+                        </div>
+                        <select id="valuta" name="" id="">
+                            <option value="">USD</option>
+                            <option value="">EUR</option>
+                            <option value="">MDL</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="comentarii">
-                    <label for="">Comentarii</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
+                
             </div>
 
-            <h1>Pret</h1>
-            <div class="bottom-div">
-                <div class="price-div">
-                    <label for="">Pret</label>
-                    <input type="number">
-                </div>
-                <button>Posteaza marfa</button>
-            </div>
+            <button>Posteaza marfa</button>
             
         </form>
     </main>
