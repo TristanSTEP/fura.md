@@ -1,0 +1,932 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin flex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+
+}
+
+
+
+@mixin flex2($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+
+}
+@mixin grid($columnsNumber) {
+    display: grid;
+    grid-template-columns: repeat($columnsNumber,5fr);
+}
+// Culori si stilizari text + iconite
+
+$blue: #0437F2; // Accent color
+$textColor: black;
+$textColor2: rgb(111, 111, 111);
+$textwhite: #ffff;
+$backgroundColor: #f1f4ff;
+$padding: 10px;
+$borderRadius: 10px;
+$gap: 10px;
+$titleSize: 2.5rem;
+// h1,h2
+$subtitleSize: 1.5rem;
+$text: 1rem; 
+// h3,h4
+$smallText: 0.8rem;
+// paragraf
+$iconSize: 1.25rem;
+// Iconita
+$titleSize2: 1.8rem;
+$inputTextSize: 1.25rem;
+$minWidth: 250px;
+
+$boxshadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+
+
+// Responsive dising 
+// 1 Phone 
+$mobile: 450px;
+$tablet: 768px;
+$desktop: 1024px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+@media screen and (max-width: $mobile) {
+    body {
+        height:96vh;
+        margin: auto;
+
+    }
+}
+
+
+.background-create {
+    text-align: center;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    margin: auto;
+    padding: $padding;
+    border-radius: $borderRadius;
+    background: url("../Image/truck\ background.jpg") ;
+    filter: brightness(80%);
+    @include flex(column, start, center);
+    background-size: cover;
+    background-repeat: no-repeat !important;
+
+    h1{
+        text-shadow: 0px 2px 2px rgb(0, 0, 0);
+        font-size: $titleSize;
+        color: $blue;
+        font-weight: 700;
+        filter: brightness(100%);
+    }
+    
+}
+@media screen and (max-width: $mobile) {
+   .background-create {
+        height: 60%;
+width:70%;
+filter: brightness(88%);
+
+border-radius: $borderRadius;
+@include flex(column, end, center);
+h1{
+    font-size: $titleSize2
+}
+
+    }
+
+
+}
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    .background-create {
+        height: 55%;
+width:75%;
+@include flex(column, end, center);
+h1{
+    font-size: $titleSize
+}
+
+    }
+}
+
+
+@media screen and (min-width: $tablet) and (max-width: $desktop){
+    .background-create {
+        height: 100%;
+width:100%;
+@include flex(column, start, center);
+h1{
+    font-size: $titleSize
+}
+
+    }
+}
+
+.create {
+    @include flex(column, center, center);
+text-align: center;
+
+
+    
+textarea {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: $padding;
+    background-color: $backgroundColor;
+    border: 1px solid $backgroundColor;
+    outline: none;
+    transition: border-color 0.15s ease-in;
+    border-radius: $borderRadius;
+    font-size: $inputTextSize;
+    box-shadow: $boxshadow;
+    min-width: $minWidth;
+    
+ textarea:focus {
+    outline: none;
+  
+}
+    &:focus {
+        border: 1px solid $blue;
+    }
+  }
+
+
+
+ h3 {
+    padding: $padding;
+    color: $textColor2;
+    font-size: $subtitleSize;
+
+  }
+ 
+
+  .input
+  {
+          padding: $padding;
+          background-color: $backgroundColor;
+          border: 1px solid $backgroundColor;
+          outline: none;
+          transition: border-color 0.15s ease-in;
+          border-radius: $borderRadius;
+          font-size: $inputTextSize;
+          min-width: $minWidth;
+      box-shadow: $boxshadow;
+      
+          &:focus {
+              border: 1px solid $blue;
+          }
+  
+          input {
+              display: none;
+          }
+      }
+  
+      #button {
+        background-color: $blue;
+        color: white;
+        @include flex(row, center, center);
+        gap: $gap;
+        font-size: $inputTextSize;
+        cursor: pointer;
+        border: 1px solid $blue;
+        transition: all 0.15s ease-in;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 5px $blue;
+    }
+        }
+
+    }
+        
+
+    
+
+    
+.image-input,
+.input,
+#button
+ {
+        padding: $padding;
+        margin: auto;
+        background-color: $backgroundColor;
+        border: 1px solid $backgroundColor;
+        outline: none;
+        transition: border-color 0.15s ease-in;
+        border-radius: $borderRadius;
+        font-size: $inputTextSize;
+        min-width: $minWidth;
+    box-shadow: $boxshadow;
+    
+        &:focus {
+            border: 1px solid $blue;
+        }
+
+        input {
+            display: none;
+        }
+    }
+
+    .image-input { 
+
+        transition: box-shadow 0.15s ease-in;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 5px $blue;
+        }
+
+       label {
+            @include flex(row, center, center);
+            gap: $gap;
+            font-size: $inputTextSize;
+            cursor: pointer;
+        }
+
+  
+    }
+
+    
+
+
+    // Update furnizori
+
+
+    
+
+.update-create {
+    width: 100%;
+height: 100%;
+background: #f1f4ff;
+    margin: auto;
+    padding: $padding;
+    border-radius: $borderRadius;
+    background: url("../Image/update-background.jpg") ;
+    filter: brightness(80%);
+    @include flex(column, center, center);
+    background-size: cover;
+    background-repeat: no-repeat !important;
+
+
+    h1{
+        text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        font-size: $titleSize;
+        color: $blue;
+        font-weight: 800;
+        
+        filter: brightness(100%);
+    }
+
+
+
+}
+
+@media screen and (max-width: $mobile) {
+    .update-create{
+         height: 60%;
+ width:70%;
+ filter: brightness(88%);
+ 
+ border-radius: $borderRadius;
+ @include flex(column, end, center);
+ h1{
+     font-size: $titleSize2
+ }
+ 
+     }
+ 
+ 
+ }
+ @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    .update-create {
+         height: 55%;
+ width:75%;
+ @include flex(column, end, center);
+ h1{
+     font-size: $titleSize
+ }
+ 
+     }
+ }
+ 
+ 
+ @media screen and (min-width: $tablet) and (max-width: $desktop){
+    .update-create{
+         height: 100%;
+ width:100%;
+ @include flex(column, start, center);
+ h1{
+     font-size: $titleSize
+ }
+ 
+     }
+ }
+ 
+
+
+.add1{ 
+    background-color: $blue;
+    padding: $padding;
+    margin: auto;
+@include flex(column,center,center);
+    height: 200px;
+    width: 800px;
+border-radius: $borderRadius;
+    border: 1px solid $blue;
+
+
+
+
+ h3 {
+    color: $textColor;
+    font-size: $subtitleSize;
+
+  }
+  .update{
+border-radius: $borderRadius;
+
+        border: 1px solid $textColor;
+        font-size: $text;
+        font-weight: 700;
+        height: 50px;
+        width: 220px;
+        background-color: $backgroundColor;
+        border: none;
+        cursor: pointer;
+        color: $textColor;
+        transition: .3s ease;
+    }
+   .update:hover {
+        filter: brightness(85%);
+    }
+
+
+
+    input[type=file] {
+        display: none;
+        font-size: $smallText;
+        width: 230px;
+        background-color:  #f1f4ff;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border: 1px solid $blue;
+        border-radius: 4px;
+      }
+
+
+      #altBotton{
+        border: 2px solid $textColor;
+        font-size: $text;
+        font-weight: 700;
+        height: 50px;
+        width: 50px;
+        background-color: $textColor;
+        border: none;
+        cursor: pointer;
+        color: white;
+        transition: .3s ease;
+        @include flex(row, center, center);
+    }
+
+
+    i {
+    
+        font-size: $iconSize;
+      color: $blue;
+
+    }
+    }
+
+
+    // Stergere furnizori
+
+
+.background-delete {
+        margin: auto;
+        padding: $padding;
+        border-radius: $borderRadius;
+        background: url("../Image/delete\ background.webp") ;
+        filter: brightness(80%);
+        @include flex(column, start, center);
+width: 100%;
+height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat !important;
+    
+        h1{
+            text-shadow: 2px 2px 2px rgb(0, 0, 0);
+            font-size: $titleSize;
+            color: $blue;
+            font-weight: 800;
+            
+            filter: brightness(100%);
+        }
+ 
+
+      p {
+            color: $textColor2;
+            font-size: $smallText;
+            font-weight: 600;
+        
+          }
+   
+     
+    
+    }
+    
+@media screen and (max-width: $mobile) {
+    .update-create{
+         height: 60%;
+ width:70%;
+ filter: brightness(88%);
+ 
+ border-radius: $borderRadius;
+ @include flex(column, end, center);
+ h1{
+     font-size: $titleSize2
+ }
+ 
+     }
+ 
+ 
+ }
+ @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    .update-create {
+         height: 55%;
+ width:75%;
+ @include flex(column, end, center);
+ h1{
+     font-size: $titleSize
+ }
+ 
+     }
+ }
+ 
+ 
+ @media screen and (min-width: $tablet) and (max-width: $desktop){
+    .update-create{
+         height: 100%;
+ width:100%;
+ @include flex(column, start, center);
+ h1{
+     font-size: $titleSize
+ }
+ 
+     }
+ }
+
+   .create{
+    h4 {
+        color: $textColor;
+        font-size: $text;
+    
+      }
+
+      
+  p {
+        color: $textColor;
+        font-size: $inputTextSize;
+        font-weight: 600;
+    
+      }
+    }
+ 
+
+    // Index.html 
+
+.furnizor{
+    background: #f1f4ff;
+    margin: auto;
+    padding: $padding;
+    border-radius: $borderRadius;
+    background: url("../Image/index\ Back.jpg") ;
+    filter: brightness(87%);
+    @include flex(column, center, center);
+height:60%;
+width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+
+
+         
+        h1{
+            text-shadow: 2px 2px 2px rgb(0, 0, 0);
+            font-size: $titleSize;
+            color: $blue;
+            font-weight: 800;
+            
+        }
+
+}
+@media screen and (max-width: $mobile) {
+    .furnizor{
+object-fit: cover;
+         height: 60%;
+ width:80%;
+ filter: brightness(88%);
+ 
+ border-radius: $borderRadius;
+ @include flex(column, end, center);
+ h1{
+     font-size: $titleSize2
+ }
+ 
+     }
+ 
+ 
+ }
+ @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    .furnizor{
+         height: 55%;
+ width:75%;
+ @include flex(column, end, center);
+ h1{
+     font-size: $titleSize
+ }
+ 
+     }
+ }
+ 
+ 
+ @media screen and (min-width: $tablet) and (max-width: $desktop){
+    .furnizor{
+         height: 100%;
+ width:100%;
+ @include flex(column, start, center);
+ h1{
+     font-size: $titleSize
+ }
+ 
+     }
+ }
+
+    .furnizor-info {
+        background-color: #f1f4ff;
+        @include flex(column, center, center);
+
+        img{
+            margin: auto;
+         width:50%;
+         height: 85%;
+            object-fit: cover;
+            border-radius: $borderRadius;
+
+        }
+
+
+                
+        h3 {
+            color: $textColor2;
+            font-size: $titleSize;
+        
+          }
+
+
+          
+      p {
+            color: $textColor;
+            font-size: $text;
+            font-weight: 700;
+        
+          }
+
+
+    }
+
+        .furnizor-image {
+@include grid(1);
+
+            margin: auto;
+        text-align: center;
+
+        }
+        @media screen and (max-width: $mobile) {
+            .furnizor-info {
+                padding: $padding;
+           margin: auto;
+         filter: brightness(88%);
+ width:75%;
+         
+         border-radius: $borderRadius;
+         h1{
+             font-size: $titleSize2
+         }
+         
+             }
+         
+         
+         }
+         @media screen and (min-width: $mobile) and (max-width: $tablet) {
+            .furnizor-info,.furnizor-image{
+
+                @include flex(column, center, center);
+                 height:50%;
+         width:80%;
+         margin: auto;
+
+         h1{
+             font-size: $titleSize
+         }
+         
+             }
+         }
+         
+         
+         @media screen and (min-width: $tablet) and (max-width: $desktop){
+            .furnizor-info,.furnizor-image{
+
+                @include flex(column, center, center);
+                 height:70%;
+         width:80%;
+         margin: auto;
+
+         h1{
+             font-size: $titleSize
+         }
+ 
+            img{
+                margin: auto;
+             width:50%;
+             height: 85%;
+                object-fit: cover;
+                border-radius: $borderRadius;
+    
+            }
+
+         }
+         
+             }
+        // Furnizor page [DHL]. 
+
+.furnizor-page{
+    background: #f1f4ff;
+    margin: auto;
+    padding: $padding;
+    border-radius: $borderRadius;
+    background: url("../Image/truck\ DHL.jpg") ;
+    filter: brightness(93%);
+    @include flex(column, center, center);
+width: 60%;
+height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+
+}
+
+@media screen and (max-width: $mobile) {
+    .furnizor-page {
+        margin: auto;
+        height: 60vh; 
+        width: 80%;
+        filter: brightness(88%);
+        border-radius: $borderRadius;
+        @include flex(column, end, center);
+        
+        h1 {
+            font-size: $titleSize2;
+        }
+    }
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    .furnizor-page {
+        margin: auto;
+        height: 55vh; 
+        width: 75%;
+        @include flex(column, end, center);
+        
+        h1 {
+            font-size: $titleSize;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+    .furnizor-page {
+        margin: auto;
+        width: 60%;
+        height: 40vh;
+        @include flex(column, start, center);
+        
+        h1 {
+            font-size: $titleSize;
+        }
+    }
+}
+
+
+
+
+.logistics{
+    @include flex(column, center, center);
+    text-align: center;
+                    
+    h3 {
+        color: $textColor2;
+        font-size: $titleSize;
+    
+      }
+}
+
+
+
+
+@media screen and (max-width: $mobile) {
+    .logistics{
+        margin: auto;
+        text-align: center;
+        
+ border-radius: $borderRadius;
+ @include flex(column, center, center);
+
+ 
+     }
+     
+     h3 {
+        color: $textColor2;
+        font-size: $titleSize2;
+    
+      }
+    }
+
+    
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+        .logistics{
+            margin: auto;
+            text-align: center;
+            
+     border-radius: $borderRadius;
+     @include flex(column, center, center);
+    
+     
+         }
+         
+         h3 {
+            color: $textColor2;
+            font-size: $titleSize2;
+        
+          }
+     
+         }
+     
+
+     @media screen and (min-width: $tablet) and (max-width: $desktop){
+        .logistics{
+            margin: auto;
+            text-align: center;
+            
+     border-radius: $borderRadius;
+     @include flex(column, center, center);
+    
+     
+         }
+         
+      
+     }
+    
+
+
+
+
+
+
+
+.furnizor2 {
+@include flex2(space-around,center);
+gap: 25px;
+}
+
+.info-furnizor {
+    
+    border-radius: $borderRadius;
+    height: 75px;
+    width: $minWidth;
+    background: $blue;
+box-shadow: $boxshadow;
+border: $blue;
+    @include flex(column, center, center);
+
+
+                 
+    h3 {
+        
+        color: $textwhite;
+        font-size: $titleSize;
+    
+      }
+
+
+      
+  p {
+    color: $textwhite;
+        font-size: $subtitleSize;
+        font-weight: 600;
+    
+    
+      }
+
+
+}
+
+@media screen and (max-width: $mobile) {
+    .furnizor2{
+        margin: auto;
+        
+ border-radius: $borderRadius;
+ @include flex(column, center, center);
+
+ 
+     }
+
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+        .furnizor2{
+            margin: auto;
+        
+            border-radius: $borderRadius;
+            @include flex(column, center, center);
+     }
+     
+         }
+     
+
+     @media screen and (min-width: $tablet) and (max-width: $desktop){
+        .furnizor2{
+            margin: auto;
+        
+            border-radius: $borderRadius;
+            @include flex2(center, center);
+         }
+     }
+    
+
+
+
+.backgrounds{
+    object-fit: cover;
+    padding: $padding;
+    background: #f1f4ff;
+    margin: auto;
+    padding: $padding;
+    border-radius: $borderRadius;
+    background: url("../Image/bkc.jpg") ;
+    filter: brightness(87%);
+    @include flex(column, start, center);
+    width: 40%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+
+
+}
+
+@media screen and (max-width: $mobile) {
+    .backgrounds {
+        width: 65%;
+        height:50%;
+        margin: auto;
+        filter: brightness(88%);
+        border-radius: $borderRadius;
+    }
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    .backgrounds {
+     
+        margin: auto;
+        filter: brightness(88%);
+        border-radius: $borderRadius;
+    }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+    .backgrounds {
+        width: 65%;
+        height:50%;
+        margin: auto;
+        filter: brightness(88%);
+        border-radius: $borderRadius;
+        
+        h1 {
+            font-size: $titleSize;
+        }
+    }
+}
