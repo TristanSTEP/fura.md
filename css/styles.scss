@@ -27,7 +27,7 @@ $iconSize: 1.25rem;
 $inputTextSize: 1.25rem;
 $minWidth: 250px;
 
-$box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.10);
+$box-shadow: 0 5px 15px #0438f211;
 
 
 * {
@@ -229,7 +229,6 @@ main {
             }
         }
     }
-
     .list {
         @include flex(column, center, center);
         gap: calc($gap + 5px);
@@ -277,17 +276,14 @@ main {
             .action-buttons {
                 @include flex(row, center, center);
                 gap: calc($gap + 10px);
-                border: 1px solid red;
                 a {
                     text-decoration: none;
                     color: $blue;
-
                     i {
                         font-size: $iconSize;
                         cursor: pointer;
                     }
                 }
-
                 button {
                     height: 40px;
                     width: 40px;
@@ -299,11 +295,9 @@ main {
                     @include flex(row, center, center);
                     transition: all 0.15s ease-in-out;
                     border: 2px solid $blue;
-
                     i {
                         font-size: $iconSize;
                     }
-
                     &:hover {
                         border: 2px solid $blue;
                         background-color: $blue;
@@ -311,25 +305,12 @@ main {
                     }
                 }
             }
-
-            .mail {
-                @include flex(row, center, center);
-                gap: calc($gap - 4px);
-            }
-
-            .phone {
-                @include flex(row, center, center);
-                gap: calc($gap - 4px);
-            }
         }
     }
-
     // pop-up georgeXdev start
     #pop-up {
-        @include flex(row, center, center);
         width: 800px;
-        height: fit-content;
-        background-color: $backgroundColor;
+        background-color: white;
         padding: calc($padding + 15px);
         border-radius: $borderRadius;
         position: absolute;
@@ -337,54 +318,51 @@ main {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-
-        button {
-            height: 30px;
-            width: 30px;
-            border-radius: $borderRadius;
-            background-color: white;
-            border: none;
-            cursor: pointer;
-            color: $blue;
-            @include flex(row, center, center);
-            transition: all 0.15s ease-in-out;
-            border: 2px solid $blue;
-
-            i {
-                font-size: $iconSize;
-            }
-
-            &:hover {
-                background-color: $blue;
-                color: white;
-            }
-        }
-
-        #popup-content {
-            @include flex(row, center, center);
-
-            img {
+        border: 2px solid $backgroundColor;
+        #popup-all {
+            @include flex(column, center, flex-end);
+            gap: $gap;
+            button {
+                padding: calc($padding - 2px) $padding;
                 border-radius: $borderRadius;
-
+                background-color: white;
+                cursor: pointer;
+                color: $blue;
+                transition: all 0.15s ease-in-out;
+                border: 2px solid $blue;
+                i {
+                    font-size: $iconSize;
+                }
+                &:hover {
+                    background-color: $blue;
+                    color: white;
+                }
             }
-
-            #text-content {
-                @include flex(column, space-between, flex-start);
-                gap: calc($gap + 10px);
-
-                h2 {
-                    font-size: calc($titleSize + 4px);
-                    font-weight: 500;
+            #popup-content {
+                @include flex(row, center, flex-start);
+                gap: calc($gap * 2);
+                img {
+                    border-radius: $borderRadius;
                 }
-
-                a {
-                    text-decoration: none;
-                    font-size: $subtitleSize;
-                    color: #303133;
-                }
-
-                p {
-                    font-size: calc($text + 6px);
+                #text-content {
+                    @include flex(column, space-between, flex-start);
+                    gap: calc($gap + 10px);
+                    h2 {
+                        font-size: calc($titleSize + 4px);
+                        font-weight: 500;
+                    }
+                    a {
+                        text-decoration: none;
+                        font-size: $subtitleSize;
+                        color: #303133;
+                        i {
+                            color: $blue;
+                            font-size: $subtitleSize;
+                        }
+                    }
+                    p {
+                        font-size: calc($text + 6px);
+                    }
                 }
             }
         }

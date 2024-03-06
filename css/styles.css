@@ -192,7 +192,7 @@ main .search-load form button i {
   width: 100%;
   gap: 10px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
   border: 2px solid #f1f4ff;
 }
 #provider-div #provider-heading-f #provider-filters form {
@@ -228,7 +228,7 @@ main .search-load form button i {
   width: 100%;
   border-radius: 10px;
   border: 2px solid #f1f4ff;
-  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
   padding: 10px;
   background-color: white;
 }
@@ -271,7 +271,6 @@ main .search-load form button i {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  border: 1px solid red;
 }
 #provider-div .list .provider-user .action-buttons a {
   text-decoration: none;
@@ -304,85 +303,72 @@ main .search-load form button i {
   background-color: #0437F2;
   color: white;
 }
-#provider-div .list .provider-user .mail {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
-#provider-div .list .provider-user .phone {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
 #provider-div #pop-up {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   width: 800px;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: #f1f4ff;
+  background-color: white;
   padding: 25px;
   border-radius: 10px;
   position: absolute;
-  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border: 2px solid #f1f4ff;
 }
-#provider-div #pop-up button {
-  height: 30px;
-  width: 30px;
+#provider-div #pop-up #popup-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+#provider-div #pop-up #popup-all button {
+  padding: 8px 10px;
   border-radius: 10px;
   background-color: white;
-  border: none;
   cursor: pointer;
   color: #0437F2;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   transition: all 0.15s ease-in-out;
   border: 2px solid #0437F2;
 }
-#provider-div #pop-up button i {
+#provider-div #pop-up #popup-all button i {
   font-size: 1.25rem;
 }
-#provider-div #pop-up button:hover {
+#provider-div #pop-up #popup-all button:hover {
   background-color: #0437F2;
   color: white;
 }
-#provider-div #pop-up #popup-content {
+#provider-div #pop-up #popup-all #popup-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 20px;
 }
-#provider-div #pop-up #popup-content img {
+#provider-div #pop-up #popup-all #popup-content img {
   border-radius: 10px;
 }
-#provider-div #pop-up #popup-content #text-content {
+#provider-div #pop-up #popup-all #popup-content #text-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
 }
-#provider-div #pop-up #popup-content #text-content h2 {
+#provider-div #pop-up #popup-all #popup-content #text-content h2 {
   font-size: calc(2.5rem + 4px);
   font-weight: 500;
 }
-#provider-div #pop-up #popup-content #text-content a {
+#provider-div #pop-up #popup-all #popup-content #text-content a {
   text-decoration: none;
   font-size: 1.5rem;
   color: #303133;
 }
-#provider-div #pop-up #popup-content #text-content p {
+#provider-div #pop-up #popup-all #popup-content #text-content a i {
+  color: #0437F2;
+  font-size: 1.5rem;
+}
+#provider-div #pop-up #popup-all #popup-content #text-content p {
   font-size: calc(1rem + 6px);
 }
 
@@ -409,7 +395,7 @@ main .search-load form button i {
   width: max-content;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
 }
 #main-create #form-create #form-inside-row {
   display: flex;
