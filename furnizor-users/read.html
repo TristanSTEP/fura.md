@@ -28,17 +28,17 @@
                 <button id='edit-btn' class="button"><i class="fa-solid fa-pencil"></i>Edit profile</button>
                 <form id="form-read" style="display: none;">
                     <div id="form-read-inputs">
-                        <input class="input" type="text" name="name" placeholder="Name..." required>
-                        <input class="input" type="email" name="email" placeholder="Email..." required>
-                        <input class="input" type="lastname" name="lastname" placeholder="Lastname..." required>
-                        <input class="input" type="password" name="password" placeholder="Password..." required>
-                        <input class="input" type="text" name="phone" placeholder="Phone number..." required>
-                        <input class="input" type="password" name="password2" placeholder="Verify password..." required>
+                        <input class="input" type="text" name="name" placeholder="Name" required>
+                        <input class="input" type="lastname" name="lastname" placeholder="Lastname" required>
+                        <input class="input" type="email" name="email" placeholder="Email" required>
+                        <input class="input" type="text" name="phone" placeholder="Phone number" required>
+                        <input class="input" type="password" name="password" placeholder="Password" required>
+                        <input class="input" type="password" name="password2" placeholder="Confirm password" required>
                     </div>
                     <div id="profile-action">
                         <div id="quick-actions">
                             <button id="save">Save changes</button>
-                            <button  type="button" id="cancel">Cancel</button>
+                            <button type="button" id="cancel">Cancel</button>
                         </div>
                         <button id="delete"><i class="fa-regular fa-trash-can"></i>Delete profile</button>
                     </div>
@@ -46,7 +46,15 @@
             </div>
         </div>
         <div class="profile-view">
-            <div id="square"></div>
+            <div id="square">
+                <div id="text-content">
+                    <h2> <i class="fa-solid fa-envelope"></i>Email</h2>
+                    <h2><i class="fa-solid fa-phone"></i>Phone</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae placeat, voluptatem
+                        praesentium officia excepturi totam tenetur quo aspernatur, eius exercitationem debitis
+                        blanditiis porro facilis laborum nisi corporis qui? Commodi, accusantium.</p>
+                </div>
+            </div>
         </div>
     </main>
 </body>

@@ -202,12 +202,15 @@ main {
     @include flex(column, center, center);
     gap: calc($gap + 10px);
     margin-top: 40px;
+
     #provider-heading-f {
         @include flex(column, center, center);
         gap: calc($gap + 20px);
+
         h1 {
             font-size: $titleSize;
         }
+
         #provider-filters {
             @include flex(row, space-between, flex-start);
             padding: calc($padding + 10px);
@@ -216,12 +219,15 @@ main {
             border-radius: $borderRadius;
             box-shadow: $box-shadow;
             border: 2px solid $backgroundColor;
+
             form {
                 @include flex(column, flex-start, flex-start);
                 gap: $gap;
+
                 option {
                     font-size: calc($text + 3px);
                 }
+
                 #buttons {
                     @include flex(row, center, center);
                     gap: $gap;
@@ -229,10 +235,12 @@ main {
             }
         }
     }
+
     .list {
         @include flex(column, center, center);
         gap: calc($gap + 5px);
         width: 1050px;
+
         .provider-user {
             display: grid;
             grid-template-columns: repeat(4, 320px 300px 300px 80px);
@@ -244,46 +252,57 @@ main {
             box-shadow: $box-shadow;
             padding: $padding;
             background-color: white;
+
             .avatar-name {
                 @include flex(row, flex-start, center);
                 gap: calc($gap + 10px);
+
                 .avatar {
                     width: 50px;
                     height: 50px;
                     border: 1px solid $blue;
                     border-radius: 100%;
                     overflow: hidden;
+
                     img {
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
                         transition: transform 0.15s ease-in;
+
                         &:hover {
                             transform: scale(1.1);
                         }
                     }
                 }
+
                 h2 {
                     font-size: calc($text + 8px);
                 }
             }
+
             .provider-data {
                 width: 300px;
+
                 p {
                     font-size: calc($text + 6px);
                 }
             }
+
             .action-buttons {
                 @include flex(row, center, center);
                 gap: calc($gap + 10px);
+
                 a {
                     text-decoration: none;
                     color: $blue;
+
                     i {
                         font-size: $iconSize;
                         cursor: pointer;
                     }
                 }
+
                 button {
                     height: 40px;
                     width: 40px;
@@ -295,9 +314,11 @@ main {
                     @include flex(row, center, center);
                     transition: all 0.15s ease-in-out;
                     border: 2px solid $blue;
+
                     i {
                         font-size: $iconSize;
                     }
+
                     &:hover {
                         border: 2px solid $blue;
                         background-color: $blue;
@@ -307,6 +328,7 @@ main {
             }
         }
     }
+
     // pop-up georgeXdev start
     #pop-up {
         width: 800px;
@@ -319,9 +341,11 @@ main {
         top: 50%;
         transform: translate(-50%, -50%);
         border: 2px solid $backgroundColor;
+
         #popup-all {
             @include flex(column, center, flex-end);
             gap: $gap;
+
             button {
                 padding: calc($padding - 2px) $padding;
                 border-radius: $borderRadius;
@@ -330,36 +354,45 @@ main {
                 color: $blue;
                 transition: all 0.15s ease-in-out;
                 border: 2px solid $blue;
+
                 i {
                     font-size: $iconSize;
                 }
+
                 &:hover {
                     background-color: $blue;
                     color: white;
                 }
             }
+
             #popup-content {
                 @include flex(row, center, flex-start);
                 gap: calc($gap * 2);
+
                 img {
                     border-radius: $borderRadius;
                 }
+
                 #text-content {
                     @include flex(column, space-between, flex-start);
                     gap: calc($gap + 10px);
+
                     h2 {
                         font-size: calc($titleSize + 4px);
                         font-weight: 500;
                     }
+
                     a {
                         text-decoration: none;
                         font-size: $subtitleSize;
                         color: #303133;
+
                         i {
                             color: $blue;
                             font-size: $subtitleSize;
                         }
                     }
+
                     p {
                         font-size: calc($text + 6px);
                     }
@@ -528,6 +561,7 @@ main {
                     #quick-actions {
                         @include flex(row, center, center);
                         gap: $gap;
+
                         #save {
                             background-color: #04AA6D;
                             color: white;
@@ -548,6 +582,7 @@ main {
                                 color: rgb(68, 68, 68);
                             }
                         }
+
                         #cancel {
                             background-color: #1D2A35;
                             color: white;
@@ -600,56 +635,156 @@ main {
 }
 
 
-// #main-account {
-//     width: 100vw;
-//     overflow-x: hidden;
+// read.html furnizor-users start georgeXdev
+#main-account {
+    width: 1200px;
+    margin: auto;
+    @include flex(row, space-between, flex start);
+    margin-top: 50px;
+    overflow-x: hidden;
 
-//     #all-inclusive {
-//         width: 80%;
-//         margin: 50px auto;
-//         box-shadow: $cardShadow;
-//         border-radius: $borderRadius;
-//         padding: calc($padding * 4) calc($padding * 3);
+    #profile-management {
+        @include flex(column, flex-start, flex-start);
 
-//         #m-data {
-//             width: 460px;
+        #profile-avatar {
+            @include flex(row, center, center);
+            gap: $gap;
+            margin-bottom: $gap;
 
-//             #m-data-avatar {
-//                 @include flex(column, center, center);
+            .avatar {
+                @include flex(column, flex-start, flex-start);
+            }
 
-//                 h2 {
-//                     font-size: $titleSize;
-//                     padding: calc($padding * 2) $padding;
-//                 }
-//             }
+            #profile-avatar-text {
+                @include flex(column, flex-start, flex-start);
+                gap: $gap;
 
-//             #update-delete {
-//                 @include flex(column, center, center);
-//                 gap: calc($gap * 2);
-//                 padding: $padding;
+                h2 {
+                    font-size: calc($subtitleSize + 6px);
+                    font-weight: 600;
+                }
 
-//                 button {
-//                     @include flex(row, center, center);
-//                     gap: $gap;
-//                     font-size: calc($text + 6px);
-//                     font-weight: 600;
-//                     padding: 6px 22px;
-//                     border-radius: calc($borderRadius - 6px);
-//                     background-color: $blue;
-//                     color: white;
-//                     outline: none;
-//                     border: none;
-//                     cursor: pointer;
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                }
+            }
+        }
 
-//                     i {
-//                         font-size: $subtitleSize;
-//                     }
-//                 }
+        #update-delete {
+            @include flex(column, center, flex-start);
+            gap: $gap;
 
 
-//             }
-//         }
-//     }
-// }
+            #form-read {
+                @include flex(column, center, flex-start);
+                // border: 1px solid red;
+                gap: 30px;
 
-// // read.html furnizor-users end
+                // comit evenining
+                #form-read-inputs {
+                    @include grid(1);
+                    gap: $gap;
+                    transition-delay: 0.25s;
+                    transition: all 0.5s ease-in-out;
+                    // border: 1px solid blue;
+                    margin-bottom: 15px;
+
+                }
+
+
+                #profile-action {
+                    @include flex(column, center, flex-start);
+
+                    #quick-actions {
+                        @include flex(column, center, center);
+                        gap: $gap;
+
+                        #save {
+                            background-color: white;
+                            color: $blue;
+                            @include flex(row, center, center);
+                            gap: $gap;
+                            border-radius: $borderRadius;
+                            font-size: $inputTextSize;
+                            cursor: pointer;
+                            border: 1px solid $blue;
+                            padding: 10px 0px;
+                            outline: none;
+                            width: 250px;
+                            transition: all 0.15s ease-in;
+
+                            &:hover {
+                                background-color: $blue;
+                                border: 1px solid $blue;
+                                color: white;
+                            }
+                        }
+
+                        #cancel {
+                            background-color: #fff;
+                            color: #1D2A35;
+                            @include flex(row, center, center);
+                            gap: $gap;
+                            border-radius: $borderRadius;
+                            font-size: $inputTextSize;
+                            cursor: pointer;
+                            border: 1px solid rgb(95, 95, 95);
+                            padding: 10px 100px;
+                            outline: none;
+
+                            transition: all 0.15s ease-in;
+
+                            &:hover {
+                                background-color: #1D2A35;
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    #delete {
+
+                        margin-top: 15px;
+                        background-color: white;
+                        color: #000;
+                        @include flex(row, center, center);
+                        gap: $gap;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+                        cursor: pointer;
+                        border: 1px solid #fff;
+                        padding: 10px 72px;
+                        outline: none;
+
+                        transition: all 0.15s ease-in;
+
+                        &:hover {
+                            border-color: red;
+                            color: red;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    // placeholder
+    #square {
+        width: 800px;
+        height: 500px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: calc($padding + 30px);
+        border: 1px solid #858fff;
+        box-shadow: 0 0 15px #0438f211;
+
+        #text-content {
+            @include flex(column, center, flex-start);
+            gap: $gap;
+        }
+    }
+}
+
+// Read.html => finish gDEV
