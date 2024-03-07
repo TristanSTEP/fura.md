@@ -492,12 +492,12 @@ main {
 #read {
     overflow-x: hidden;
     overflow-y: hidden;
-    margin-top: 20px;
+    margin-top: 50px;
 
     #main-account {
-        width: 1000px;
+        width: 1200px;
         margin: auto;
-        @include flex(row, space-between, center);
+        @include flex(row, space-between, flex-start);
         height: fit-content;
         overflow-x: visible;
         background-color: white;
@@ -508,167 +508,101 @@ main {
 
 
         #profile-management {
-            @include flex(column, flex-start, flex-start);
+            @include flex(column, flex-start, center);
+            gap: calc($gap + 10px);
+
 
             #profile-avatar {
-                @include flex(row, center, center);
-                gap: $gap;
-                margin-bottom: $gap;
+                @include flex(column, center, center);
+                gap: calc($gap + 20px);
+
+                h1 {
+                    color: #010C32;
+                    font-weight: 500;
+                    font-size: calc($text + 4px);
+                }
 
                 .avatar {
                     @include flex(column, flex-start, flex-start);
                 }
 
                 #profile-avatar-text {
-                    @include flex(column, flex-start, flex-start);
-                    gap: $gap;
+                    @include flex(column, center, center);
+                    gap: 2px;
 
                     h2 {
-                        font-size: calc($subtitleSize + 6px);
+                        font-size: calc($subtitleSize + 2px);
                         font-weight: 600;
+                        color: $blue;
                     }
 
                     h3 {
-                        font-size: 1.6rem;
+                        font-size: 1.4rem;
                         font-weight: 400;
+                        letter-spacing: -0.5px;
                     }
                 }
             }
 
-            #update-delete {
-                @include flex(column, center, flex-start);
-                gap: $gap;
+            .profile-view {
+                @include flex(column, center, center);
+                margin: auto;
 
-                h2 {
-                    font-size: calc($text + 6px);
-                }
+                #square {
+                    margin: auto;
+                    @include flex(column, center, center);
+                    gap: calc($gap + 5px);
 
-
-                #form-read {
-                    @include flex(column, center, flex-start);
-                    // border: 1px solid red;
-                    gap: 30px;
-
-                    // comit evenining
-                    #form-read-inputs {
-                        @include grid(1);
-                        gap: $gap;
-                        transition-delay: 0.25s;
-                        transition: all 0.5s ease-in-out;
-                        // border: 1px solid blue;
-                        margin-bottom: 15px;
-
-                    }
+                    #text-content {
+                        @include flex(column, space-between, flex-start);
+                        gap: calc($gap + 10px);
+                        margin: auto;
 
 
-                    #profile-action {
-                        @include flex(column, center, flex-start);
 
-                        #quick-actions {
-                            @include flex(column, center, center);
-                            gap: $gap;
+                        a {
+                            width: 110%;
+                            margin: auto;
+                            text-decoration: none;
+                            padding: 10px 0;
+                            background-color: #E6EBFF;
+                            color: #032396;
+                            font-size: calc($text + 6px);
+                            border-radius: $borderRadius;
+                            font-weight: normal;
+                            @include flex(row, center, center);
+                            gap: calc($gap - 2px);
 
-                            #save {
-                                background-color: white;
-                                color: $blue;
-                                @include flex(row, center, center);
-                                border-radius: $borderRadius;
-                                font-size: $inputTextSize;
-                                cursor: pointer;
-                                border: 1px solid $blue;
-                                padding: 10px 0px;
-                                outline: none;
-                                width: 250px;
-                                transition: all 0.15s ease-in;
-
-                                &:hover {
-                                    background-color: $blue;
-                                    border: 1px solid $blue;
-                                    color: white;
-                                }
-                            }
-
-                            #cancel {
-                                background-color: #fff;
-                                color: #1D2A35;
-                                @include flex(row, center, center);
-                                border-radius: $borderRadius;
-                                font-size: $inputTextSize;
-                                cursor: pointer;
-                                border: 1px solid rgb(95, 95, 95);
-                                padding: 10px 100px;
-                                outline: none;
-
-                                transition: all 0.15s ease-in;
-
-                                &:hover {
-                                    background-color: #1D2A35;
-                                    color: #fff;
-                                }
+                            i {
+                                font-size: calc($iconSize + 6px);
                             }
                         }
-
-                    }
-                }
-
-                #delete {
-                    background-color: white;
-                    color: #000;
-                    @include flex(row, center, center);
-                    gap: $gap;
-                    border-radius: $borderRadius;
-                    font-size: $inputTextSize;
-                    cursor: pointer;
-                    border: 1px solid #fff;
-                    padding: 10px 72px;
-                    outline: none;
-
-                    transition: all 0.15s ease-in;
-
-                    &:hover {
-                        border-color: red;
-                        color: red;
-                    }
-                }
-
-
-            }
-        }
-
-        .profile-view {
-        
-            #square {
-                
-                #text-content {
-                    @include flex(column, space-between, flex-start);
-                    gap: calc($gap + 10px);
-
-                    h1 {
-                        font-size: calc($titleSize + 6px);
                     }
 
-                    a {
-                        text-decoration: none;
-                        color: black;
-                        font-size: calc($text + 8px);
-                        font-weight: normal;
+                    #delete {
+                        background-color: white;
+                        color: #032396;
+                        // border: 1px solid #032396;
+                        border: none;
+                        font-weight: 700;
                         @include flex(row, center, center);
-                        gap: calc($gap - 2px);
+                        gap: $gap;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+                        cursor: pointer;
+                        width: 100%;
+                        padding: 10px 0;
+                        align-self: center;
+                        outline: none;
 
-                        i {
-                            font-size: calc($iconSize + 6px);
+                        transition: all 0.15s ease-in;
+
+                        &:hover {
+                            color: #010C32;
                         }
-                    }
-
-                    p {
-                        width: 450px;
-                        font-size: calc($text + 6px);
-                        font-weight: 300;
                     }
                 }
             }
-
-
         }
 
 
@@ -692,7 +626,7 @@ main {
                 height: fit-content;
                 border-radius: $borderRadius;
                 padding: calc($padding + 20px);
-                background: $backgroundColor;
+                background: #E6EBFF;
                 gap: calc($gap + 8px);
 
 
@@ -709,9 +643,13 @@ main {
                         outline: none;
                         border: none;
                         font-size: $inputTextSize;
-                        color: black;
+                        color: #032396;
                         font-weight: bold;
                         cursor: pointer;
+
+                        &:hover {
+                            color: #010C32;
+                        }
                     }
 
                     #confirm-no {
@@ -726,8 +664,110 @@ main {
                         cursor: pointer;
                     }
                 }
+            }
+        }
+
+        // read.html LOADS Available
+
+        #update-delete {
+            @include flex(column, center, flex-start);
+            gap: $gap;
+
+            h2 {
+                font-size: calc($text + 6px);
+            }
+
+
+            #form-read {
+                @include flex(column, center, flex-start);
+                // border: 1px solid red;
+                gap: 30px;
+
+                // comit evenining
+                #form-read-inputs {
+                    @include flex(column, center, center);
+                    gap: calc($gap + 10px);
+                    transition-delay: 0.25s;
+                    transition: all 0.5s ease-in-out;
+                    // border: 1px solid blue;
+                    margin-bottom: 15px;
+
+                    .basic {
+                        @include flex(column, center, flex-start);
+                        gap: $gap;
+
+                        h2 {
+                            font-weight: 500;
+                        }
+                    }
+
+                    .about {
+                        @include flex(column, center, flex-start);
+                        gap: $gap;
+
+                        h2 {
+                            font-weight: 500;
+                        }
+                    }
+
+                    .security {
+                        @include flex(column, center, flex-start);
+                        gap: $gap;
+
+                        h2 {
+                            font-weight: 500;
+                        }
+                    }
+
+                }
+
+
+
+
+                #quick-actions {
+                    @include flex(column, center, center);
+                    gap: $gap;
+
+                    #save {
+                        background-color: $blue;
+                        font-weight: 700;
+                        color: white;
+                        @include flex(row, center, center);
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+                        cursor: pointer;
+                        border: 1px solid $blue;
+                        padding: 10px 0px;
+                        outline: none;
+                        width: 100%;
+                        transition: all 0.15s ease-in;
+                    }
+
+                    #cancel {
+                        background-color: #E6EBFF;
+                        color: $blue;
+                        @include flex(row, center, center);
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+                        font-weight: 700;
+                        cursor: pointer;
+                        padding: 10px 0;
+                        border: none;
+                        width: 100%;
+                        outline: none;
+
+                        transition: all 0.15s ease-in;
+
+                        &:hover {}
+                    }
+                }
+
 
             }
+
+
+
+
         }
     }
 }
