@@ -167,11 +167,11 @@ main .search-load form button i {
 
 #provider-div {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 40px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1380px;
+  margin: 40px auto;
 }
 #provider-div #provider-heading-f {
   display: flex;
@@ -185,12 +185,12 @@ main .search-load form button i {
 }
 #provider-div #provider-heading-f #provider-filters {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
   width: 100%;
-  gap: 10px;
+  gap: 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
   border: 2px solid #f1f4ff;
@@ -200,17 +200,78 @@ main .search-load form button i {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 20px;
+}
+#provider-div #provider-heading-f #provider-filters form #inputs-fil {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+#provider-div #provider-heading-f #provider-filters form #inputs-fil option {
+  font-size: calc(1rem + 3px);
+}
+#provider-div #provider-heading-f #provider-filters form #inputs-fil #check-boxes-country {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 10px;
 }
-#provider-div #provider-heading-f #provider-filters form option {
-  font-size: calc(1rem + 3px);
+#provider-div #provider-heading-f #provider-filters form #inputs-fil #check-boxes-country p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+#provider-div #provider-heading-f #provider-filters form #inputs-fil #check-boxes-country #check-boxes-c {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+#provider-div #provider-heading-f #provider-filters form #inputs-fil #check-boxes-country #check-boxes-c div label {
+  font-size: 1.5rem;
+}
+#provider-div #provider-heading-f #provider-filters form #check-boxes-cities {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+#provider-div #provider-heading-f #provider-filters form #check-boxes-cities p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+#provider-div #provider-heading-f #provider-filters form #check-boxes-cities #check-boxes-cit {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+#provider-div #provider-heading-f #provider-filters form #check-boxes-cities #check-boxes-cit div label {
+  font-size: 1.5rem;
 }
 #provider-div #provider-heading-f #provider-filters form #buttons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+#provider-div #provider-heading-f #provider-filters form #buttons .button-clear {
+  background-color: #E6EBFF;
+  color: #0437F2;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px 0;
+  border: none;
+  width: 100%;
+  outline: none;
 }
 #provider-div .list {
   display: flex;
@@ -544,7 +605,7 @@ main .search-load form button i {
   width: 110%;
   margin: auto;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 10px;
   background-color: #E6EBFF;
   color: #032396;
   font-size: calc(1rem + 6px);
@@ -552,7 +613,7 @@ main .search-load form button i {
   font-weight: normal;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
 }
