@@ -141,7 +141,6 @@ $minWidth: 250px;
     height: 100vh;
     width: 100vw;
     padding: $padding;
-    display: flex;
     @include flex(column, center, center);
     gap: 25px;
     h1 {
