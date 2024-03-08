@@ -223,24 +223,30 @@ main {
             form {
                 @include flex(column, flex-start, flex-start);
                 gap: calc($gap * 2);
+
                 #inputs-fil {
                     @include flex(column, flex-start, flex-start);
                     gap: calc($gap + 5px);
+
                     option {
                         font-size: calc($text + 3px);
                     }
+
                     #check-boxes-country {
                         width: 100%;
                         @include flex(column, flex-start, flex-start);
                         gap: $gap;
+
                         p {
                             font-size: $subtitleSize;
                             font-weight: 500;
                         }
+
                         #check-boxes-c {
                             @include grid(2);
                             align-items: center;
                             gap: calc($gap * 2);
+
                             div {
                                 label {
                                     font-size: $subtitleSize;
@@ -249,17 +255,21 @@ main {
                         }
                     }
                 }
+
                 #check-boxes-cities {
                     @include flex(column, flex-start, flex-start);
                     gap: $gap;
+
                     p {
                         font-size: $subtitleSize;
                         font-weight: 500;
                     }
+
                     #check-boxes-cit {
                         @include grid(2);
                         align-items: center;
                         gap: calc($gap * 2);
+
                         div {
                             label {
                                 font-size: $subtitleSize;
@@ -267,9 +277,11 @@ main {
                         }
                     }
                 }
+
                 #buttons {
                     @include flex(column, center, center);
                     gap: $gap;
+
                     .button-clear {
                         background-color: #E6EBFF;
                         color: $blue;
@@ -634,7 +646,7 @@ main {
                         background-color: white;
                         color: #032396;
                         // border: 1px solid #032396;
-                        border: none;
+                        border: 1px solid white;
                         font-weight: 700;
                         @include flex(row, center, center);
                         gap: $gap;
@@ -650,6 +662,7 @@ main {
 
                         &:hover {
                             color: #010C32;
+                            border: 1px solid #010C32;
                         }
                     }
                 }
@@ -677,7 +690,7 @@ main {
                 height: fit-content;
                 border-radius: $borderRadius;
                 padding: calc($padding + 20px);
-                background: #E6EBFF;
+                background: #fff;
                 gap: calc($gap + 8px);
 
 
@@ -704,15 +717,23 @@ main {
                     }
 
                     #confirm-no {
-                        padding: 12px 32px;
+                        background-color: #E6EBFF;
+                        color: $blue;
+                        @include flex(row, center, center);
                         border-radius: $borderRadius;
-                        background-color: $blue;
-                        border: none;
-                        outline: none;
-                        color: white;
-                        font-weight: bold;
                         font-size: $inputTextSize;
+                        font-weight: 700;
                         cursor: pointer;
+                        padding: 10px 20px;
+                        border: none;
+                        width: fit-content;
+                        outline: none;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            background-color: #3661FC;
+                            color: white;
+                        }
                     }
                 }
             }
@@ -841,6 +862,10 @@ main {
                         outline: none;
                         width: 100%;
                         transition: all 0.15s ease-in;
+                        &:hover {
+                            background-color: white;
+                            color: $blue;
+                        }
                     }
 
                     #cancel {
@@ -856,9 +881,12 @@ main {
                         width: 100%;
                         outline: none;
 
-                        transition: all 0.15s ease-in;
+                        transition: all 0.2s ease;
 
-                        // &:hover {}
+                        &:hover {
+                            background-color: #3661FC;
+                            color: white;
+                        }
                     }
                 }
 

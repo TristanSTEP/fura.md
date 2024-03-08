@@ -623,7 +623,7 @@ main .search-load form button i {
 #read #main-account #profile-management .profile-view #square #delete {
   background-color: white;
   color: #032396;
-  border: none;
+  border: 1px solid white;
   font-weight: 700;
   display: flex;
   flex-direction: row;
@@ -641,6 +641,7 @@ main .search-load form button i {
 }
 #read #main-account #profile-management .profile-view #square #delete:hover {
   color: #010C32;
+  border: 1px solid #010C32;
 }
 #read #main-account #confirm-delete-popup {
   display: none;
@@ -666,7 +667,7 @@ main .search-load form button i {
   height: fit-content;
   border-radius: 10px;
   padding: 30px;
-  background: #E6EBFF;
+  background: #fff;
   gap: 18px;
 }
 #read #main-account #confirm-delete-popup .delete-popup-content p {
@@ -692,15 +693,26 @@ main .search-load form button i {
   color: #010C32;
 }
 #read #main-account #confirm-delete-popup .delete-popup-content #confirm-buttons #confirm-no {
-  padding: 12px 32px;
+  background-color: #E6EBFF;
+  color: #0437F2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
-  background-color: #0437F2;
-  border: none;
-  outline: none;
-  color: white;
-  font-weight: bold;
   font-size: 1.25rem;
+  font-weight: 700;
   cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  outline: none;
+  transition: all 0.2s ease;
+}
+#read #main-account #confirm-delete-popup .delete-popup-content #confirm-buttons #confirm-no:hover {
+  background-color: #3661FC;
+  color: white;
 }
 #read #main-account #loads-available {
   display: flex;
@@ -831,6 +843,10 @@ main .search-load form button i {
   width: 100%;
   transition: all 0.15s ease-in;
 }
+#read #main-account #update-delete #form-read #quick-actions #save:hover {
+  background-color: white;
+  color: #0437F2;
+}
 #read #main-account #update-delete #form-read #quick-actions #cancel {
   background-color: #E6EBFF;
   color: #0437F2;
@@ -846,5 +862,9 @@ main .search-load form button i {
   border: none;
   width: 100%;
   outline: none;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease;
+}
+#read #main-account #update-delete #form-read #quick-actions #cancel:hover {
+  background-color: #3661FC;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */
