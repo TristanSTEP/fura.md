@@ -460,7 +460,7 @@ main .search-load form button i {
   margin-top: 50px;
 }
 #read #main-account {
-  width: 1200px;
+  width: 1300px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -641,6 +641,48 @@ main .search-load form button i {
   font-size: 1.25rem;
   cursor: pointer;
 }
+#read #main-account #loads-available {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#read #main-account #loads-available h1 {
+  color: #010C32;
+  font-weight: 500;
+  font-size: calc(1rem + 4px);
+}
+#read #main-account #loads-available #load-card {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px 10px;
+  border: 1px solid #E6EBFF;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
+}
+#read #main-account #loads-available #load-card h1,
+#read #main-account #loads-available #load-card h2,
+#read #main-account #loads-available #load-card h3,
+#read #main-account #loads-available #load-card h4,
+#read #main-account #loads-available #load-card h5,
+#read #main-account #loads-available #load-card i {
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+#read #main-account #loads-available #load-card button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#read #main-account #loads-available #load-card button:hover {
+  scale: 1.2;
+  color: red;
+}
 #read #main-account #update-delete {
   display: flex;
   flex-direction: column;
@@ -672,31 +714,37 @@ main .search-load form button i {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 }
 #read #main-account #update-delete #form-read #form-read-inputs .basic h2 {
+  color: #010C32;
   font-weight: 500;
+  font-size: calc(1rem + 4px);
 }
 #read #main-account #update-delete #form-read #form-read-inputs .about {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 }
 #read #main-account #update-delete #form-read #form-read-inputs .about h2 {
+  color: #010C32;
   font-weight: 500;
+  font-size: calc(1rem + 4px);
 }
 #read #main-account #update-delete #form-read #form-read-inputs .security {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 }
 #read #main-account #update-delete #form-read #form-read-inputs .security h2 {
+  color: #010C32;
   font-weight: 500;
+  font-size: calc(1rem + 4px);
 }
 #read #main-account #update-delete #form-read #quick-actions {
   display: flex;

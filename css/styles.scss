@@ -495,7 +495,7 @@ main {
     margin-top: 50px;
 
     #main-account {
-        width: 1200px;
+        width: 1300px;
         margin: auto;
         @include flex(row, space-between, flex-start);
         height: fit-content;
@@ -669,6 +669,49 @@ main {
 
         // read.html LOADS Available
 
+        #loads-available {
+            // width: 600px;
+            @include flex(column, center, center);
+            gap: calc($gap + 6px);
+
+            h1 {
+                color: #010C32;
+                font-weight: 500;
+                font-size: calc($text + 4px);
+            }
+
+            #load-card {
+                width: 600px;
+                @include flex(row, space-around, center);
+                padding: 14px 10px;
+                border: 1px solid #E6EBFF;
+                border-radius: $borderRadius;
+                box-shadow: $box-shadow;
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                i {
+                    font-weight: normal;
+                    font-size: 1.6rem;
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    transition: all .2s ease-in-out;
+
+                    &:hover {
+                        scale: 1.2;
+                        color: red;
+                    }
+                }
+            }
+        }
+
         #update-delete {
             @include flex(column, center, flex-start);
             gap: $gap;
@@ -693,29 +736,35 @@ main {
                     margin-bottom: 15px;
 
                     .basic {
-                        @include flex(column, center, flex-start);
+                        @include flex(column, center, center);
                         gap: $gap;
 
                         h2 {
+                            color: #010C32;
                             font-weight: 500;
+                            font-size: calc($text + 4px);
                         }
                     }
 
                     .about {
-                        @include flex(column, center, flex-start);
+                        @include flex(column, center, center);
                         gap: $gap;
 
                         h2 {
+                            color: #010C32;
                             font-weight: 500;
+                            font-size: calc($text + 4px);
                         }
                     }
 
                     .security {
-                        @include flex(column, center, flex-start);
+                        @include flex(column, center, center);
                         gap: $gap;
 
                         h2 {
+                            color: #010C32;
                             font-weight: 500;
+                            font-size: calc($text + 4px);
                         }
                     }
 
