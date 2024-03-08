@@ -102,22 +102,40 @@
   color: #0437f2;
 }
 
-#login-container {
+#mainn {
   height: 100vh;
   width: 100vw;
-  padding: 10px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mainn .register {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 25px;
+  justify-content: center;
+  height: 400px;
+  width: 600px;
+  gap: 10px;
 }
-#login-container h1 {
+#mainn .register h1 {
   font-size: 2.5rem;
-  padding: 10px;
 }
-#login-container .form-group input {
+#mainn .register .registerInp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#mainn .register .registerInp .form-group {
+  display: flex;
+}
+#mainn .register .registerInp .form-group input::-webkit-outer-spin-button,
+#mainn .register .registerInp .form-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#mainn .register .registerInp .form-group input {
   padding: 10px;
   background-color: #f1f4ff;
   border: 1px solid #f1f4ff;
@@ -127,10 +145,11 @@
   font-size: 1.25rem;
   min-width: 250px;
 }
-#login-container .form-group input:focus {
-  border: 1px solid #0437F2;
+#mainn .register .registerInp .form-group input:focus {
+  border: 1px solid #0437f2;
 }
-#login-container #login-button {
+#mainn .register .registerInp .image-input {
+  transition: box-shadow 0.15s ease-in;
   padding: 10px;
   background-color: #f1f4ff;
   border: 1px solid #f1f4ff;
@@ -139,7 +158,24 @@
   border-radius: 10px;
   font-size: 1.25rem;
   min-width: 250px;
-  background-color: #0437F2;
+}
+#mainn .register .registerInp .image-input input {
+  display: none;
+}
+#mainn .register .registerInp .image-input:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #0437f2;
+}
+#mainn .register .registerInp .image-input label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+#mainn .register .registerInp .createAcc {
+  background-color: #0437f2;
   color: white;
   display: flex;
   flex-direction: row;
@@ -148,20 +184,22 @@
   gap: 10px;
   font-size: 1.25rem;
   cursor: pointer;
-  border: 1px solid #0437F2;
+  border: 1px solid #0437f2;
   transition: all 0.15s ease-in;
+  padding: 10px;
+  border: 1px solid #0437f2;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 10px;
 }
-#login-container #login-button:focus {
-  border: 1px solid #0437F2;
-}
-#login-container #login-button:hover {
+#mainn .register .registerInp .createAcc:hover {
   background-color: white;
-  color: #0437F2;
+  color: #0437f2;
 }
-#login-container .dont-have-account {
+#mainn .register .oldUser {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */
