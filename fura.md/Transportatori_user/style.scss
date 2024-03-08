@@ -1,6 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-$blue: #0437f2; // Accent color
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($columnsNumber) {
+    display: grid;
+    grid-template-columns: repeat($columnsNumber, 1fr);
+}
+
+$blue: #0437F2; // Accent color
 $textColor: black;
 $textColor2: rgb(111, 111, 111);
 $backgroundColor: #f1f4ff;
@@ -12,6 +24,9 @@ $subtitleSize: 1.5rem;
 $text: 1rem;
 $smallText: 0.8rem;
 $iconSize: 1.25rem;
+$inputTextSize: 1.25rem;
+$minWidth: 250px;
+
 
 * {
     margin: 0;
@@ -21,328 +36,534 @@ $iconSize: 1.25rem;
     font-size: 10px;
 }
 
+.assets {
+    padding: $padding;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+
+    i {
+        font-size: $iconSize;
+    }
+
+    .input,
+    .image-input,
+    .button {
+        padding: $padding;
+        background-color: $backgroundColor;
+        border: 1px solid $backgroundColor;
+        outline: none;
+        transition: border-color 0.15s ease-in;
+        border-radius: $borderRadius;
+        font-size: $inputTextSize;
+        min-width: $minWidth;
+    
+        &:focus {
+            border: 1px solid $blue;
+        }
+
+        input {
+            display: none;
+        }
+    }
+
+    .image-input { 
+        transition: box-shadow 0.15s ease-in;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 5px $blue;
+        }
+
+        label {
+            @include flex(row, center, center);
+            gap: $gap;
+            font-size: $inputTextSize;
+            cursor: pointer;
+        }
+    }
+
+    .row-box {
+        @include grid(3);
+        gap: $gap;
+        border-radius: $borderRadius;
+        padding: $padding;
+        background-color: $backgroundColor;
+
+        p {
+            font-size: 1.25rem;
+        }
+    }
+
+    .avatar {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid $blue;
+        overflow: hidden;
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.15s ease-in;
+        }
+    }
+
+    .button {
+        background-color: $blue;
+        color: white;
+        @include flex(row, center, center);
+        gap: $gap;
+        font-size: $inputTextSize;
+        cursor: pointer;
+        border: 1px solid $blue;
+        transition: all 0.15s ease-in;
+
+        &:hover {
+            background-color: white;
+            color: $blue;
+        }
+    }
+}
+
 main {
     height: 100vh;
     width: 100vw;
-    .register {
+
+    .search-load {
         padding: $padding;
         height: 100%;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flex(column, center, center);
+        gap: $gap;
+
         h1 {
+            width: 100%;
             font-size: $titleSize;
-            margin-bottom: 20px;
+            text-align: center
         }
-    }
 
-    .oldUser {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 20px;
-        p,a {
-            font-size: $subtitleSize;
-        }
-    }
-
-    .registerInp {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        flex-flow: column;
-        .form-group {
-            position: relative;
-            margin: 12px 0;
-
-            input {
-                padding: 8px 10px;
-                font-size: $subtitleSize;
-                border-radius: 5px;
-                border: #acacac solid 2px;
-                background-color: transparent;
-                color: black;
-                transition: 0.15s all ease;
-                outline-color: $blue;
-                width: 250px;
-            }
-
-            input::placeholder {
-                color: transparent;
-            }
-
-            .form-label {
-                position: absolute;
-                top: 9px;
-                left: 0;
-                font-size: calc($subtitleSize + 0.5rem);
-                padding: 0 10px;
-                color: #acacac;
-                pointer-events: none;
-                transition: 0.15s all ease;
-            }
-
-            input:focus + .form-label,
-            input:not(:placeholder-shown) + .form-label {
-                transform: translate(5px, -22px);
-                background-color: $blue;
-                font-size: 14px;
-                color: #eee;
-                border-radius: 5px;
-            }
-        }
-        .createAcc {
-            height: 42px;
-            width: 150px;
-            margin-top: 20px;
+        form {
+            @include flex(row, center, center);
+            background-color: $backgroundColor;
+            padding: $padding;
             border-radius: $borderRadius;
-            background-color: $blue;
-            border: none;
-            cursor: pointer;
-            color: white;
-            font-size: $subtitleSize;
-        }
-        .form {
-            width: 400px;
-        }
 
-        .file-upload-wrapper {
-            $defaultColor: #4daf7c;
-            $height: 60px;
+            .form-group {
+                @include flex(row, center, center);
+                background-color: $backgroundColor;
+                gap: $gap;
 
-            position: relative;
-            width: 100%;
-            height: $height;
+                i {
+                    font-size: $subtitleSize;
+                    color: $blue;
+                }
 
-            &:after {
-                content: attr(data-text);
-                font-size: 16px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background: #fff;
-                padding: 10px 15px;
-                display: block;
-                width: calc(100% - 40px);
-                pointer-events: none;
-                z-index: 20;
-                height: $height - 20px;
-                line-height: $height - 20px;
-                color: #999;
-                border-radius: 5px 10px 10px 5px;
-                font-weight: 300;
-            }
-
-            &:before {
-                content: "Upload";
-                position: absolute;
-                top: 0;
-                right: 0;
-                display: inline-block;
-                height: 60px;
-                background: $defaultColor;
-                color: #fff;
-                font-weight: 700;
-                z-index: 25;
-                font-size: 16px;
-                line-height: $height;
-                padding: 0 15px;
-                text-transform: uppercase;
-                pointer-events: none;
-                border-radius: 0 5px 5px 0;
-            }
-
-            &:hover {
-                &:before {
-                    background: darken($defaultColor, 10%);
+                input {
+                    border: none;
+                    outline: none;
+                    min-width: 500px;
+                    font-size: $text;
+                    border-radius: $borderRadius;
+                    background: none;
+                    font-size: $subtitleSize;
                 }
             }
-            input {
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                z-index: 99;
-                height: $height - 20px;
-                margin: 0;
-                padding: 0;
-                display: block;
+
+            button {
+                height: 50px;
+                width: 50px;
+                border-radius: $borderRadius;
+                background-color: $blue;
+                border: none;
                 cursor: pointer;
-                width: 100%;
-            }
-        }
-
-        img {
-            height: 1.5rem;
-            width: auto;
-        }
-
-        .form {
-            width: 250px;
-            margin: 10px;
-        }
-
-        .file-upload-wrapper {
-            position: relative;
-            width: 100%;
-            height: 42px;
-
-            &:after {
-                content: attr(data-text);
-                font-size: 15px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                border: 1px solid $blue;
-                background: none;
-                padding: 10px 10px;
-                display: block;
-                width: calc(100% - 40px);
-                pointer-events: none;
-                z-index: 20;
-                height: 20px;
-                line-height: 22px;
-                color: #999;
-                border-radius: 5px 10px 10px 5px;
-                font-weight: 300;
-            }
-
-            &:before {
-                content: "Upload";
-                position: absolute;
-                top: 0;
-                right: 0;
-                display: inline-block;
-                height: 42px;
-                background: $blue;
-                color: #fff;
-                font-weight: 700;
-                z-index: 25;
-                font-size: 14px;
-                line-height: 42px;
-                padding: 0 15px;
-                text-transform: uppercase;
-                pointer-events: none;
-                border-radius: 0 5px 5px 0;
-            }
-
-            &:hover {
-                &:before {
-                    background: darken($blue, 10%);
+                color: white;
+                @include flex(row, center, center);
+                
+                i {
+                    font-size: $iconSize;
                 }
             }
-            input {
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                z-index: 99;
-                height: 42px;
-                margin: 0;
-                padding: 0;
-                display: block;
-                cursor: pointer;
-                width: 100%;
-            }
         }
-
-        img {
-            height: 1.5rem;
-            width: auto;
-        }
-    }
-
-    #login-button {
-        height: 42px;
-        width: 75px;
-        border-radius: $borderRadius;
-        background-color: $blue;
-        border: none;
-        cursor: pointer;
-        color: white;
-        font-size: $subtitleSize;
     }
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
 
-#login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    flex-flow: column;
-    .form-group {
-        position: relative;
-        margin: 12px 0;
 
-        input {
-            padding: 8px 10px;
-            font-size: $subtitleSize;
-            border-radius: 5px;
-            border: #acacac solid 2px;
-            background-color: transparent;
-            color: black;
-            transition: 0.15s all ease;
-            outline-color: $blue;
-            width: 250px;
-        }
 
-        input::placeholder {
-            color: transparent;
-        }
 
-        .form-label {
-            position: absolute;
-            top: 9px;
-            left: 0;
-            font-size: calc($subtitleSize + 0.5rem);
-            padding: 0 10px;
-            color: #acacac;
-            pointer-events: none;
-            transition: 0.15s all ease;
-        }
 
-        input:focus + .form-label,
-        input:not(:placeholder-shown) + .form-label {
-            transform: translate(5px, -22px);
-            background-color: $blue;
-            font-size: 14px;
-            color: #eee;
-            border-radius: 5px;
-            outline-color: $blue;
-        }
-    }
 
-    #login-button {
-        height: 42px;
-        width: 75px;
-        border-radius: $borderRadius;
-        background-color: $blue;
-        border: none;
-        cursor: pointer;
-        color: white;
-        font-size: $subtitleSize;
-    }
-}
-.dont-have-account {
-    p,
-    a {
-        font-size: calc($smallText + 0.5rem);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+// $blue: #0437f2; // Accent color
+// $textColor: black;
+// $textColor2: rgb(111, 111, 111);
+// $backgroundColor: #f1f4ff;
+// $padding: 10px;
+// $borderRadius: 10px;
+// $gap: 10px;
+// $titleSize: 2.5rem;
+// $subtitleSize: 1.5rem;
+// $text: 1rem;
+// $smallText: 0.8rem;
+// $iconSize: 1.25rem;
+
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//     font-family: "Montserrat", sans-serif;
+//     font-size: 10px;
+// }
+
+// main {
+//     height: 100vh;
+//     width: 100vw;
+//     .register {
+//         padding: $padding;
+//         height: 100%;
+//         width: 100%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         h1 {
+//             font-size: $titleSize;
+//             margin-bottom: 20px;
+//         }
+//     }
+
+//     .oldUser {
+//         display: flex;
+//         align-items: center;
+//         flex-direction: column;
+//         margin-top: 20px;
+//         p,a {
+//             font-size: $subtitleSize;
+//         }
+//     }
+
+//     .registerInp {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 100%;
+//         height: 100%;
+//         flex-flow: column;
+//         .form-group {
+//             position: relative;
+//             margin: 12px 0;
+
+//             input {
+//                 padding: 8px 10px;
+//                 font-size: $subtitleSize;
+//                 border-radius: 5px;
+//                 border: #acacac solid 2px;
+//                 background-color: transparent;
+//                 color: black;
+//                 transition: 0.15s all ease;
+//                 outline-color: $blue;
+//                 width: 250px;
+//             }
+
+//             input::placeholder {
+//                 color: transparent;
+//             }
+
+//             .form-label {
+//                 position: absolute;
+//                 top: 9px;
+//                 left: 0;
+//                 font-size: calc($subtitleSize + 0.5rem);
+//                 padding: 0 10px;
+//                 color: #acacac;
+//                 pointer-events: none;
+//                 transition: 0.15s all ease;
+//             }
+
+//             input:focus + .form-label,
+//             input:not(:placeholder-shown) + .form-label {
+//                 transform: translate(5px, -22px);
+//                 background-color: $blue;
+//                 font-size: 14px;
+//                 color: #eee;
+//                 border-radius: 5px;
+//             }
+//         }
+//         .createAcc {
+//             height: 42px;
+//             width: 150px;
+//             margin-top: 20px;
+//             border-radius: $borderRadius;
+//             background-color: $blue;
+//             border: none;
+//             cursor: pointer;
+//             color: white;
+//             font-size: $subtitleSize;
+//         }
+//         .form {
+//             width: 400px;
+//         }
+
+//         .file-upload-wrapper {
+//             $defaultColor: #4daf7c;
+//             $height: 60px;
+
+//             position: relative;
+//             width: 100%;
+//             height: $height;
+
+//             &:after {
+//                 content: attr(data-text);
+//                 font-size: 16px;
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 background: #fff;
+//                 padding: 10px 15px;
+//                 display: block;
+//                 width: calc(100% - 40px);
+//                 pointer-events: none;
+//                 z-index: 20;
+//                 height: $height - 20px;
+//                 line-height: $height - 20px;
+//                 color: #999;
+//                 border-radius: 5px 10px 10px 5px;
+//                 font-weight: 300;
+//             }
+
+//             &:before {
+//                 content: "Upload";
+//                 position: absolute;
+//                 top: 0;
+//                 right: 0;
+//                 display: inline-block;
+//                 height: 60px;
+//                 background: $defaultColor;
+//                 color: #fff;
+//                 font-weight: 700;
+//                 z-index: 25;
+//                 font-size: 16px;
+//                 line-height: $height;
+//                 padding: 0 15px;
+//                 text-transform: uppercase;
+//                 pointer-events: none;
+//                 border-radius: 0 5px 5px 0;
+//             }
+
+//             &:hover {
+//                 &:before {
+//                     background: darken($defaultColor, 10%);
+//                 }
+//             }
+//             input {
+//                 opacity: 0;
+//                 position: absolute;
+//                 top: 0;
+//                 right: 0;
+//                 bottom: 0;
+//                 left: 0;
+//                 z-index: 99;
+//                 height: $height - 20px;
+//                 margin: 0;
+//                 padding: 0;
+//                 display: block;
+//                 cursor: pointer;
+//                 width: 100%;
+//             }
+//         }
+
+//         img {
+//             height: 1.5rem;
+//             width: auto;
+//         }
+
+//         .form {
+//             width: 250px;
+//             margin: 10px;
+//         }
+
+//         .file-upload-wrapper {
+//             position: relative;
+//             width: 100%;
+//             height: 42px;
+
+//             &:after {
+//                 content: attr(data-text);
+//                 font-size: 15px;
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 border: 1px solid $blue;
+//                 background: none;
+//                 padding: 10px 10px;
+//                 display: block;
+//                 width: calc(100% - 40px);
+//                 pointer-events: none;
+//                 z-index: 20;
+//                 height: 20px;
+//                 line-height: 22px;
+//                 color: #999;
+//                 border-radius: 5px 10px 10px 5px;
+//                 font-weight: 300;
+//             }
+
+//             &:before {
+//                 content: "Upload";
+//                 position: absolute;
+//                 top: 0;
+//                 right: 0;
+//                 display: inline-block;
+//                 height: 42px;
+//                 background: $blue;
+//                 color: #fff;
+//                 font-weight: 700;
+//                 z-index: 25;
+//                 font-size: 14px;
+//                 line-height: 42px;
+//                 padding: 0 15px;
+//                 text-transform: uppercase;
+//                 pointer-events: none;
+//                 border-radius: 0 5px 5px 0;
+//             }
+
+//             &:hover {
+//                 &:before {
+//                     background: darken($blue, 10%);
+//                 }
+//             }
+//             input {
+//                 opacity: 0;
+//                 position: absolute;
+//                 top: 0;
+//                 right: 0;
+//                 bottom: 0;
+//                 left: 0;
+//                 z-index: 99;
+//                 height: 42px;
+//                 margin: 0;
+//                 padding: 0;
+//                 display: block;
+//                 cursor: pointer;
+//                 width: 100%;
+//             }
+//         }
+
+//         img {
+//             height: 1.5rem;
+//             width: auto;
+//         }
+//     }
+
+//     #login-button {
+//         height: 42px;
+//         width: 75px;
+//         border-radius: $borderRadius;
+//         background-color: $blue;
+//         border: none;
+//         cursor: pointer;
+//         color: white;
+//         font-size: $subtitleSize;
+//     }
+// }
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//     -webkit-appearance: none;
+//     margin: 0;
+// }
+
+// #login-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//     height: 100vh;
+//     flex-flow: column;
+//     .form-group {
+//         position: relative;
+//         margin: 12px 0;
+
+//         input {
+//             padding: 8px 10px;
+//             font-size: $subtitleSize;
+//             border-radius: 5px;
+//             border: #acacac solid 2px;
+//             background-color: transparent;
+//             color: black;
+//             transition: 0.15s all ease;
+//             outline-color: $blue;
+//             width: 250px;
+//         }
+
+//         input::placeholder {
+//             color: transparent;
+//         }
+
+//         .form-label {
+//             position: absolute;
+//             top: 9px;
+//             left: 0;
+//             font-size: calc($subtitleSize + 0.5rem);
+//             padding: 0 10px;
+//             color: #acacac;
+//             pointer-events: none;
+//             transition: 0.15s all ease;
+//         }
+
+//         input:focus + .form-label,
+//         input:not(:placeholder-shown) + .form-label {
+//             transform: translate(5px, -22px);
+//             background-color: $blue;
+//             font-size: 14px;
+//             color: #eee;
+//             border-radius: 5px;
+//             outline-color: $blue;
+//         }
+//     }
+
+//     #login-button {
+//         height: 42px;
+//         width: 75px;
+//         border-radius: $borderRadius;
+//         background-color: $blue;
+//         border: none;
+//         cursor: pointer;
+//         color: white;
+//         font-size: $subtitleSize;
+//     }
+// }
+// .dont-have-account {
+//     p,
+//     a {
+//         font-size: calc($smallText + 0.5rem);
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//     }
+// }

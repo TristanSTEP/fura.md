@@ -7,319 +7,163 @@
   font-size: 10px;
 }
 
+.assets {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.assets i {
+  font-size: 1.25rem;
+}
+.assets .input,
+.assets .image-input,
+.assets .button {
+  padding: 10px;
+  background-color: #f1f4ff;
+  border: 1px solid #f1f4ff;
+  outline: none;
+  transition: border-color 0.15s ease-in;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  min-width: 250px;
+}
+.assets .input:focus,
+.assets .image-input:focus,
+.assets .button:focus {
+  border: 1px solid #0437F2;
+}
+.assets .input input,
+.assets .image-input input,
+.assets .button input {
+  display: none;
+}
+.assets .image-input {
+  transition: box-shadow 0.15s ease-in;
+}
+.assets .image-input:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #0437F2;
+}
+.assets .image-input label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.assets .row-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f1f4ff;
+}
+.assets .row-box p {
+  font-size: 1.25rem;
+}
+.assets .avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid #0437F2;
+  overflow: hidden;
+}
+.assets .avatar:hover img {
+  transform: scale(1.1);
+}
+.assets .avatar img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.15s ease-in;
+}
+.assets .button {
+  background-color: #0437F2;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+}
+.assets .button:hover {
+  background-color: white;
+  color: #0437F2;
+}
+
 main {
   height: 100vh;
   width: 100vw;
 }
-main .register {
+main .search-load {
   padding: 10px;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-main .register h1 {
+main .search-load h1 {
+  width: 100%;
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  text-align: center;
 }
-main .oldUser {
+main .search-load form {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
-}
-main .oldUser p, main .oldUser a {
-  font-size: 1.5rem;
-}
-main .registerInp {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  flex-flow: column;
-}
-main .registerInp .form-group {
-  position: relative;
-  margin: 12px 0;
-}
-main .registerInp .form-group input {
-  padding: 8px 10px;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  border: #acacac solid 2px;
-  background-color: transparent;
-  color: black;
-  transition: 0.15s all ease;
-  outline-color: #0437f2;
-  width: 250px;
-}
-main .registerInp .form-group input::-moz-placeholder {
-  color: transparent;
-}
-main .registerInp .form-group input::placeholder {
-  color: transparent;
-}
-main .registerInp .form-group .form-label {
-  position: absolute;
-  top: 9px;
-  left: 0;
-  font-size: 2rem;
-  padding: 0 10px;
-  color: #acacac;
-  pointer-events: none;
-  transition: 0.15s all ease;
-}
-main .registerInp .form-group input:not(:-moz-placeholder-shown) + .form-label {
-  transform: translate(5px, -22px);
-  background-color: #0437f2;
-  font-size: 14px;
-  color: #eee;
-  border-radius: 5px;
-}
-main .registerInp .form-group input:focus + .form-label,
-main .registerInp .form-group input:not(:placeholder-shown) + .form-label {
-  transform: translate(5px, -22px);
-  background-color: #0437f2;
-  font-size: 14px;
-  color: #eee;
-  border-radius: 5px;
-}
-main .registerInp .createAcc {
-  height: 42px;
-  width: 150px;
-  margin-top: 20px;
+  background-color: #f1f4ff;
+  padding: 10px;
   border-radius: 10px;
-  background-color: #0437f2;
-  border: none;
-  cursor: pointer;
-  color: white;
+}
+main .search-load form .form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f4ff;
+  gap: 10px;
+}
+main .search-load form .form-group i {
   font-size: 1.5rem;
+  color: #0437F2;
 }
-main .registerInp .form {
-  width: 400px;
-}
-main .registerInp .file-upload-wrapper {
-  position: relative;
-  width: 100%;
-  height: 60px;
-}
-main .registerInp .file-upload-wrapper:after {
-  content: attr(data-text);
-  font-size: 16px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  padding: 10px 15px;
-  display: block;
-  width: calc(100% - 40px);
-  pointer-events: none;
-  z-index: 20;
-  height: 40px;
-  line-height: 40px;
-  color: #999;
-  border-radius: 5px 10px 10px 5px;
-  font-weight: 300;
-}
-main .registerInp .file-upload-wrapper:before {
-  content: "Upload";
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-block;
-  height: 60px;
-  background: #4daf7c;
-  color: #fff;
-  font-weight: 700;
-  z-index: 25;
-  font-size: 16px;
-  line-height: 60px;
-  padding: 0 15px;
-  text-transform: uppercase;
-  pointer-events: none;
-  border-radius: 0 5px 5px 0;
-}
-main .registerInp .file-upload-wrapper:hover:before {
-  background: #3d8c63;
-}
-main .registerInp .file-upload-wrapper input {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  height: 40px;
-  margin: 0;
-  padding: 0;
-  display: block;
-  cursor: pointer;
-  width: 100%;
-}
-main .registerInp img {
-  height: 1.5rem;
-  width: auto;
-}
-main .registerInp .form {
-  width: 250px;
-  margin: 10px;
-}
-main .registerInp .file-upload-wrapper {
-  position: relative;
-  width: 100%;
-  height: 42px;
-}
-main .registerInp .file-upload-wrapper:after {
-  content: attr(data-text);
-  font-size: 15px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid #0437f2;
+main .search-load form .form-group input {
+  border: none;
+  outline: none;
+  min-width: 500px;
+  font-size: 1rem;
+  border-radius: 10px;
   background: none;
-  padding: 10px 10px;
-  display: block;
-  width: calc(100% - 40px);
-  pointer-events: none;
-  z-index: 20;
-  height: 20px;
-  line-height: 22px;
-  color: #999;
-  border-radius: 5px 10px 10px 5px;
-  font-weight: 300;
+  font-size: 1.5rem;
 }
-main .registerInp .file-upload-wrapper:before {
-  content: "Upload";
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-block;
-  height: 42px;
-  background: #0437f2;
-  color: #fff;
-  font-weight: 700;
-  z-index: 25;
-  font-size: 14px;
-  line-height: 42px;
-  padding: 0 15px;
-  text-transform: uppercase;
-  pointer-events: none;
-  border-radius: 0 5px 5px 0;
-}
-main .registerInp .file-upload-wrapper:hover:before {
-  background: #032cc0;
-}
-main .registerInp .file-upload-wrapper input {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  height: 42px;
-  margin: 0;
-  padding: 0;
-  display: block;
-  cursor: pointer;
-  width: 100%;
-}
-main .registerInp img {
-  height: 1.5rem;
-  width: auto;
-}
-main #login-button {
-  height: 42px;
-  width: 75px;
+main .search-load form button {
+  height: 50px;
+  width: 50px;
   border-radius: 10px;
-  background-color: #0437f2;
+  background-color: #0437F2;
   border: none;
   cursor: pointer;
   color: white;
-  font-size: 1.5rem;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-#login-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-  flex-flow: column;
 }
-#login-container .form-group {
-  position: relative;
-  margin: 12px 0;
-}
-#login-container .form-group input {
-  padding: 8px 10px;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  border: #acacac solid 2px;
-  background-color: transparent;
-  color: black;
-  transition: 0.15s all ease;
-  outline-color: #0437f2;
-  width: 250px;
-}
-#login-container .form-group input::-moz-placeholder {
-  color: transparent;
-}
-#login-container .form-group input::placeholder {
-  color: transparent;
-}
-#login-container .form-group .form-label {
-  position: absolute;
-  top: 9px;
-  left: 0;
-  font-size: 2rem;
-  padding: 0 10px;
-  color: #acacac;
-  pointer-events: none;
-  transition: 0.15s all ease;
-}
-#login-container .form-group input:not(:-moz-placeholder-shown) + .form-label {
-  transform: translate(5px, -22px);
-  background-color: #0437f2;
-  font-size: 14px;
-  color: #eee;
-  border-radius: 5px;
-  outline-color: #0437f2;
-}
-#login-container .form-group input:focus + .form-label,
-#login-container .form-group input:not(:placeholder-shown) + .form-label {
-  transform: translate(5px, -22px);
-  background-color: #0437f2;
-  font-size: 14px;
-  color: #eee;
-  border-radius: 5px;
-  outline-color: #0437f2;
-}
-#login-container #login-button {
-  height: 42px;
-  width: 75px;
-  border-radius: 10px;
-  background-color: #0437f2;
-  border: none;
-  cursor: pointer;
-  color: white;
-  font-size: 1.5rem;
-}
-
-.dont-have-account p,
-.dont-have-account a {
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+main .search-load form button i {
+  font-size: 1.25rem;
 }/*# sourceMappingURL=style.css.map */
