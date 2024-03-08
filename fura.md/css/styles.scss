@@ -26,7 +26,10 @@ $smallText: 0.8rem;
 $iconSize: 1.25rem;
 $inputTextSize: 1.25rem;
 $minWidth: 250px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 90dd815cd70721657fd72aa8138c66e129d641d9
 
 * {
     margin: 0;
@@ -98,7 +101,10 @@ main {
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 90dd815cd70721657fd72aa8138c66e129d641d9
 #see-products{
     height: 100vh;
     width: 100vw;
@@ -508,6 +514,38 @@ main {
                 }
             }
         }
+<<<<<<< HEAD
+=======
+    }
+}
+
+.adauga-marfa{
+    height: 100vh;
+    width: 100vw;
+    
+
+    h1{
+        font-size: $titleSize;
+        margin-bottom: calc($gap * 3);
+    }
+    
+    form{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: $gap;
+        height: 95vh;
+        width: 80vw;
+        margin: auto;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        border-radius: $borderRadius;
+        box-shadow: 0 0 5px $blue;
+        padding: $padding;
+>>>>>>> 90dd815cd70721657fd72aa8138c66e129d641d9
 
         #marfuri {
             width: 1200px;
@@ -516,9 +554,15 @@ main {
             display: flex;
             flex-direction: row;
             align-items: center;
+<<<<<<< HEAD
             justify-content: space-between;
             padding: $padding;
             border-radius: $borderRadius;
+=======
+            width: inherit;
+            height: 35vh;
+            margin-bottom: calc($gap * 3);
+>>>>>>> 90dd815cd70721657fd72aa8138c66e129d641d9
 
             #destinatii {
                 display: flex;
@@ -545,6 +589,7 @@ main {
                     font-size: $inputTextSize;
                     cursor: pointer;
 
+<<<<<<< HEAD
                     &:hover {
                         scale: 1.1;
                         color: $blue;
@@ -1063,9 +1108,65 @@ main {
                             
                         }
                     }
+=======
+                 .tara-incarcare-div, .oras-incarcare-div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+                    gap:$gap;
+                }
+
+                .tara-descarcare-div, .oras-descarcare-div, .tip-camion, .tip-incarcare, .tip-transport{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+                    gap:$gap;
+                }
+
+                 select {
+                    width: 350px;
+                    padding: $padding;
+                    background-color: $backgroundColor;
+                    border: 1px solid $backgroundColor;
+                    outline: none;
+                    transition: border-color 0.15s ease-in;
+                    border-radius: $borderRadius;
+                    font-size: $inputTextSize;
+
+                    option {
+                        color: $textColor2;
+                        font-size: $inputTextSize;
+                        background-color: $backgroundColor;
+                    }
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+                    
+                }
+
+                 label {
+                    display: flex;
+                    font-size: $inputTextSize;
+                    
+                }
+
+                 input {
+                    width: 350px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    margin-top: $gap;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+>>>>>>> 90dd815cd70721657fd72aa8138c66e129d641d9
                 }
             }
         }
+<<<<<<< HEAD
     }
 
     @media (max-width: 1200px) {
@@ -1195,10 +1296,66 @@ main {
 
                         #vizualizare_harta {
                             width: 80%;
+=======
+         .middle-div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: inherit;
+            height: 35vh;
+            margin-bottom: calc($gap * 3);
+
+            .second_middle_div{
+                display: flex;
+                justify-content: space-around;
+                width: inherit;
+
+                .greutate, .volumul-marfii, .natura-marfii{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+                    gap: $gap;
+                }
+            }
+
+            .second2_middle_div{
+                display: flex;
+                width: inherit;
+                justify-content: space-between;
+                padding: 0 55px;
+                
+                .comentarii{
+                    display: flex;
+                    width: 70%;
+                    flex-direction: column;
+                    width: inherit;
+                    justify-content: start;
+                    align-items: start;
+                    margin-top: calc($gap * 3 );
+                    gap: $gap;
+
+                    textarea{
+                        width: 800px;
+                        height: 100px;
+                        border-radius: $borderRadius;
+                        padding: $padding;
+                        font-size:  $inputTextSize;
+                        background-color: $backgroundColor;
+                        outline: none;
+                        resize: none;
+                        border: rgba(255, 255, 255, 0);
+                        transition: border-color 0.15s ease-in;
+
+                        &:focus {
+                            border: 1px solid $blue;
+>>>>>>> 90dd815cd70721657fd72aa8138c66e129d641d9
                         }
                     }
                 }
 
+<<<<<<< HEAD
                 #perioada {
                     width: 25%;
                     display: flex;
@@ -1339,11 +1496,109 @@ main {
                                     }
                                 }
                             }
+=======
+                .price-div{
+                    display: flex;
+                    width: 30%;
+                    width: inherit;
+                    justify-content: end;
+                    align-items: end;
+                    margin-top: $gap;
+
+                    .price_div_div{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: end;
+
+                        #price{
+                            width: 250px;
+                            height: 39px;
+                            border-radius:    $borderRadius 0px 0px $borderRadius ;
+                            padding: $padding;
+                            font-size:  $inputTextSize;
+                            background-color: $backgroundColor;
+                            outline: none;
+                            border: rgba(255, 255, 255, 0);
+                            transition: border-color 0.15s ease-in;
+
+                            &:focus {
+                                border: 1px solid $blue;
+                            }
+                        }
+
+                    }
+                    #valuta{
+                        width: 100px;
+                        height: 39px ;
+                        border-radius:  0px  $borderRadius   $borderRadius 0px;
+                        padding: $padding;
+                        font-size:  $inputTextSize;
+                        background-color: $backgroundColor;
+                        outline: none;
+                        border: rgba(255, 255, 255, 0);
+                        transition: border-color 0.15s ease-in;
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
+
+                        option {
+                            color: $textColor2;
+                            font-size: $inputTextSize;
+                            background-color: $backgroundColor;
+>>>>>>> 90dd815cd70721657fd72aa8138c66e129d641d9
                         }
                     }
                 }
             }
 
+<<<<<<< HEAD
+=======
+            
+
+            label {
+                font-size: $inputTextSize;
+                
+            }
+
+             input {
+                width: 350px;
+                border-radius: $borderRadius;
+                padding: $padding;
+                font-size:  $inputTextSize;
+                background-color: $backgroundColor;
+                outline: none;
+                border: rgba(255, 255, 255, 0);
+                transition: border-color 0.15s ease-in;
+
+                &:focus {
+                    border: 1px solid $blue;
+                }
+            }
+
+            
+        }
+
+        button {
+            background-color: $blue;
+            color: white;
+            gap: $gap;
+            font-size: $inputTextSize;
+            cursor: pointer;
+            border: 1px solid $blue;
+            transition: all 0.15s ease-in;
+            width: $minWidth;
+            border-radius: $borderRadius;
+            width: $minWidth;
+            height: 50px;
+            @include flex(row, center, center);
+
+            &:hover {
+                background-color: white;
+                color: $blue;
+            }
+>>>>>>> 90dd815cd70721657fd72aa8138c66e129d641d9
         }
     }
 
