@@ -303,7 +303,6 @@ i {
     }
     .dont-have-account {
         @include flex(column, center, center);
-        font-size: $smallText;
         a{
             color: $blue;
             text-decoration: none;

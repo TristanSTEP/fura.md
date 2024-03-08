@@ -271,7 +271,6 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
 }
 #login-container .dont-have-account a {
   color: #0437f2;
