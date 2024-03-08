@@ -199,9 +199,9 @@ main {
 // provider-users-list.html  start g
 
 #provider-div {
-    @include flex(column, center, center);
-    gap: calc($gap + 10px);
-    margin-top: 40px;
+    @include flex(row, space-between, flex-start);
+    width: 1380px;
+    margin: 40px auto;
 
     #provider-heading-f {
         @include flex(column, center, center);
@@ -212,25 +212,77 @@ main {
         }
 
         #provider-filters {
-            @include flex(row, space-between, flex-start);
+            @include flex(column, flex-start, flex-start);
             padding: calc($padding + 10px);
             width: 100%;
-            gap: $gap;
+            gap: calc($gap * 3);
             border-radius: $borderRadius;
             box-shadow: $box-shadow;
             border: 2px solid $backgroundColor;
 
             form {
                 @include flex(column, flex-start, flex-start);
-                gap: $gap;
-
-                option {
-                    font-size: calc($text + 3px);
+                gap: calc($gap * 2);
+                #inputs-fil {
+                    @include flex(column, flex-start, flex-start);
+                    gap: calc($gap + 5px);
+                    option {
+                        font-size: calc($text + 3px);
+                    }
+                    #check-boxes-country {
+                        width: 100%;
+                        @include flex(column, flex-start, flex-start);
+                        gap: $gap;
+                        p {
+                            font-size: $subtitleSize;
+                            font-weight: 500;
+                        }
+                        #check-boxes-c {
+                            @include grid(2);
+                            align-items: center;
+                            gap: calc($gap * 2);
+                            div {
+                                label {
+                                    font-size: $subtitleSize;
+                                }
+                            }
+                        }
+                    }
                 }
-
-                #buttons {
-                    @include flex(row, center, center);
+                #check-boxes-cities {
+                    @include flex(column, flex-start, flex-start);
                     gap: $gap;
+                    p {
+                        font-size: $subtitleSize;
+                        font-weight: 500;
+                    }
+                    #check-boxes-cit {
+                        @include grid(2);
+                        align-items: center;
+                        gap: calc($gap * 2);
+                        div {
+                            label {
+                                font-size: $subtitleSize;
+                            }
+                        }
+                    }
+                }
+                #buttons {
+                    @include flex(column, center, center);
+                    gap: $gap;
+                    .button-clear {
+                        background-color: #E6EBFF;
+                        color: $blue;
+                        text-align: center;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+                        font-weight: 700;
+                        cursor: pointer;
+                        padding: 10px 0;
+                        border: none;
+                        width: 100%;
+                        outline: none;
+                    }
                 }
             }
         }
@@ -559,18 +611,17 @@ main {
                         margin: auto;
 
 
-
                         a {
                             width: 110%;
                             margin: auto;
                             text-decoration: none;
-                            padding: 10px 0;
+                            padding: $padding;
                             background-color: #E6EBFF;
                             color: #032396;
                             font-size: calc($text + 6px);
                             border-radius: $borderRadius;
                             font-weight: normal;
-                            @include flex(row, center, center);
+                            @include flex(row, flex-start, center);
                             gap: calc($gap - 2px);
 
                             i {
