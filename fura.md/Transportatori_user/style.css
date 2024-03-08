@@ -33,7 +33,7 @@
 .assets .input:focus,
 .assets .image-input:focus,
 .assets .button:focus {
-  border: 1px solid #0437F2;
+  border: 1px solid #0437f2;
 }
 .assets .input input,
 .assets .image-input input,
@@ -45,7 +45,7 @@
 }
 .assets .image-input:hover {
   cursor: pointer;
-  box-shadow: 0 0 5px #0437F2;
+  box-shadow: 0 0 5px #0437f2;
 }
 .assets .image-input label {
   display: flex;
@@ -71,7 +71,7 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 1px solid #0437F2;
+  border: 1px solid #0437f2;
   overflow: hidden;
 }
 .assets .avatar:hover img {
@@ -85,7 +85,7 @@
   transition: transform 0.15s ease-in;
 }
 .assets .button {
-  background-color: #0437F2;
+  background-color: #0437f2;
   color: white;
   display: flex;
   flex-direction: row;
@@ -94,76 +94,112 @@
   gap: 10px;
   font-size: 1.25rem;
   cursor: pointer;
-  border: 1px solid #0437F2;
+  border: 1px solid #0437f2;
   transition: all 0.15s ease-in;
 }
 .assets .button:hover {
   background-color: white;
-  color: #0437F2;
+  color: #0437f2;
 }
 
 main {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-main .search-load {
-  padding: 10px;
-  height: 100%;
-  width: 100%;
+main .register {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 600px;
   gap: 10px;
 }
-main .search-load h1 {
-  width: 100%;
+main .register h1 {
   font-size: 2.5rem;
-  text-align: center;
 }
-main .search-load form {
+main .register .registerInp {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: #f1f4ff;
-  padding: 10px;
-  border-radius: 10px;
-}
-main .search-load form .form-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #f1f4ff;
   gap: 10px;
 }
-main .search-load form .form-group i {
-  font-size: 1.5rem;
-  color: #0437F2;
+main .register .registerInp .form-group {
+  display: flex;
 }
-main .search-load form .form-group input {
-  border: none;
+main .register .registerInp .form-group input::-webkit-outer-spin-button,
+main .register .registerInp .form-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .register .registerInp .form-group input {
+  padding: 10px;
+  background-color: #f1f4ff;
+  border: 1px solid #f1f4ff;
   outline: none;
-  min-width: 500px;
-  font-size: 1rem;
+  transition: border-color 0.15s ease-in;
   border-radius: 10px;
-  background: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  min-width: 250px;
 }
-main .search-load form button {
-  height: 50px;
-  width: 50px;
+main .register .registerInp .form-group input:focus {
+  border: 1px solid #0437f2;
+}
+main .register .registerInp .image-input {
+  transition: box-shadow 0.15s ease-in;
+  padding: 10px;
+  background-color: #f1f4ff;
+  border: 1px solid #f1f4ff;
+  outline: none;
+  transition: border-color 0.15s ease-in;
   border-radius: 10px;
-  background-color: #0437F2;
-  border: none;
+  font-size: 1.25rem;
+  min-width: 250px;
+}
+main .register .registerInp .image-input input {
+  display: none;
+}
+main .register .registerInp .image-input:hover {
   cursor: pointer;
+  box-shadow: 0 0 5px #0437f2;
+}
+main .register .registerInp .image-input label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+main .register .registerInp .createAcc {
+  background-color: #0437f2;
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-main .search-load form button i {
+  gap: 10px;
   font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437f2;
+  transition: all 0.15s ease-in;
+  padding: 10px;
+  border: 1px solid #0437f2;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+main .register .registerInp .createAcc:hover {
+  background-color: white;
+  color: #0437f2;
+}
+main .register .oldUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */
