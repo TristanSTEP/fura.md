@@ -7,6 +7,11 @@
     align-items: $align;
 }
 
+@mixin grid($columnsNumber) {
+    display: grid;
+    grid-template-columns: repeat($columnsNumber, 1fr);
+}
+
 $blue: #0437F2; // Accent color
 $textColor: black;
 $textColor2: rgb(111, 111, 111);
@@ -19,6 +24,9 @@ $subtitleSize: 1.5rem;
 $text: 1rem;
 $smallText: 0.8rem;
 $iconSize: 1.25rem;
+$inputTextSize: 1.25rem;
+$minWidth: 250px;
+
 
 * {
     margin: 0;
@@ -42,7 +50,7 @@ main {
         h1 {
             width: 100%;
             font-size: $titleSize;
-            text-align: center
+            text-align: center;
         }
 
         form {
@@ -90,18 +98,19 @@ main {
     }
 }
 
-<<<<<<< HEAD
+
 #see-products{
     height: 100vh;
     width: 100vw;
-    background-color: $backgroundColor;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
 
     #products{
-        width: 1400px;
+        width: 1200px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -111,38 +120,70 @@ main {
         h2 {
             color: black;
             font-size: $titleSize;
+            margin-top: $padding;
+            margin-bottom: $padding;
         }
 
 
-        form {
+        #formular {
             width: 100%;
-            height: 260px;
-            background-color: #eeeef0;
-            border: 1px solid #3498db;
+            // height: 185px;
+            height: auto;
+            background-color: white;
             padding: $padding;
+            border-radius: $borderRadius;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $gap;
+            box-shadow: 0 0 5px $blue;
+            margin-bottom: $gap;
 
             #form_1 {
-                width: 1368px;
-                height: 58px;
+                width: 1180px;
+                height: 70px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                gap: $gap;
 
                 #form_11 {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    gap: $gap;
+                    
 
                     label {
-                        font-size: $subtitleSize;
+                        font-size: $inputTextSize;
                         color: black;
                     }
 
                     select {
-                        width: 680px;
-                        height: 40px;
+                        width: 585px;
+                        padding: $padding;
+                        background-color: $backgroundColor;
+                        border: 1px solid $backgroundColor;
+                        outline: none;
+                        transition: border-color 0.15s ease-in;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+
+                        option {
+                            width: 100%;
+                            color: $textColor2;
+                            font-size: $inputTextSize;  
+                            background-color: $backgroundColor;
+                            padding: $padding;
+                            border-radius: $borderRadius;
+                        }
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
                     }
                 }
 
@@ -151,41 +192,74 @@ main {
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    gap: $gap;
 
                     label {
-                        font-size: $subtitleSize;
+                        font-size: $inputTextSize;
                         color: black;
                     }
 
                     select {
-                        width: 680px;
-                        height: 40px;
+                        width: 585px;
+                        padding: $padding;
+                        background-color: $backgroundColor;
+                        border: 1px solid $backgroundColor;
+                        outline: none;
+                        transition: border-color 0.15s ease-in;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+
+                        option {
+                            width: 100%;
+                            color: $textColor2;
+                            font-size: $inputTextSize;  
+                            background-color: $backgroundColor;
+                            padding: $padding;
+                            border-radius: $borderRadius;
+                        }
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
                     }
                 }
             }
 
             #form_2 {
-                width: 1368px;
-                height: 58px;
-                display: flex;
+                width: 1180px;
+                height: 70px;
+                display: none;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                
+                gap: $gap;
 
                 #form_21 {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    gap: $gap;
 
                     label {
-                        font-size: $subtitleSize;
+                        font-size: $inputTextSize;
                         color: black;
                     }
 
                     input {
-                        width: 336px;
-                        height: 40px;
+                        width: 287.5px;
+                        padding: $padding;
+                        background-color: $backgroundColor;
+                        border: 1px solid $backgroundColor;
+                        outline: none;
+                        transition: border-color 0.15s ease-in;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
                     }
                 }
 
@@ -194,15 +268,26 @@ main {
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    gap: $gap;
 
                     label {
-                        font-size: $subtitleSize;
+                        font-size: $inputTextSize;
                         color: black;
                     }
 
                     input {
-                        width: 336px;
-                        height: 40px;
+                        width: 287.5px;
+                        padding: $padding;
+                        background-color: $backgroundColor;
+                        border: 1px solid $backgroundColor;
+                        outline: none;
+                        transition: border-color 0.15s ease-in;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
                     }
                 }
 
@@ -211,15 +296,26 @@ main {
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    gap: $gap;
 
                     label {
-                        font-size: $subtitleSize;
+                        font-size: $inputTextSize;
                         color: black;
                     }
 
                     input {
-                        width: 336px;
-                        height: 40px;
+                        width: 287.5px;
+                        padding: $padding;
+                        background-color: $backgroundColor;
+                        border: 1px solid $backgroundColor;
+                        outline: none;
+                        transition: border-color 0.15s ease-in;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
                     }
                 }
 
@@ -228,41 +324,73 @@ main {
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    gap: $gap;
 
                     label {
-                        font-size: $subtitleSize;
+                        font-size: $inputTextSize;
                         color: black;
                     }
 
                     input {
-                        width: 336px;
-                        height: 40px;
+                        width: 287.5px;
+                        padding: $padding;
+                        background-color: $backgroundColor;
+                        border: 1px solid $backgroundColor;
+                        outline: none;
+                        transition: border-color 0.15s ease-in;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
                     }
                 }
             }
 
             #form_3 {
-                width: 1368px;
-                height: 58px;
-                display: flex;
+                width: 1180px;
+                height: 70px;
+                display: none;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                gap: $gap;
 
                 #form_31 {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    gap: $gap;
 
                     label {
-                        font-size: $subtitleSize;
+                        font-size: $inputTextSize;
                         color: black;
                     }
 
                     select {
-                        width: 680px;
-                        height: 40px;
+                        width: 585px;
+                        padding: $padding;
+                        background-color: $backgroundColor;
+                        border: 1px solid $backgroundColor;
+                        outline: none;
+                        transition: border-color 0.15s ease-in;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+
+                        option {
+                            width: 100%;
+                            color: $textColor2;
+                            font-size: $inputTextSize;  
+                            background-color: $backgroundColor;
+                            padding: $padding;
+                            border-radius: $borderRadius;
+                        }
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
                     }
                 }
 
@@ -271,127 +399,2235 @@ main {
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    gap: $gap;
 
                     label {
-                        font-size: $subtitleSize;
+                        font-size: $inputTextSize;
                         color: black;
                     }
 
                     input {
-                        width: 680px;
-                        height: 40px;
+                        width: 585px;
+                        padding: $padding;
+                        background-color: $backgroundColor;
+                        border: 1px solid $backgroundColor;
+                        outline: none;
+                        transition: border-color 0.15s ease-in;
+                        border-radius: $borderRadius;
+                        font-size: $inputTextSize;
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
                     }
                 }
-
-
             }
 
             #butoane {
-                width: 1368px;
-                height: 58px;
+                width: 1180px;
+                height: 70px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                gap: $gap;
 
                 #btn_1 {
-                    width: 336px;
-                    height: 40px;
-                    background-color: #93D292;
+                    width: 287.5px;
+                    padding: $padding;
+                    background-color: $backgroundColor;
+                    border: 1px solid $backgroundColor;
+                    outline: none;
+                    transition: border-color 0.15s ease-in;
+                    border-radius: $borderRadius;
+                    font-size: $inputTextSize;
+
+                    background-color: $blue;
+                    color: white;
+                    @include flex(row, center, center);
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+
+                    &:hover {
+                        background-color: white;
+                        color: $blue;
+                    }
                 }
 
                 #btn_2 {
-                    width: 336px;
-                    height: 40px;
-                    background-color: #ECCF73;
+                    width: 287.5px;
+                    padding: $padding;
+                    background-color: $backgroundColor;
+                    border: 1px solid $backgroundColor;
+                    outline: none;
+                    transition: border-color 0.15s ease-in;
+                    border-radius: $borderRadius;
+                    font-size: $inputTextSize;
+
+                    background-color: $blue;
+                    color: white;
+                    @include flex(row, center, center);
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+
+                    &:hover {
+                        background-color: white;
+                        color: $blue;
+                    }
                 }
 
                 #btn_3 {
-                    width: 680px;
-                    height: 40px;
-                    background-color: #BBC8D4;
+                    width: 585px;
+                    padding: $padding;
+                    background-color: $backgroundColor;
+                    border: 1px solid $backgroundColor;
+                    outline: none;
+                    transition: border-color 0.15s ease-in;
+                    border-radius: $borderRadius;
+                    font-size: $inputTextSize;
+
+                    background-color: $blue;
+                    color: white;
+                    @include flex(row, center, center);
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+
+                    &:hover {
+                        background-color: white;
+                        color: $blue;
+                    }
                 }
             }
-=======
-.adauga-marfa{
-    height: 100vh;
-    width: 100vw;
-    
-    form{
-        position: absolute;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: $gap;
-        height: 90vh;
-        width: 80vw;
-        margin: auto;
-        right: 50%;
-        top: 50%;
-        transform: translate(50%, -50%);
-        background-color: aqua;
+        }
 
-        .up-div{
+        #marfuri {
+            width: 1200px;
+            height: 50px;
+            background-color: $backgroundColor;
             display: flex;
-            justify-content: space-around;
+            flex-direction: row;
             align-items: center;
-            width: inherit;
-            background-color: aquamarine;
-            height: 35vh;
+            justify-content: space-between;
+            padding: $padding;
+            border-radius: $borderRadius;
 
-            .incarcare-div, .descarcare-div, .truck-type-div{
+            #destinatii {
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: $padding;
+
+                h3 {
+                    font-size: $inputTextSize;
+
+                    strong {
+                        font-size: $inputTextSize;
+                    }
+                }
+            }
+
+            #mapa_locatie {
+                display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: $gap;
 
+                .fa-solid {
+                    font-size: $inputTextSize;
+                    cursor: pointer;
 
-                .tara-incarcare-div, .oras-incarcare-div{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                    &:hover {
+                        scale: 1.1;
+                        color: $blue;
+                    }
+                }
+
+                #info_harta {
+                    position: absolute;
+                    display: none;
+                    width: 100vw;
+                    height: 100vh;
+                    top: 0%;
+                    left: 0%;
+                    z-index: 0;
+                    background-color: white;
+                    background-color: rgba(0, 0, 0, 0.7); 
+                    backdrop-filter: blur(1px);
                     justify-content: center;
-                }
-
-                .tara-descarcare-div, .oras-descarcare-div, .tip-camion, .tip-incarcare, .tip-transport{
-                    display: flex;
-                    flex-direction: column;
                     align-items: center;
-                    justify-content: center;
+
+                    #vizualizare_harta {
+                        width: 1200px;
+                        height: 625px;
+                        background-color: white;
+                        border-radius: $borderRadius;
+                        display: flex;
+                        flex-direction: column;
+                        padding: $padding;
+
+                        #btn_inchide {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+
+                            .fa-xmark {
+                                font-size: $titleSize;
+
+                                &:hover {
+                                    scale: 1.1;
+                                    color: $blue;
+                                }
+                            }
+                        }
+
+                        #detalii_traseu {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: $padding;
+
+                            #puncte_traseu {
+                                display: flex;
+                                flex-direction: column;
+
+                                p {
+                                    font-size: $inputTextSize;
+
+                                    strong {
+                                        font-size: $inputTextSize;
+                                    }
+                                }
+                            }
+
+                            #perioada_cursa {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                p {
+                                    font-size: $inputTextSize;
+                                }
+                            }
+
+                            #distanta_timp {
+                                display: flex;
+                                flex-direction: column;
+
+                                p {
+                                    font-size: $inputTextSize;
+
+                                    strong {
+                                        font-size: $inputTextSize;
+                                    }
+                                }
+                            }
+
+                           
+                        }
+
+                        #harta {
+                            width: 100%;
+                            height: 580px;
+
+                            #mapid {
+                                width: 100%;
+                                height: 530px;
+
+                            }
+                        }
+                    }
                 }
 
-                 select {
-                    width: 250px;
-                    height: 30px;
-                    border-radius: $borderRadius;
-                    
+            }
+
+            #perioada {
+                p {
+                    font-size: $inputTextSize;
                 }
-                input {
-                    width: 250px;
-                    height: 30px;
-                    border-radius: $borderRadius;
+            }
+
+            #greutatea {
+                p {
+                    font-size: $inputTextSize;
                 }
-                
+            }
+
+            #tip_camion {
+                p {
+                    font-size: $inputTextSize;
+                }
+            }
+
+            #companie {
+                h3 {
+                    font-size: $inputTextSize;
+                }
+            }
+
+            #info_marfa {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: $padding;
+
+                .fa-circle-info {
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+
+                    &:hover {
+                        scale: 1.1;
+                        color: $blue;
+                    }
+                }
+
+                #info_detaliata {
+                    position: absolute;
+                    display: none;
+                    width: 100vw;
+                    height: 100vh;
+                    top: 0%;
+                    left: 0%;
+                    z-index: 0;
+                    background-color: white;
+                    background-color: rgba(0, 0, 0, 0.7); 
+                    backdrop-filter: blur(1px);
+                    justify-content: center;
+                    align-items: center;
+
+                    #vizualizare_info {
+                        width: 800px;
+                        height: 665px;
+                        background-color: white;
+                        border-radius: $borderRadius;
+                        display: flex;
+                        flex-direction: column;
+                        padding: $padding;
+
+                        #btn_info_inchide {
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            margin-bottom: $padding;
+                            padding: $padding;
+                            
+                            #btn_inchide_info {
+                                font-size: $titleSize;
+                                cursor: pointer;
+
+                                &:hover {
+                                    scale: 1.1;
+                                    color: $blue;
+                                }
+
+                            }
+                        }
+                    }
+
+                    #detalii_marfa {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        box-shadow: 0 0 5px $blue;
+                        padding: $padding;
+                        margin-bottom: calc($padding * 3);
+
+                        #detalii_marfa_1 {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            margin-bottom: calc($padding * 3);
+
+                            h3 {
+                                font-size: $subtitleSize;
+                                color: $textColor2;
+                            }
+                        }
+
+                        #detalii_marfa_2 {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            margin-bottom: $gap;
+                            gap: $gap;
+
+                            #detalii_marfa_21 {
+                                display: flex;
+                                flex-direction: column;
+                                gap: $gap;
+
+                                h3 {
+                                    font-size: $inputTextSize;
+                                    color: $textColor2;
+                                }
+
+                                #detalii_marfa_211 {
+                                    width: 246.6px;
+                                    height: 120px;
+                                    background-color: $backgroundColor;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    gap: $gap;
+                                    padding: $padding;
+                                    border-radius: $borderRadius;
+
+                                    p {
+                                        font-size: $inputTextSize;
+                                        color: $textColor;
+                                    }
+                                }
+                            }
+
+                            #detalii_marfa_22 {
+                                display: flex;
+                                flex-direction: column;
+                                gap: $gap;
+
+                                h3 {
+                                    font-size: $inputTextSize;
+                                    color: $textColor2;
+                                }
+
+                                #detalii_marfa_221 {
+                                    width: 246.6px;
+                                    height: 120px;
+                                    background-color: $backgroundColor;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    gap: $gap;
+                                    padding: $padding;
+                                    border-radius: $borderRadius;
+
+                                    p {
+                                        font-size: $inputTextSize;
+                                        color: $textColor;
+                                    }
+                                }
+                            }
+
+                            #detalii_marfa_23 {
+                                display: flex;
+                                flex-direction: column;
+                                gap: $gap;
+
+                                h3 {
+                                    font-size: $inputTextSize;
+                                    color: $textColor2;
+                                }
+
+                                #detalii_marfa_231 {
+                                    width: 246.6px;
+                                    height: 120px;
+                                    background-color: $backgroundColor;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    gap: $gap;
+                                    padding: $padding;
+                                    border-radius: $borderRadius;
+
+                                    .fa-map-location-dot {
+                                        font-size: $titleSize;
+                                        color: #0437F2;
+                                    }
+
+                                    p {
+                                        font-size: $inputTextSize;
+                                        color: $textColor;
+                                    }
+                                }
+                            }
+                        }
+
+                        #detalii_marfa_3 {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: $gap;
+                            gap: $gap;
+
+                            #detalii_marfa_31 {
+                                display: flex;
+                                flex-direction: column;
+                                gap: $gap;
+
+                                h3 {
+                                    font-size: $inputTextSize;
+                                    color: $textColor2;
+                                }
+
+                                #detalii_marfa_311 {
+                                    width: 500px;
+                                    height: 60px;
+                                    background-color: $backgroundColor;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    gap: $gap;
+                                    padding: $padding;
+                                    border-radius: $borderRadius;
+
+                                    p {
+                                        font-size: $inputTextSize;
+                                        color: $textColor;
+                                    }
+                                }
+                            }
+
+                            #detalii_marfa_32 {
+                                display: flex;
+                                flex-direction: column;
+                                gap: $gap;
+
+                                h3 {
+                                    font-size: $inputTextSize;
+                                    color: $textColor2;
+                                }
+
+                                #detalii_marfa_321 {
+                                    width: 250px;
+                                    height: 60px;
+                                    background-color: $backgroundColor;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    gap: $gap;
+                                    padding: $padding;
+                                    border-radius: $borderRadius;
+
+                                    p {
+                                        font-size: $inputTextSize;
+                                        color: $textColor;
+                                    }
+                                }
+                            }
+                        }
+
+                        #detalii_marfa_4 {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: $gap;
+
+                            #detalii_marfa_41 {
+                                display: flex;
+                                flex-direction: column;
+                                gap: $gap;
+
+                                h3 {
+                                    font-size: $inputTextSize;
+                                    color: $textColor2;
+                                }
+
+                                #detalii_marfa_411 {
+                                    width: 375px;
+                                    height: 60px;
+                                    background-color: $backgroundColor;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    gap: $gap;
+                                    padding: $padding;
+                                    border-radius: $borderRadius;
+                                }
+                            }
+
+                            #detalii_marfa_42 {
+                                display: flex;
+                                flex-direction: column;
+                                gap: $gap;
+
+                                h3 {
+                                    font-size: $inputTextSize;
+                                    color: $textColor2;
+                                }
+
+                                #detalii_marfa_421 {
+                                    width: 375px;
+                                    height: 60px;
+                                    background-color: $backgroundColor;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    gap: $gap;
+                                    padding: $padding;
+                                    border-radius: $borderRadius;
+                                }
+                            }
+                        }
+                    }
+
+                    #detalii_utilizator {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        box-shadow: 0 0 5px $blue;
+                        padding: $padding;
+
+                        #detalii_utilizator_1 {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            gap: $gap;
+
+                            h3 {
+                                font-size: $inputTextSize;
+                                color: $textColor2;
+                            }
+
+                            #detalii_utilizator_11 {
+                                width: 375px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: flex-start;
+                                gap: $gap;
+                                padding: $padding;
+                                background-color: $backgroundColor;
+                                border-radius: $borderRadius;
+
+                                h3 {
+                                    font-size: $inputTextSize;
+                                    color: $textColor;
+                                }
+
+                                #nume_companie {
+                                    color: #0437F2;
+                                }
+                            }
+                        }
+
+                        #detalii_utilizator_2 {
+                            width: 375px;
+                            height: 136px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            gap: $gap;
+
+                            h3 {
+                                font-size: $inputTextSize;
+                                color: $textColor2;
+                            }
+
+                            #detalii_utilizator_21 {
+                                display: flex;
+                                flex-direction: row;
+                                gap: $gap;
+
+                                a {
+                                    .fa-viber {
+                                        color: rgb(124, 82, 158);
+                                        font-size: $titleSize;
+                                    }
+
+                                    .fa-telegram {
+                                        color: rgb(55, 174, 226);
+                                        font-size: calc($titleSize * 1.05);
+                                    }
+
+                                    .fa-square-whatsapp {
+                                        color: rgb(37, 211, 102);
+                                        font-size: calc($titleSize * 1.1);
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
             }
         }
-        .middle-div{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: inherit;
-            background-color: red;
-            height: 35vh;
-        }
-        .bottom-div{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: inherit;
-            background-color: seagreen;
-            height: 25vh;
->>>>>>> cf9edc554024e20b19fe214ddb77066b86bbb9b6
+    }
+
+    @media (max-width: 1200px) {
+        #products {
+            width: 80%;
+
+            #formular {
+                width: 100%;
+
+                #form_1 {
+                    width: 100%;
+
+                    #form_11 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_12 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_2 {
+                    width: 100%;
+
+                    #form_21 {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_22 {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_23 {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_24 {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_3 {
+                    width: 100%;
+                    
+                    #form_31 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_32 {
+                        width: 100%; 
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #butoane {
+                    width: 100%;
+
+                    #btn_1 {
+                        width: 100%;
+                    }
+
+                    #btn_2 {
+                        width: 100%;
+                    }
+
+                    #btn_3 {
+                        width: 100%;
+                    }
+                }
+            }
+
+            #marfuri {
+                width: 100%;
+                height: auto;
+                display: flex;
+                gap: $gap;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+               
+                #destinatii {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #mapa_locatie {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_harta {
+                        width: 100%;
+
+                        #vizualizare_harta {
+                            width: 80%;
+                        }
+                    }
+                }
+
+                #perioada {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #greutatea {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                #tip_camion {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #companie {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #info_marfa {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_detaliata {
+                        width: 100%;
+
+                        #vizualizare_info {
+                            width: 70%;
+
+                            #detalii_marfa {
+                                width: 100%;
+
+                                #detalii_marfa_1 {
+                                    width: 100%;
+                                }
+
+                                #detalii_marfa_2 {
+                                    width: 100%;
+
+                                    #detalii_marfa_21 {
+                                        width: 100%;
+
+                                        #detalii_marfa_211 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_22 {
+                                        width: 100%;
+
+                                        #detalii_marfa_221 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_23 {
+                                        width: 100%;
+
+                                        #detalii_marfa_231 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_3 {
+                                    width: 100%;
+
+                                    #detalii_marfa_31 {
+                                        width: 100%;
+
+                                        #detalii_marfa_311 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_32 {
+                                        width: 100%;
+
+                                        #detalii_marfa_321 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_4 {
+                                    width: 100%;
+
+                                    #detalii_marfa_41 {
+                                        width: 100%;
+
+                                        #detalii_marfa_411 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_42 {
+                                        width: 100%;
+
+                                        #detalii_marfa_421 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            #detalii_utilizator {
+                                width: 100%;
+
+                                #detalii_utilizator_1 {
+                                    width: 100%;
+
+                                    #detalii_utilizator_11 {
+                                        width: 100%;
+                                    }
+                                }
+
+                                #detalii_utilizator_2 {
+                                    width: 100%;
+
+                                    h3 {
+                                        width: 40%;
+                                    }
+                                    
+                                    #detalii_utilizator_21 {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
+
+    @media (max-width: 1024px) {
+    
+    }
+
+    @media (max-width: 900px) {
+    
+    }
+
+    @media (max-width: 768px) {
+        #products {
+            width: 80%;
+
+            #formular {
+                width: 100%;
+                height: auto;
+
+                #form_1 {
+                    width: 100%;
+
+                    #form_11 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_12 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_2 {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: $gap;
+
+                    #form_21 {
+                        width: 48.5%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_22 {
+                        width: 48.5%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_23 {
+                        width: 48.5%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_24 {
+                        width: 48.5%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_3 {
+                    width: 100%;
+                    
+                    #form_31 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_32 {
+                        width: 100%; 
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #butoane {
+                    width: 100%;
+
+                    #btn_1 {
+                        width: 100%;
+                    }
+
+                    #btn_2 {
+                        width: 100%;
+                    }
+
+                    #btn_3 {
+                        width: 100%;
+                    }
+                }
+            }
+
+            #marfuri {
+                width: 100%;
+                height: auto;
+                display: flex;
+                gap: $gap;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+               
+                #destinatii {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #mapa_locatie {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_harta {
+                        width: 100%;
+
+                        #vizualizare_harta {
+                            width: 80%;
+                        }
+                    }
+                }
+
+                #perioada {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                #greutatea {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                #tip_camion {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #companie {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #info_marfa {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_detaliata {
+                        width: 100%;
+
+                        #vizualizare_info {
+                            width: 70%;
+
+                            #detalii_marfa {
+                                width: 100%;
+
+                                #detalii_marfa_1 {
+                                    width: 100%;
+                                }
+
+                                #detalii_marfa_2 {
+                                    width: 100%;
+
+                                    #detalii_marfa_21 {
+                                        width: 100%;
+
+                                        #detalii_marfa_211 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_22 {
+                                        width: 100%;
+
+                                        #detalii_marfa_221 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_23 {
+                                        width: 100%;
+
+                                        #detalii_marfa_231 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_3 {
+                                    width: 100%;
+
+                                    #detalii_marfa_31 {
+                                        width: 100%;
+
+                                        #detalii_marfa_311 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_32 {
+                                        width: 100%;
+
+                                        #detalii_marfa_321 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_4 {
+                                    width: 100%;
+
+                                    #detalii_marfa_41 {
+                                        width: 100%;
+
+                                        #detalii_marfa_411 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_42 {
+                                        width: 100%;
+
+                                        #detalii_marfa_421 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            #detalii_utilizator {
+                                width: 100%;
+
+                                #detalii_utilizator_1 {
+                                    width: 100%;
+
+                                    #detalii_utilizator_11 {
+                                        width: 100%;
+                                    }
+                                }
+
+                                #detalii_utilizator_2 {
+                                    width: 100%;
+
+                                    h3 {
+                                        width: 40%;
+                                    }
+                                    
+                                    #detalii_utilizator_21 {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 600px) {
+        #products {
+            width: 80%;
+
+            #formular {
+                width: 100%;
+                height: auto;
+
+                #form_1 {
+                    width: 100%;
+
+                    #form_11 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_12 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_2 {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: $gap;
+
+                    #form_21 {
+                        width: 48.5%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_22 {
+                        width: 48.5%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_23 {
+                        width: 48.5%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_24 {
+                        width: 48.5%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_3 {
+                    width: 100%;
+                    
+                    #form_31 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_32 {
+                        width: 100%; 
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #butoane {
+                    width: 100%;
+
+                    #btn_1 {
+                        width: 100%;
+                    }
+
+                    #btn_2 {
+                        width: 100%;
+                    }
+
+                    #btn_3 {
+                        width: 100%;
+                    }
+                }
+            }
+
+            #marfuri {
+                width: 100%;
+                height: auto;
+                display: flex;
+                gap: $gap;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+               
+                #destinatii {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #mapa_locatie {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_harta {
+                        width: 100%;
+
+                        #vizualizare_harta {
+                            width: 80%;
+                           height: auto;
+
+                            #detalii_traseu {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                height: auto;
+
+                                #puncte_traseu {
+                                    width: 35%;
+                                }
+
+                                #perioada_cursa {
+                                    width: 30%;
+                                }
+
+                                #distanta_timp {
+                                    width: 40%;
+                                }
+                            }
+
+                            #harta {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+
+                #perioada {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                #greutatea {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                #tip_camion {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #companie {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #info_marfa {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_detaliata {
+                        width: 100%;
+
+                        #vizualizare_info {
+                            width: 90%;
+
+                            #detalii_marfa {
+                                width: 100%;
+
+                                #detalii_marfa_1 {
+                                    width: 100%;
+                                }
+
+                                #detalii_marfa_2 {
+                                    width: 100%;
+
+                                    #detalii_marfa_21 {
+                                        width: 100%;
+
+                                        #detalii_marfa_211 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_22 {
+                                        width: 100%;
+
+                                        #detalii_marfa_221 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_23 {
+                                        width: 100%;
+
+                                        #detalii_marfa_231 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_3 {
+                                    width: 100%;
+
+                                    #detalii_marfa_31 {
+                                        width: 100%;
+
+                                        #detalii_marfa_311 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_32 {
+                                        width: 100%;
+
+                                        #detalii_marfa_321 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_4 {
+                                    width: 100%;
+
+                                    #detalii_marfa_41 {
+                                        width: 100%;
+
+                                        #detalii_marfa_411 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_42 {
+                                        width: 100%;
+
+                                        #detalii_marfa_421 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            #detalii_utilizator {
+                                width: 100%;
+
+                                #detalii_utilizator_1 {
+                                    width: 100%;
+
+                                    #detalii_utilizator_11 {
+                                        width: 100%;
+                                    }
+                                }
+
+                                #detalii_utilizator_2 {
+                                    width: 100%;
+
+                                    h3 {
+                                        width: 40%;
+                                    }
+                                    
+                                    #detalii_utilizator_21 {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 480px) {
+        #products {
+            width: 80%;
+
+            #formular {
+                width: 100%;
+                height: auto;
+
+                #form_1 {
+                    width: 100%;
+
+                    #form_11 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_12 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_2 {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: $gap;
+
+                    #form_21 {
+                        width: 48.2%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_22 {
+                        width: 48.2%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_23 {
+                        width: 48.2%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_24 {
+                        width: 48.2%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_3 {
+                    width: 100%;
+                    
+                    #form_31 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_32 {
+                        width: 100%; 
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #butoane {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    #btn_1 {
+                        width: 100%;
+                    }
+
+                    #btn_2 {
+                        width: 100%;
+                    }
+
+                    #btn_3 {
+                        width: 100%;
+                    }
+                }
+            }
+
+            #marfuri {
+                width: 100%;
+                height: auto;
+                display: flex;
+                gap: $gap;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+               
+                #destinatii {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #mapa_locatie {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_harta {
+                        width: 100%;
+
+                        #vizualizare_harta {
+                            width: 80%;
+                           height: auto;
+
+                            #detalii_traseu {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                height: auto;
+
+                                #puncte_traseu {
+                                    width: 35%;
+                                }
+
+                                #perioada_cursa {
+                                    width: 30%;
+                                }
+
+                                #distanta_timp {
+                                    width: 40%;
+                                }
+                            }
+
+                            #harta {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+
+                #perioada {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                #greutatea {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                #tip_camion {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #companie {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #info_marfa {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_detaliata {
+                        width: 100%;
+
+                        #vizualizare_info {
+                            width: 90%;
+                            height: auto;
+
+                            #detalii_marfa {
+                                width: 100%;
+
+                                #detalii_marfa_1 {
+                                    width: 100%;
+                                }
+
+                                #detalii_marfa_2 {
+                                    width: 100%;
+
+                                    #detalii_marfa_21 {
+                                        width: 100%;
+
+                                        #detalii_marfa_211 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_22 {
+                                        width: 100%;
+
+                                        #detalii_marfa_221 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_23 {
+                                        width: 100%;
+
+                                        #detalii_marfa_231 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_3 {
+                                    width: 100%;
+
+                                    #detalii_marfa_31 {
+                                        width: 100%;
+
+                                        #detalii_marfa_311 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_32 {
+                                        width: 100%;
+
+                                        #detalii_marfa_321 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_4 {
+                                    width: 100%;
+
+                                    #detalii_marfa_41 {
+                                        width: 100%;
+
+                                        #detalii_marfa_411 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_42 {
+                                        width: 100%;
+
+                                        #detalii_marfa_421 {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            #detalii_utilizator {
+                                width: 100%;
+
+                                #detalii_utilizator_1 {
+                                    width: 100%;
+
+                                    #detalii_utilizator_11 {
+                                        width: 100%;
+                                    }
+                                }
+
+                                #detalii_utilizator_2 {
+                                    width: 100%;
+
+                                    h3 {
+                                        width: 40%;
+                                    }
+                                    
+                                    #detalii_utilizator_21 {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 320px) {
+        #products {
+            width: 80%;
+
+            #formular {
+                width: 100%;
+                height: auto;
+
+                #form_1 {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    #form_11 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_12 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_2 {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    #form_21 {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_22 {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_23 {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_24 {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #form_3 {
+                    width: 100%;
+                    
+                    #form_31 {
+                        width: 100%;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    #form_32 {
+                        width: 100%; 
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #butoane {
+                    width: 100%;
+
+                    #btn_1 {
+                        width: 100%;
+                    }
+
+                    #btn_2 {
+                        width: 100%;
+                    }
+
+                    #btn_3 {
+                        width: 100%;
+                    }
+                }
+            }
+
+            #marfuri {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+
+               
+                #destinatii {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: $gap;
+                }
+
+                #mapa_locatie {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_harta {
+                        width: 100%;
+
+                        #vizualizare_harta {
+                            width: 80%;
+                           height: auto;
+
+                            #detalii_traseu {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                height: auto;
+
+                                #puncte_traseu {
+                                    width: 100%;
+                                }
+
+                                #perioada_cursa {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                }
+
+                                #distanta_timp {
+                                    width: 100%;
+                                }
+                            }
+
+                            #harta {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+
+                #perioada {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                #greutatea {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: $gap;
+                    
+                }
+
+                #tip_camion {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #companie {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #info_marfa {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #info_detaliata {
+                        width: 100%;
+                        height: auto;
+                        padding-top: $padding;
+                        padding-bottom: $padding;
+
+                        #vizualizare_info {
+                            width: 90%;
+                            height: auto;
+
+                            #detalii_marfa {
+                                width: 100%;
+
+                                #detalii_marfa_1 {
+                                    width: 100%;
+                                    height: 30px;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+
+                                #detalii_marfa_2 {
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    #detalii_marfa_21 {
+                                        width: 100%;
+
+                                        #detalii_marfa_211 {
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            flex-direction: row;
+                                        }
+                                    }
+
+                                    #detalii_marfa_22 {
+                                        width: 100%;
+                                        height: auto;
+
+                                        #detalii_marfa_221 {
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            flex-direction: row;
+                                        }
+                                    }
+
+                                    #detalii_marfa_23 {
+                                        width: 100%;
+                                        height: auto;
+
+                                        #detalii_marfa_231 {
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            flex-direction: row;
+
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_3 {
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    #detalii_marfa_31 {
+                                        width: 100%;
+
+                                        #detalii_marfa_311 {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_32 {
+                                        width: 100%;
+
+                                        #detalii_marfa_321 {
+                                            width: 100%;
+                                            height: 50%;
+                                        }
+                                    }
+                                }
+
+                                #detalii_marfa_4 {
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    #detalii_marfa_41 {
+                                        width: 100%;
+
+                                        #detalii_marfa_411 {
+                                            width: 100%;
+                                            height: 50%;
+                                        }
+                                    }
+
+                                    #detalii_marfa_42 {
+                                        width: 100%;
+
+                                        #detalii_marfa_421 {
+                                            width: 100%;
+                                            height: 50%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            #detalii_utilizator {
+                                width: 100%;
+
+                                #detalii_utilizator_1 {
+                                    width: 100%;
+
+                                    #detalii_utilizator_11 {
+                                        width: 100%;
+                                    }
+                                }
+
+                                #detalii_utilizator_2 {
+                                    width: 100%;
+                                    gap: $gap;
+
+                                    h3 {
+                                        width: 40%;
+                                    }
+                                    
+                                    #detalii_utilizator_21 {
+                                        width: 100%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
 }

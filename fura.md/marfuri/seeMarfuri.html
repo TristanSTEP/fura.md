@@ -3,78 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vizualizeaza marfuri</title>
+    <title>View goods</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="./seeMarfuri.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
 </head>
 <body>
     <main id="see-products">
         <div id="products">
-            <h2>Toate marfurile</h2>
-            <form action="">
+            <h2>All goods</h2>
+            <form id="formular" action="">
                 <div id="form_1">
                     <div id="form_11">
-                        <label for="tara_incarcare">Tara incarcare</label>
+                        <label for="tara_incarcare">The country of loading</label>
                         <select id="tara_incarcare" name="denuimire" placeholder="Selecteaza tarile">
-                            <option value="" disabled selected>Selectează tarile</option>
+                            <option value="" disabled selected>Select countries</option>
                             <option value="moldova">Moldova</option>
                             <option value="romania">Romania</option>
-                            <option value="turcia">Turcia</option>
+                            <option value="turcia">Turkey</option>
                         </select>
                     </div>
                     <div id="form_12">
-                        <label for="tara_descarcare">Tara descarcare</label>
+                        <label for="tara_descarcare">Country of unloading</label>
                         <select id="tara_descarcare" name="denuimire">
-                            <option value="" disabled selected>Selectează tarile</option>
-                            <option value="franta">Franta</option>
-                            <option value="elvetia">Elvetia</option>
-                            <option value="germania">Germania</option>
+                            <option value="" disabled selected>Select the countries</option>
+                            <option value="franta">France</option>
+                            <option value="elvetia">Switzerland</option>
+                            <option value="germania">Germany</option>
                         </select>
                     </div>
                 </div>     
 
                 <div id="form_2">
                     <div id="form_21">
-                        <label for="de_la">De la data de </label>
+                        <label for="de_la">From the date of</label>
                         <input type="date" id="de_la" >
                     </div>
                     <div id="form_22">
-                        <label for="pina_la">Pina la data</label> 
+                        <label for="pina_la">Until the date</label> 
                         <input type="date" id="pina_la" >
                     </div>
                     <div id="form_23">
-                        <label for="greutate_de_la">Greutate de la t</label> 
+                        <label for="greutate_de_la">Weight from t</label> 
                         <input type="number" id="greutate_de_la" min="0" max="100">
                     </div>
                     <div id="form_24">
-                        <label for="greutate_pina_la">Greutate de la t</label> 
+                        <label for="greutate_pina_la">Weight until t</label> 
                         <input type="number" id="greutate_pina_la" min="0" max="100">
                     </div>
                 </div>
 
                 <div id="form_3">
                     <div id="form_31">
-                        <label for="tip_camion">Tip camion</label>
+                        <label for="tip_camion">Truck type</label>
                         <select id="tip_camion" name="type">
                             <option value=""></option>
-                            <option value="platforma">Platforma</option>
-                            <option value="cisterna">Cisterna</option>
+                            <option value="platforma">Curtainsaid</option>
+                            <option value="cisterna">Tank</option>
                             <option value="container">Container</option>
                         </select>
                     </div>
                     <div id="form_32">
-                        <label for="volum_pina_la_mc">Volum pana la m3</label> 
+                        <label for="volum_pina_la_mc">Volume up to m3</label> 
                         <input type="number" id="volum_pina_la_mc" min="0" max="100">
                     </div>
                 </div>
 
                 <div id="butoane">
-                    <button id="btn_1">Aplica filtru</button>
-                    <button id="btn_2">Sterge filtru</button>
-                    <button id="btn_3">Aplica filtru</button>
+                    <button id="btn_1">Apply filter</button>
+                    <button id="btn_2">Clear filter</button>
+                    <button id="btn_3">Detailed filter</button>
                 </div>
             </form>
 
+            <div id="marfuri">
+                <div id="destinatii">
+                    <h3><strong>RO</strong> Constanța</h3>
+                    <h3><strong>UA</strong> Kyiv</h3>
+                </div>
+                <div id="mapa_locatie">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <div id="info_harta">
+                        <div id="vizualizare_harta">
+                            <div id="btn_inchide">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div id="detalii_traseu">
+                                <div id="puncte_traseu">
+                                    <p><strong>RO</strong> Constanța</p>
+                                    <p><strong>UA</strong> Kyiv</p>
+                                </div>
+                                <div id="perioada_cursa">
+                                    <p>04.03.2024 - 05.03.2024</p>
+                                </div>
+                                <div id="distanta_timp">
+                                    <p><strong>Distance</strong> - 887 km</p>
+                                    <p><strong>Travel time</strong> - 9 h 59 min</p>
+                                </div>
+                            </div>
+                            <div id="harta">
+                                <div id="mapid"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="perioada">
+                    <p>04.03.2024 - 05.03.2024</p>
+                </div>
+                <div id="greutatea">
+                    <p>22.00 t</p>
+                    <p>86.00 m3</p>
+                </div>
+                <div id="tip_camion">
+                    <p>Refrigerated</p>
+                </div>
+                <div id="companie">
+                    <h3>ASPECT-ART SRL</h3>
+                </div>
+                <div id="info_marfa">
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <div id="info_detaliata">
+                        <div id="vizualizare_info">
+                            <div id="btn_info_inchide">
+                                <i id="btn_inchide_info" class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div id="detalii_marfa">
+                                <div id="detalii_marfa_1">
+                                    <h3>The cargo details</h3>
+                                    <h3>The published: 02.03.2024 | 09:13</h3>
+                                </div>
+                                <div id="detalii_marfa_2">
+                                    <div id="detalii_marfa_21">
+                                        <h3>The loading</h3>
+                                        <div id="detalii_marfa_211">
+                                            <p>RO Romania</p>
+                                            <p>Constanța</p>
+                                            <p>04.03.2024 - 05.03.2024</p>
+                                        </div>
+                                    </div>
+                                    <div id="detalii_marfa_22">
+                                        <h3>The unloading</h3>
+                                        <div id="detalii_marfa_221">
+                                            <p>UA Ucraina</p>
+                                            <p>Kiev</p>
+                                        </div>
+                                    </div>
+                                    <div id="detalii_marfa_23">
+                                        <h3>View on map</h3>
+                                        <div id="detalii_marfa_231">
+                                            <i class="fa-solid fa-map-location-dot"></i>
+                                            <p>By road</p>
+                                            <p>Refrigerated</p>
+                                            <p>Full (FTL)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="detalii_marfa_3">
+                                    <div id="detalii_marfa_31">
+                                        <h3>Goods details</h3>
+                                        <div id="detalii_marfa_311">
+                                            <p>22 t | 86 m3</p>
+                                            <p>Perishable food products</p>
+                                        </div>
+                                    </div>
+                                    <div id="detalii_marfa_32">
+                                        <h3>Transportation cost</h3>
+                                        <div id="detalii_marfa_321">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="detalii_marfa_4">
+                                    <div id="detalii_marfa_41">
+                                        <h3>Comments and picture</h3>
+                                        <div id="detalii_marfa_411">
+
+                                        </div>
+                                    </div>
+                                    <div id="detalii_marfa_42">
+                                        <h3>Additional information</h3>
+                                        <div id="detalii_marfa_421">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="detalii_utilizator">
+                                <div id="detalii_utilizator_1">
+                                    <h3>User details</h3>
+                                    <div id="detalii_utilizator_11">
+                                        <h3 id="nume_companie">ASPECT-ART SRL</h3>
+                                        <h3>Maria Timofti</h3>
+                                        <h3>timofti1985gmail.com</h3>
+                                        <h3>069096173</h3>
+                                    </div>
+                                </div>
+                                <div id="detalii_utilizator_2">
+                                    <h3>Share goods: </h3>
+                                    <div id="detalii_utilizator_21">
+                                        <a target="_blank" href="https://account.viber.com/en/login"><i class="fa-brands fa-viber"></i></a>
+                                        <a target="_blank" href="https://web.telegram.org/a/"><i class="fa-brands fa-telegram"></i></a>
+                                        <a target="_blank" href="https://www.whatsapp.com/"><i class="fa-brands fa-square-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var map = L.map('mapid', {
+                center: [51.505, -0.09], // Setează centrul hărții
+                zoom: 5, // Setează nivelul de zoom
+                scrollWheelZoom: true // Permite tragerea hărții cu scroll-ul mouse-ului
+            });
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var cities = [
+                { name: "Constanta", coordinates: [44.1811, 28.6343] },
+                { name: "Kiev", coordinates: [50.4501, 30.5234] }
+            ];
+
+            cities.forEach(function(city) {
+                L.marker(city.coordinates).addTo(map).bindPopup(city.name);
+            });
+
+            var polyline = L.polyline([cities[0].coordinates, cities[1].coordinates], {color: 'red'}).addTo(map);
+        });
+    </script>
 </body>
 </html>
