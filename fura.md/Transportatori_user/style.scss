@@ -135,68 +135,67 @@ $minWidth: 250px;
     }
 }
 
-main {
+
+
+
+#login-container {
     height: 100vh;
     width: 100vw;
-
-    .search-load {
+    padding: $padding;
+    display: flex;
+    @include flex(column, center, center);
+    gap: 25px;
+    h1 {
+        font-size: $titleSize;
         padding: $padding;
-        height: 100%;
-        width: 100%;
-        @include flex(column, center, center);
-        gap: $gap;
-
-        h1 {
-            width: 100%;
-            font-size: $titleSize;
-            text-align: center
-        }
-
-        form {
-            @include flex(row, center, center);
-            background-color: $backgroundColor;
+    }
+    .form-group {
+        input {
             padding: $padding;
+            background-color: $backgroundColor;
+            border: 1px solid $backgroundColor;
+            outline: none;
+            transition: border-color 0.15s ease-in;
             border-radius: $borderRadius;
-
-            .form-group {
-                @include flex(row, center, center);
-                background-color: $backgroundColor;
-                gap: $gap;
-
-                i {
-                    font-size: $subtitleSize;
-                    color: $blue;
-                }
-
-                input {
-                    border: none;
-                    outline: none;
-                    min-width: 500px;
-                    font-size: $text;
-                    border-radius: $borderRadius;
-                    background: none;
-                    font-size: $subtitleSize;
-                }
-            }
-
-            button {
-                height: 50px;
-                width: 50px;
-                border-radius: $borderRadius;
-                background-color: $blue;
-                border: none;
-                cursor: pointer;
-                color: white;
-                @include flex(row, center, center);
-                
-                i {
-                    font-size: $iconSize;
-                }
+            font-size: $inputTextSize;
+            min-width: $minWidth;
+            &:focus {
+                border: 1px solid $blue;
             }
         }
     }
+
+    #login-button {
+        padding: $padding;
+        background-color: $backgroundColor;
+        border: 1px solid $backgroundColor;
+        outline: none;
+        transition: border-color 0.15s ease-in;
+        border-radius: $borderRadius;
+        font-size: $inputTextSize;
+        min-width: $minWidth;
+    
+        &:focus {
+            border: 1px solid $blue;
+        }
+
+        background-color: $blue;
+        color: white;
+        @include flex(row, center, center);
+        gap: $gap;
+        font-size: $inputTextSize;
+        cursor: pointer;
+        border: 1px solid $blue;
+        transition: all 0.15s ease-in;
+        
+
+        &:hover {
+            background-color: white;
+            color: $blue;
+        }
+    }
+    .dont-have-account {
+        @include flex(column, center, center);
+        font-size: $smallText;
+    }
 }
-
-
-
-

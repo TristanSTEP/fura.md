@@ -102,68 +102,66 @@
   color: #0437F2;
 }
 
-main {
+#login-container {
   height: 100vh;
   width: 100vw;
-}
-main .search-load {
   padding: 10px;
-  height: 100%;
-  width: 100%;
+  display: flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 25px;
 }
-main .search-load h1 {
-  width: 100%;
+#login-container h1 {
   font-size: 2.5rem;
-  text-align: center;
-}
-main .search-load form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #f1f4ff;
   padding: 10px;
-  border-radius: 10px;
 }
-main .search-load form .form-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+#login-container .form-group input {
+  padding: 10px;
   background-color: #f1f4ff;
-  gap: 10px;
-}
-main .search-load form .form-group i {
-  font-size: 1.5rem;
-  color: #0437F2;
-}
-main .search-load form .form-group input {
-  border: none;
+  border: 1px solid #f1f4ff;
   outline: none;
-  min-width: 500px;
-  font-size: 1rem;
+  transition: border-color 0.15s ease-in;
   border-radius: 10px;
-  background: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  min-width: 250px;
 }
-main .search-load form button {
-  height: 50px;
-  width: 50px;
+#login-container .form-group input:focus {
+  border: 1px solid #0437F2;
+}
+#login-container #login-button {
+  padding: 10px;
+  background-color: #f1f4ff;
+  border: 1px solid #f1f4ff;
+  outline: none;
+  transition: border-color 0.15s ease-in;
   border-radius: 10px;
+  font-size: 1.25rem;
+  min-width: 250px;
   background-color: #0437F2;
-  border: none;
-  cursor: pointer;
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-main .search-load form button i {
+  gap: 10px;
   font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+}
+#login-container #login-button:focus {
+  border: 1px solid #0437F2;
+}
+#login-container #login-button:hover {
+  background-color: white;
+  color: #0437F2;
+}
+#login-container .dont-have-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */
