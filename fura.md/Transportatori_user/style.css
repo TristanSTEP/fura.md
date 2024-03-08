@@ -102,6 +102,10 @@
   color: #0437f2;
 }
 
+i {
+  font-size: 1.25rem;
+}
+
 #mainn {
   height: 100vh;
   width: 100vw;
@@ -156,7 +160,6 @@
   outline: none;
   transition: border-color 0.15s ease-in;
   border-radius: 10px;
-  font-size: 1.25rem;
   min-width: 250px;
 }
 #mainn .register .registerInp .image-input input {
@@ -179,8 +182,8 @@
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 1.25rem;
   cursor: pointer;
@@ -202,6 +205,10 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 10px;
+}
+#mainn .register .oldUser a {
+  color: #0437f2;
+  text-decoration: none;
 }
 
 #login-container {
@@ -265,4 +272,8 @@
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
+}
+#login-container .dont-have-account a {
+  color: #0437f2;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
