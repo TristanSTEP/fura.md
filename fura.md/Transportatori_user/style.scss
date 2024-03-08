@@ -236,3 +236,65 @@ $minWidth: 250px;
         }
     }
 }
+
+
+#login-container {
+    height: 100vh;
+    width: 100vw;
+    padding: $padding;
+    @include flex(column, center, center);
+    gap: 25px;
+    h1 {
+        font-size: $titleSize;
+        padding: $padding;
+    }
+    .form-group {
+        input {
+            padding: $padding;
+            background-color: $backgroundColor;
+            border: 1px solid $backgroundColor;
+            outline: none;
+            transition: border-color 0.15s ease-in;
+            border-radius: $borderRadius;
+            font-size: $inputTextSize;
+            min-width: $minWidth;
+            &:focus {
+                border: 1px solid $blue;
+            }
+        }
+    }
+
+    #login-button {
+        padding: $padding;
+        background-color: $backgroundColor;
+        border: 1px solid $backgroundColor;
+        outline: none;
+        transition: border-color 0.15s ease-in;
+        border-radius: $borderRadius;
+        font-size: $inputTextSize;
+        min-width: $minWidth;
+
+        &:focus {
+            border: 1px solid $blue;
+        }
+
+        background-color: $blue;
+        color: white;
+        @include flex(row, center, center);
+        gap: $gap;
+        font-size: $inputTextSize;
+        cursor: pointer;
+        border: 1px solid $blue;
+        transition: all 0.15s ease-in;
+
+
+        &:hover {
+            background-color: white;
+            color: $blue;
+        }
+    }
+    .dont-have-account {
+        @include flex(column, center, center);
+        font-size: $smallText;
+    }
+}
