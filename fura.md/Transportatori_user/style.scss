@@ -134,105 +134,67 @@ $minWidth: 250px;
     }
 }
 
-main {
+
+
+
+#login-container {
     height: 100vh;
     width: 100vw;
+    padding: $padding;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    .register {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 400px;
-        width: 600px;
+    @include flex(column, center, center);
+    gap: 25px;
+    h1 {
+        font-size: $titleSize;
+        padding: $padding;
+    }
+    .form-group {
+        input {
+            padding: $padding;
+            background-color: $backgroundColor;
+            border: 1px solid $backgroundColor;
+            outline: none;
+            transition: border-color 0.15s ease-in;
+            border-radius: $borderRadius;
+            font-size: $inputTextSize;
+            min-width: $minWidth;
+            &:focus {
+                border: 1px solid $blue;
+            }
+        }
+    }
+
+    #login-button {
+        padding: $padding;
+        background-color: $backgroundColor;
+        border: 1px solid $backgroundColor;
+        outline: none;
+        transition: border-color 0.15s ease-in;
+        border-radius: $borderRadius;
+        font-size: $inputTextSize;
+        min-width: $minWidth;
+    
+        &:focus {
+            border: 1px solid $blue;
+        }
+
+        background-color: $blue;
+        color: white;
+        @include flex(row, center, center);
         gap: $gap;
-        h1 {
-            font-size: $titleSize;
+        font-size: $inputTextSize;
+        cursor: pointer;
+        border: 1px solid $blue;
+        transition: all 0.15s ease-in;
+        
+
+        &:hover {
+            background-color: white;
+            color: $blue;
         }
-        .registerInp {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: $gap;
-
-            .form-group {
-                display: flex;
-                input::-webkit-outer-spin-button,
-                input::-webkit-inner-spin-button {
-                    -webkit-appearance: none;
-                    margin: 0;
-                }
-                input {
-                    padding: $padding;
-                    background-color: $backgroundColor;
-                    border: 1px solid $backgroundColor;
-                    outline: none;
-                    transition: border-color 0.15s ease-in;
-                    border-radius: $borderRadius;
-                    font-size: $inputTextSize;
-                    min-width: $minWidth;
-                    &:focus {
-                        border: 1px solid $blue;
-                    }
-                }
-            }
-            .image-input {
-                transition: box-shadow 0.15s ease-in;
-                padding: $padding;
-                background-color: $backgroundColor;
-                border: 1px solid $backgroundColor;
-                outline: none;
-                transition: border-color 0.15s ease-in;
-                border-radius: $borderRadius;
-                font-size: $inputTextSize;
-                min-width: $minWidth;
-                input {
-                    display: none;
-                }
-
-                &:hover {
-                    cursor: pointer;
-                    box-shadow: 0 0 5px $blue;
-                }
-
-                label {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: $gap;
-                    font-size: $inputTextSize;
-                    cursor: pointer;
-                }
-            }
-            .createAcc {
-                background-color: $blue;
-                color: white;
-                @include flex(row, center, center);
-                gap: $gap;
-                font-size: $inputTextSize;
-                cursor: pointer;
-                border: 1px solid $blue;
-                transition: all 0.15s ease-in;
-                padding: $padding;
-                border: 1px solid $blue;
-                outline: none;
-                border-radius: $borderRadius;
-                margin-top: $gap;
-
-                &:hover {
-                    background-color: white;
-                    color: $blue;
-                }
-            }
-        }
-        .oldUser {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin-top: $gap;
-        }
+    }
+    .dont-have-account {
+        @include flex(column, center, center);
+        font-size: $smallText;
     }
 }

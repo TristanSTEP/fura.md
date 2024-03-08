@@ -102,40 +102,22 @@
   color: #0437f2;
 }
 
-main {
+#login-container {
   height: 100vh;
   width: 100vw;
+  padding: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main .register {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 400px;
-  width: 600px;
-  gap: 10px;
+  align-items: center;
+  gap: 25px;
 }
-main .register h1 {
+#login-container h1 {
   font-size: 2.5rem;
+  padding: 10px;
 }
-main .register .registerInp {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-main .register .registerInp .form-group {
-  display: flex;
-}
-main .register .registerInp .form-group input::-webkit-outer-spin-button,
-main .register .registerInp .form-group input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-main .register .registerInp .form-group input {
+#login-container .form-group input {
   padding: 10px;
   background-color: #f1f4ff;
   border: 1px solid #f1f4ff;
@@ -145,11 +127,10 @@ main .register .registerInp .form-group input {
   font-size: 1.25rem;
   min-width: 250px;
 }
-main .register .registerInp .form-group input:focus {
-  border: 1px solid #0437f2;
+#login-container .form-group input:focus {
+  border: 1px solid #0437F2;
 }
-main .register .registerInp .image-input {
-  transition: box-shadow 0.15s ease-in;
+#login-container #login-button {
   padding: 10px;
   background-color: #f1f4ff;
   border: 1px solid #f1f4ff;
@@ -158,24 +139,7 @@ main .register .registerInp .image-input {
   border-radius: 10px;
   font-size: 1.25rem;
   min-width: 250px;
-}
-main .register .registerInp .image-input input {
-  display: none;
-}
-main .register .registerInp .image-input:hover {
-  cursor: pointer;
-  box-shadow: 0 0 5px #0437f2;
-}
-main .register .registerInp .image-input label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-main .register .registerInp .createAcc {
-  background-color: #0437f2;
+  background-color: #0437F2;
   color: white;
   display: flex;
   flex-direction: row;
@@ -184,22 +148,20 @@ main .register .registerInp .createAcc {
   gap: 10px;
   font-size: 1.25rem;
   cursor: pointer;
-  border: 1px solid #0437f2;
+  border: 1px solid #0437F2;
   transition: all 0.15s ease-in;
-  padding: 10px;
-  border: 1px solid #0437f2;
-  outline: none;
-  border-radius: 10px;
-  margin-top: 10px;
 }
-main .register .registerInp .createAcc:hover {
+#login-container #login-button:focus {
+  border: 1px solid #0437F2;
+}
+#login-container #login-button:hover {
   background-color: white;
-  color: #0437f2;
+  color: #0437F2;
 }
-main .register .oldUser {
+#login-container .dont-have-account {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */
