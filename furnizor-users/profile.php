@@ -114,9 +114,7 @@
                 </div>
             </form>
             <!-- move into form up back -->
-
         </div>
-
         <div id="confirm-delete-popup">
             <div class="delete-popup-content">
                 <p>Are you sure you want to delete your account?</p>

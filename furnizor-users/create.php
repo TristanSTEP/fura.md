@@ -1,3 +1,7 @@
+<?php
+require_once "config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +24,13 @@
 					</div>
 				</div>
 				<div id="inputs">
-					<input class="input" type="text" name="name" placeholder="Name..." required>
-					<input class="input" type="lastname" name="lastname" placeholder="Lastname..." required>
-					<input class="input" type="email" name="email" placeholder="Email..." required>
-					<input class="input" type="password" name="password" placeholder="Password..." required>
-					<input class="input" type="password" name="password2" placeholder="Verify password..." required>
-					<input class="input" type="text" name="phone" placeholder="Phone number..." required>
+					<input class="input" type="text" name="name" placeholder="Name" required>
+					<input class="input" type="lastname" name="lastname" placeholder="Lastname" required>
+					<input class="input" type="email" name="email" placeholder="Email" required>
+					<input class="input" type="password" name="password" placeholder="Password" required>
+					<input class="input" type="password" name="password2" placeholder="Confirm password" required>
+					<input class="input" type="text" name="phone" placeholder="Phone number" required>
+
 				</div>
 			</div>
 			<button class="button">Add user</button>
