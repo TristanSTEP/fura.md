@@ -212,7 +212,10 @@ i {
             .createAcc {
                 background-color: $blue;
                 color: white;
-                @include flex(row, center, center);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
                 gap: $gap;
                 font-size: $inputTextSize;
                 border: 1px solid $blue;
@@ -302,6 +305,213 @@ i {
         a {
             color: $blue;
             text-decoration: none;
+        }
+    }
+}
+
+#Pmain {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .all-in-one {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 5 * $gap;
+        border-radius: $borderRadius;
+        height: 600px;
+        width: 1000px;
+        box-shadow: 0 0 5px $textColor2;
+        .firstPart {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: $gap;
+            img {
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                border: 1px solid $blue;
+                overflow: hidden;
+                object-fit: cover;
+            }
+            .names {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                h3 {
+                    font-size: $titleSize;
+                }
+                p {
+                    font-size: $subtitleSize;
+                }
+            }
+            .butt {
+                display: flex;
+                gap: $gap;
+                button {
+                    background-color: $blue;
+                    color: white;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+                    padding: $padding;
+                    border: 1px solid $blue;
+                    outline: none;
+                    border-radius: $borderRadius;
+                    &:hover {
+                        background-color: white;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .secPart {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: $gap;
+            div {
+                label {
+                    font-size: $subtitleSize;
+                    h3 {
+                        font-size: $titleSize;
+                    }
+                }
+            }
+        }
+        #line {
+            display: flex;
+            height: 95%;
+            width: 1px;
+            background-color: $textColor2;
+        }
+    }
+}
+
+#profile-edit-mainest-main-parent-of-main {
+    height: 100vh;
+    width: 100vw;
+    @include flex(row, center, center);
+
+    #profile-edit-main {
+        height: 600px;
+        width: 1000px;
+        padding: $padding;
+        @include flex(row, center, center);
+        gap: 25px;
+        box-shadow: 0 0 5px $textColor2;
+        border-radius: $borderRadius;
+
+        .profile-edit-left {
+            height: 100%;
+            width: 100%;
+            padding: $padding;
+            @include flex(column, center, center);
+            gap: $gap;
+            border-right: 1px solid $textColor2;
+
+            img {
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                border: 2px solid $blue;
+                overflow: hidden;
+                object-fit: cover;
+                transition: transform 0.15s ease-in;
+            }
+
+            h1 {
+                font-size: $titleSize;
+                color: $textColor;
+            }
+
+            p {
+                font-size: $subtitleSize;
+                color: $textColor2;
+            }
+        }
+        .profile-edit-right {
+            height: 100%;
+            width: 100%;
+            padding: $padding;
+            @include flex(column, center, center);
+            gap: $gap;
+
+            h1 {
+                font-size: $titleSize;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: $gap;
+
+                .other-info-edit {
+                    display: flex;
+                    flex-direction: column;
+                    gap: $gap;
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        input::-webkit-outer-spin-button,
+                        input::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                        input {
+                            padding: $padding;
+                            background-color: $backgroundColor;
+                            border: 1px solid $backgroundColor;
+                            outline: none;
+                            transition: border-color 0.15s ease-in;
+                            border-radius: $borderRadius;
+                            font-size: $inputTextSize;
+                            min-width: $minWidth;
+                            &:focus {
+                                border: 1px solid $blue;
+                            }
+                        }
+                        label {
+                            font-size: $inputTextSize;
+                        }
+                    }
+                }
+                #profile-edit-button {
+                    background-color: $blue;
+                    color: white;
+                    @include flex(row, center, center);
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+                    padding: $padding;
+                    border: 1px solid $blue;
+                    outline: none;
+                    border-radius: $borderRadius;
+                    margin-top: $gap;
+
+                    &:hover {
+                        background-color: white;
+                        color: $blue;
+                    }
+                }
+            }
         }
     }
 }

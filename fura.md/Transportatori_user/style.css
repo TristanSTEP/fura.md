@@ -182,11 +182,10 @@ i {
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 1.25rem;
-  cursor: pointer;
   border: 1px solid #0437f2;
   transition: all 0.15s ease-in;
   padding: 10px;
@@ -275,6 +274,96 @@ i {
 #login-container .dont-have-account a {
   color: #0437f2;
   text-decoration: none;
+}
+
+#Pmain {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Pmain .all-in-one {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 50px;
+  border-radius: 10px;
+  height: 600px;
+  width: 1000px;
+  box-shadow: 0 0 5px rgb(111, 111, 111);
+}
+#Pmain .all-in-one .firstPart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+#Pmain .all-in-one .firstPart img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #0437f2;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#Pmain .all-in-one .firstPart .names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#Pmain .all-in-one .firstPart .names h3 {
+  font-size: 2.5rem;
+}
+#Pmain .all-in-one .firstPart .names p {
+  font-size: 1.5rem;
+}
+#Pmain .all-in-one .firstPart .butt {
+  display: flex;
+  gap: 10px;
+}
+#Pmain .all-in-one .firstPart .butt button {
+  background-color: #0437f2;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437f2;
+  transition: all 0.15s ease-in;
+  padding: 10px;
+  border: 1px solid #0437f2;
+  outline: none;
+  border-radius: 10px;
+}
+#Pmain .all-in-one .firstPart .butt button:hover {
+  background-color: white;
+  color: #0437f2;
+}
+#Pmain .all-in-one .secPart {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+#Pmain .all-in-one .secPart div label {
+  font-size: 1.5rem;
+}
+#Pmain .all-in-one .secPart div label h3 {
+  font-size: 2.5rem;
+}
+#Pmain .all-in-one #line {
+  display: flex;
+  height: 95%;
+  width: 1px;
+  background-color: rgb(111, 111, 111);
 }
 
 #profile-edit-mainest-main-parent-of-main {
