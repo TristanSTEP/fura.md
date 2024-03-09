@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+}
+main .search-load {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main .search-load h1 {
+  width: 100%;
+  font-size: 2.5rem;
+  text-align: center;
+}
+main .search-load form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f4ff;
+  padding: 10px;
+  border-radius: 10px;
+}
+main .search-load form .form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f4ff;
+  gap: 10px;
+}
+main .search-load form .form-group i {
+  font-size: 1.5rem;
+  color: #0437F2;
+}
+main .search-load form .form-group input {
+  border: none;
+  outline: none;
+  min-width: 500px;
+  font-size: 1rem;
+  border-radius: 10px;
+  background: none;
+  font-size: 1.5rem;
+}
+main .search-load form button {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  background-color: #0437F2;
+  border: none;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .search-load form button i {
+  font-size: 1.25rem;
+}
+
+header {
+  height: 60px;
+  background-color: #0437F2;
+  opacity: 0.9;
+  padding: 10px;
+  overflow: hidden;
+}
+header h1 {
+  font-size: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.back {
+  background-image: url("../images/sander-yigin-ki19VJAGh6w-unsplash.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 900px;
+  background-position: center;
+}
+
+.border {
+  border: 2px solid #f1f4ff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(4, 56, 242, 0.0666666667);
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.form {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  text-align: right;
+}
+.form h3 {
+  font-size: 1.5rem;
+  color: black;
+}
+.form .input,
+.form .image-input,
+.form .button,
+.form .textarea {
+  padding: 10px;
+  background-color: #f1f4ff;
+  border: 1px solid #f1f4ff;
+  outline: none;
+  transition: border-color 0.15s ease-in;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  min-width: 250px;
+  cursor: pointer;
+}
+.form .input:focus,
+.form .image-input:focus,
+.form .button:focus,
+.form .textarea:focus {
+  border: 1px solid #0437F2;
+}
+.form .input input,
+.form .image-input input,
+.form .button input,
+.form .textarea input {
+  display: none;
+}
+.form .image-input {
+  transition: box-shadow 0.15s ease-in;
+}
+.form .image-input:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #0437F2;
+}
+.form .image-input label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.form .button {
+  background-color: #0437F2;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+}
+.form .button:hover {
+  background-color: white;
+  color: #0437F2;
+}
+
+.body {
+  background-color: #f1f4ff;
+  overflow-x: hidden;
+}
+
+.furnizor {
+  background-image: url("../images/dhltruck.jpg");
+  height: 500px;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 10px;
+}
+.furnizor h1 {
+  font-size: 40px;
+  text-align: right;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  color: white;
+  text-shadow: 0 0 10px white;
+}
+
+.avatar {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid #0437F2;
+  overflow: hidden;
+}
+.avatar:hover img {
+  transform: scale(1.1);
+}
+.avatar img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.15s ease-in;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  border-radius: 10px;
+  padding: 50px;
+  background-color: #f1f4ff;
+}
+.grid .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.grid .text {
+  margin: auto;
+}
+.grid .text h1 {
+  font-size: 40px;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+.grid .text h3 {
+  font-size: 15px;
+  -webkit-text-decoration: dimgray;
+          text-decoration: dimgray;
+}
+.grid .info {
+  background-image: url("../images/plane.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 100px;
+  opacity: 0.7;
+}
+.grid .info h3 {
+  font-size: 40px;
+}
+.grid .info h5 {
+  font-size: 20px;
+}
+.grid .info-furnizor {
+  background-image: url("../images/box.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  height: 500px;
+  width: 700px;
+  margin: auto;
+  text-align: center;
+  padding: 100px;
+  opacity: 0.7;
+}
+.grid h3 {
+  font-size: 40px;
+}
+.grid h5 {
+  font-size: 20px;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer h3 {
+  font-size: 2.5rem;
+}
+footer a {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid #0437F2;
+  overflow: hidden;
+}
+footer a:hover img {
+  transform: scale(1.1);
+}
+footer a img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.15s ease-in;
+}/*# sourceMappingURL=styles.css.map */

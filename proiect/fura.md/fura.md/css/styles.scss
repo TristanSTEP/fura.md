@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($columnsNumber) {
+    display: grid;
+    grid-template-columns: repeat($columnsNumber, 1fr);
+}
+
+
+$blue: #0437F2; // Accent color
+$textColor: black;
+$textColor2: rgb(111, 111, 111);
+$backgroundColor: #f1f4ff;
+$padding: 10px;
+$borderRadius: 10px;
+$gap: 10px;
+$titleSize: 2.5rem;
+$subtitleSize: 1.5rem;
+$text: 1rem;
+$smallText: 0.8rem;
+$iconSize: 1.25rem;
+$inputTextSize: 1.25rem;
+$minWidth: 250px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    overflow-x: hidden;
+   
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+
+    .search-load {
+        padding: $padding;
+        height: 100%;
+        width: 100%;
+        @include flex(column, center, center);
+        gap: $gap;
+
+        h1 {
+            width: 100%;
+            font-size: $titleSize;
+            text-align: center;
+        }
+
+        form {
+            @include flex(row, center, center);
+            background-color: $backgroundColor;
+            padding: $padding;
+            border-radius: $borderRadius;
+
+            .form-group {
+                @include flex(row, center, center);
+                background-color: $backgroundColor;
+                gap: $gap;
+
+                i {
+                    font-size: $subtitleSize;
+                    color: $blue;
+                }
+
+                input {
+                    border: none;
+                    outline: none;
+                    min-width: 500px;
+                    font-size: $text;
+                    border-radius: $borderRadius;
+                    background: none;
+                    font-size: $subtitleSize;
+                }
+            }
+
+            button {
+                height: 50px;
+                width: 50px;
+                border-radius: $borderRadius;
+                background-color: $blue;
+                border: none;
+                cursor: pointer;
+                color: white;
+                @include flex(row, center, center);
+                
+                i {
+                    font-size: $iconSize;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+header {
+    height: 60px;
+    background-color: #0437F2;
+    opacity: 0.9;
+    padding: $padding;
+    overflow: hidden;
+    
+
+
+        h1{
+            font-size: 35px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+}
+.back{
+    background-image: url("../images/sander-yigin-ki19VJAGh6w-unsplash.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 900px;
+    background-position: center;
+    
+
+}
+
+    .border {
+        border: 2px solid $backgroundColor;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px #0438f211;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        gap: 25px;
+        margin-top: 50px;
+        
+    }
+
+    .form{
+    padding: $padding;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    text-align: right;
+   
+    
+    
+    
+        h3 {
+            font-size: $subtitleSize;
+            color: $textColor;
+            
+        }
+
+
+    .input,
+    .image-input,
+    .button,
+    .textarea {
+        padding: $padding;
+        background-color: $backgroundColor;
+        border: 1px solid $backgroundColor;
+        outline: none;
+        transition: border-color 0.15s ease-in;
+        border-radius: $borderRadius;
+        font-size: $inputTextSize;
+        min-width: $minWidth;
+        cursor: pointer;
+    
+        &:focus {
+            border: 1px solid $blue;
+        }
+
+        input {
+            display: none;
+        }
+    }
+
+    .image-input { 
+        transition: box-shadow 0.15s ease-in;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 5px $blue;
+        }
+
+        label {
+            @include flex(row, center, center);
+            gap: $gap;
+            font-size: $inputTextSize;
+            cursor: pointer;
+        }
+
+       
+    }
+
+      .button {
+        background-color: $blue;
+        color: white;
+        @include flex(row, center, center);
+        gap: $gap;
+        font-size: $inputTextSize;
+        cursor: pointer;
+        border: 1px solid $blue;
+        transition: all 0.15s ease-in;
+
+        &:hover {
+            background-color: white;
+            color: $blue;
+        }
+    }
+      
+    }
+     
+
+.body{
+    background-color: $backgroundColor;
+    overflow-x: hidden;
+}
+.furnizor{
+   background-image: url("../images/dhltruck.jpg");
+   height: 500px;
+   width: 100vw;
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   border-radius: $borderRadius;
+
+      h1 {
+        font-size: 40px;
+        text-align: right;
+        text-decoration: solid;
+        color: white;
+        text-shadow: 0 0 10px white;
+      }
+  
+}
+
+    
+
+    .avatar {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        border: 1px solid $blue;
+        overflow: hidden;
+
+      
+        
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.15s ease-in;
+        }
+    }
+
+    .grid {
+        @include grid(2);
+        gap: $gap;
+        border-radius: $borderRadius;
+        padding: 50px;
+        background-color: $backgroundColor;
+
+        .avatar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .text {
+           margin: auto;
+
+                h1 {
+                    font-size: 40px;
+                    text-decoration: solid;
+                   
+
+                }
+
+                h3 {
+                    font-size: 15px;
+                    text-decoration: dimgray;
+                    
+                }
+        }
+
+        .info {
+            background-image: url("../images/plane.jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            height: 500px;
+            margin: auto;
+            text-align: center;
+            padding: 100px;
+            opacity: 0.7;
+
+                
+                  h3{
+                    
+                        font-size: 40px;
+                       }
+                    h5{
+                        font-size: 20px;
+                 }
+
+     }
+     .info-furnizor {
+            background-image: url("../images/box.jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            height: 500px;
+            width: 700px;
+            margin: auto;
+            text-align: center;
+            padding: 100px;
+            opacity: 0.7;
+     }
+            h3 {
+                font-size: 40px;
+            }
+
+            h5{
+                font-size: 20px;
+                text-decoration: solid;
+                
+            }
+    }
+    footer {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+
+             h3 {
+                font-size: $titleSize;
+             }
+
+            a {
+                height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid $blue;
+        overflow: hidden;
+
+      
+        
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.15s ease-in;
+        }
+             }
+    }
+       
+
+
+
