@@ -2118,4 +2118,229 @@ main .search-load form button i {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.adauga-marfa {
+  height: 100vh;
+  width: 100vw;
+}
+.adauga-marfa h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.adauga-marfa form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  height: 90vh;
+  height: 95vh;
+  width: 80vw;
+  margin: auto;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 0 5px #0437F2;
+  padding: 10px;
+}
+.adauga-marfa form .up-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: inherit;
+  height: 35vh;
+  margin-bottom: 30px;
+}
+.adauga-marfa form .up-div .incarcare-div, .adauga-marfa form .up-div .descarcare-div, .adauga-marfa form .up-div .truck-type-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.adauga-marfa form .up-div .incarcare-div .tara-incarcare-div, .adauga-marfa form .up-div .incarcare-div .oras-incarcare-div, .adauga-marfa form .up-div .descarcare-div .tara-incarcare-div, .adauga-marfa form .up-div .descarcare-div .oras-incarcare-div, .adauga-marfa form .up-div .truck-type-div .tara-incarcare-div, .adauga-marfa form .up-div .truck-type-div .oras-incarcare-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+.adauga-marfa form .up-div .incarcare-div .tara-descarcare-div, .adauga-marfa form .up-div .incarcare-div .oras-descarcare-div, .adauga-marfa form .up-div .incarcare-div .tip-camion, .adauga-marfa form .up-div .incarcare-div .tip-incarcare, .adauga-marfa form .up-div .incarcare-div .tip-transport, .adauga-marfa form .up-div .descarcare-div .tara-descarcare-div, .adauga-marfa form .up-div .descarcare-div .oras-descarcare-div, .adauga-marfa form .up-div .descarcare-div .tip-camion, .adauga-marfa form .up-div .descarcare-div .tip-incarcare, .adauga-marfa form .up-div .descarcare-div .tip-transport, .adauga-marfa form .up-div .truck-type-div .tara-descarcare-div, .adauga-marfa form .up-div .truck-type-div .oras-descarcare-div, .adauga-marfa form .up-div .truck-type-div .tip-camion, .adauga-marfa form .up-div .truck-type-div .tip-incarcare, .adauga-marfa form .up-div .truck-type-div .tip-transport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+.adauga-marfa form .up-div .incarcare-div select, .adauga-marfa form .up-div .descarcare-div select, .adauga-marfa form .up-div .truck-type-div select {
+  width: 350px;
+  padding: 10px;
+  background-color: #f1f4ff;
+  border: 1px solid #f1f4ff;
+  outline: none;
+  transition: border-color 0.15s ease-in;
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+.adauga-marfa form .up-div .incarcare-div select:focus, .adauga-marfa form .up-div .descarcare-div select:focus, .adauga-marfa form .up-div .truck-type-div select:focus {
+  border: 1px solid #0437F2;
+}
+.adauga-marfa form .up-div .incarcare-div input, .adauga-marfa form .up-div .descarcare-div input, .adauga-marfa form .up-div .truck-type-div input {
+  width: 350px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  margin-top: 10px;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+}
+.adauga-marfa form .up-div .incarcare-div option, .adauga-marfa form .up-div .descarcare-div option, .adauga-marfa form .up-div .truck-type-div option {
+  color: rgb(111, 111, 111);
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+}
+.adauga-marfa form .up-div .incarcare-div label, .adauga-marfa form .up-div .descarcare-div label, .adauga-marfa form .up-div .truck-type-div label {
+  display: flex;
+  font-size: 1.25rem;
+}
+.adauga-marfa form .middle-div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: inherit;
+  height: 35vh;
+  margin-bottom: 30px;
+}
+.adauga-marfa form .middle-div .second_middle_div {
+  display: flex;
+  justify-content: space-around;
+  width: inherit;
+}
+.adauga-marfa form .middle-div .second_middle_div .greutate, .adauga-marfa form .middle-div .second_middle_div .volumul-marfii, .adauga-marfa form .middle-div .second_middle_div .natura-marfii {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+.adauga-marfa form .middle-div .second2_middle_div {
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+  padding: 0 55px;
+}
+.adauga-marfa form .middle-div .second2_middle_div .comentarii {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  width: inherit;
+  justify-content: start;
+  align-items: start;
+  margin-top: 30px;
+  gap: 10px;
+}
+.adauga-marfa form .middle-div .second2_middle_div .comentarii textarea {
+  width: 800px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  resize: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.adauga-marfa form .middle-div .second2_middle_div .comentarii textarea:focus {
+  border: 1px solid #0437F2;
+}
+.adauga-marfa form .middle-div .second2_middle_div .price-div {
+  display: flex;
+  width: 30%;
+  width: inherit;
+  justify-content: end;
+  align-items: end;
+  margin-top: 10px;
+}
+.adauga-marfa form .middle-div .second2_middle_div .price-div .price_div_div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+}
+.adauga-marfa form .middle-div .second2_middle_div .price-div .price_div_div #price {
+  width: 250px;
+  height: 39px;
+  border-radius: 10px 0px 0px 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.adauga-marfa form .middle-div .second2_middle_div .price-div .price_div_div #price:focus {
+  border: 1px solid #0437F2;
+}
+.adauga-marfa form .middle-div .second2_middle_div .price-div #valuta {
+  width: 100px;
+  height: 39px;
+  border-radius: 0px 10px 10px 0px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.adauga-marfa form .middle-div .second2_middle_div .price-div #valuta:focus {
+  border: 1px solid #0437F2;
+}
+.adauga-marfa form .middle-div .second2_middle_div .price-div #valuta option {
+  color: rgb(111, 111, 111);
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+}
+.adauga-marfa form .middle-div label {
+  font-size: 1.25rem;
+}
+.adauga-marfa form .middle-div input {
+  width: 350px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.adauga-marfa form .middle-div input:focus {
+  border: 1px solid #0437F2;
+}
+.adauga-marfa form button {
+  background-color: #0437F2;
+  color: white;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+  width: 250px;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.adauga-marfa form button:hover {
+  background-color: white;
+  color: #0437F2;
 }/*# sourceMappingURL=styles.css.map */

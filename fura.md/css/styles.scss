@@ -2631,3 +2631,261 @@ main {
     }
 
 }
+
+
+.adauga-marfa {
+    height: 100vh;
+    width: 100vw;
+
+    h1{
+        font-size: $titleSize;
+        margin-bottom: calc($gap * 3);
+    }
+
+    form{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: $gap;
+        height: 90vh;
+        height: 95vh;
+        width: 80vw;
+        margin: auto;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        border-radius: $borderRadius;
+        box-shadow: 0 0 5px $blue;
+        padding: $padding;
+
+        .up-div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: inherit;
+            height: 35vh;
+            margin-bottom: calc($gap * 3);
+
+            .incarcare-div, .descarcare-div, .truck-type-div{
+                display: flex;
+                flex-direction: column;
+                gap: $gap;
+
+                .tara-incarcare-div, .oras-incarcare-div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    align-items: start;
+                    justify-content: center;
+                    gap:$gap;
+                }
+
+                .tara-descarcare-div, .oras-descarcare-div, .tip-camion, .tip-incarcare, .tip-transport{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    align-items: start;
+                    justify-content: center;
+                    gap:$gap;
+                }
+
+                select{
+                    width: 350px;
+                    padding: $padding;
+                    background-color: $backgroundColor;
+                    border: 1px solid $backgroundColor;
+                    outline: none;
+                    transition: border-color 0.15s ease-in;
+                    border-radius: $borderRadius;
+                    font-size: $inputTextSize;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+                }
+
+                input{
+                    width: 350px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    margin-top: $gap;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+
+                }
+
+                option {
+                        color: $textColor2;
+                        font-size: $inputTextSize;
+                        background-color: $backgroundColor;
+                    }
+
+                label{
+                    display: flex;
+                    font-size: $inputTextSize;
+                }
+            }
+        }
+
+        .middle-div{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: inherit;
+            height: 35vh;
+            margin-bottom: calc($gap * 3);
+
+            .second_middle_div{
+                display: flex;
+                justify-content: space-around;
+                width: inherit;
+
+                .greutate, .volumul-marfii, .natura-marfii{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+                    gap: $gap;
+
+                }
+            }
+
+            .second2_middle_div{
+                display: flex;
+                width: inherit;
+                justify-content: space-between;
+                padding: 0 55px;
+
+                .comentarii{
+                    display: flex;
+                    width: 70%;
+                    flex-direction: column;
+                    width: inherit;
+                    justify-content: start;
+                    align-items: start;
+                    margin-top: calc($gap * 3 );
+                    gap: $gap;
+
+                    textarea{
+                        width: 800px;
+                        height: 100px;
+                        border-radius: $borderRadius;
+                        padding: $padding;
+                        font-size:  $inputTextSize;
+                        background-color: $backgroundColor;
+                        outline: none;
+                        resize: none;
+                        border: rgba(255, 255, 255, 0);
+                        transition: border-color 0.15s ease-in;
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
+
+                    }
+                }
+
+                .price-div{
+                    display: flex;
+                    width: 30%;
+                    width: inherit;
+                    justify-content: end;
+                    align-items: end;
+                    margin-top: $gap;
+
+                    .price_div_div{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: end;
+
+                        #price{
+                            width: 250px;
+                            height: 39px;
+                            border-radius: $borderRadius 0px 0px $borderRadius ;
+                            padding: $padding;
+                            font-size:  $inputTextSize;
+                            background-color: $backgroundColor;
+                            outline: none;
+                            border: rgba(255, 255, 255, 0);
+                            transition: border-color 0.15s ease-in;
+
+                            &:focus {
+                                border: 1px solid $blue;
+                            }
+
+                        }
+                    }
+
+                    #valuta{
+                        width: 100px;
+                        height: 39px ;
+                        border-radius:  0px  $borderRadius   $borderRadius 0px;
+                        padding: $padding;
+                        font-size:  $inputTextSize;
+                        background-color: $backgroundColor;
+                        outline: none;
+                        border: rgba(255, 255, 255, 0);
+                        transition: border-color 0.15s ease-in;
+
+                        &:focus {
+                            border: 1px solid $blue;
+                        }
+
+                        option {
+                            color: $textColor2;
+                            font-size: $inputTextSize;
+                            background-color: $backgroundColor;
+                        }
+                    }
+                }
+            }
+
+            label{
+                font-size: $inputTextSize;
+            }
+
+            input {
+                width: 350px;
+                border-radius: $borderRadius;
+                padding: $padding;
+                font-size:  $inputTextSize;
+                background-color: $backgroundColor;
+                outline: none;
+                border: rgba(255, 255, 255, 0);
+                transition: border-color 0.15s ease-in;
+
+                &:focus {
+                    border: 1px solid $blue;
+                }
+            }
+
+        }
+
+        button{
+            background-color: $blue;
+            color: white;
+            gap: $gap;
+            font-size: $inputTextSize;
+            cursor: pointer;
+            border: 1px solid $blue;
+            transition: all 0.15s ease-in;
+            width: $minWidth;
+            border-radius: $borderRadius;
+            width: $minWidth;
+            height: 50px;
+            @include flex(row, center, center);
+
+            &:hover{
+                background-color: white;
+                color: $blue;
+            }
+        }
+    }
+}
