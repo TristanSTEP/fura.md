@@ -182,8 +182,8 @@ i {
   color: white;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   font-size: 1.25rem;
   cursor: pointer;
@@ -275,4 +275,125 @@ i {
 #login-container .dont-have-account a {
   color: #0437f2;
   text-decoration: none;
+}
+
+#profile-edit-mainest-main-parent-of-main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main {
+  height: 600px;
+  width: 1000px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 0 5px rgb(111, 111, 111);
+  border-radius: 10px;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-left {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-right: 1px solid rgb(111, 111, 111);
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-left img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 2px solid #0437f2;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.15s ease-in;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-left h1 {
+  font-size: 2.5rem;
+  color: black;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-left p {
+  font-size: 1.5rem;
+  color: rgb(111, 111, 111);
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right h1 {
+  font-size: 2.5rem;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form .other-info-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form .other-info-edit div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form .other-info-edit div input::-webkit-outer-spin-button,
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form .other-info-edit div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form .other-info-edit div input {
+  padding: 10px;
+  background-color: #f1f4ff;
+  border: 1px solid #f1f4ff;
+  outline: none;
+  transition: border-color 0.15s ease-in;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  min-width: 250px;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form .other-info-edit div input:focus {
+  border: 1px solid #0437f2;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form .other-info-edit div label {
+  font-size: 1.25rem;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form #profile-edit-button {
+  background-color: #0437f2;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437f2;
+  transition: all 0.15s ease-in;
+  padding: 10px;
+  border: 1px solid #0437f2;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#profile-edit-mainest-main-parent-of-main #profile-edit-main .profile-edit-right form #profile-edit-button:hover {
+  background-color: white;
+  color: #0437f2;
 }/*# sourceMappingURL=style.css.map */
