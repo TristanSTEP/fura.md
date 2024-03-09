@@ -215,7 +215,6 @@ i {
                 @include flex(row, center, center);
                 gap: $gap;
                 font-size: $inputTextSize;
-                cursor: pointer;
                 border: 1px solid $blue;
                 transition: all 0.15s ease-in;
                 padding: $padding;
@@ -303,120 +302,6 @@ i {
         a {
             color: $blue;
             text-decoration: none;
-        }
-    }
-}
-#profile-edit-mainest-main-parent-of-main {
-    height: 100vh;
-    width: 100vw;
-    @include flex(row, center, center);
-
-    #profile-edit-main {
-        height: 600px;
-        width: 1000px;
-        padding: $padding;
-        @include flex(row, center, center);
-        gap: 25px;
-        box-shadow: 0 0 5px $textColor2;
-        border-radius: $borderRadius;
-
-        .profile-edit-left {
-            height: 100%;
-            width: 100%;
-            padding: $padding;
-            @include flex(column, center, center);
-            gap: $gap;
-            border-right: 1px solid $textColor2;
-
-            img {
-                height: 200px;
-                width: 200px;
-                border-radius: 50%;
-                border: 2px solid $blue;
-                overflow: hidden;
-                object-fit: cover;
-                transition: transform 0.15s ease-in;
-            }
-
-            h1 {
-                font-size: $titleSize;
-                color: $textColor;
-            }
-
-            p {
-                font-size: $subtitleSize;
-                color: $textColor2;
-            }
-        }
-        .profile-edit-right {
-            height: 100%;
-            width: 100%;
-            padding: $padding;
-            @include flex(column, center, center);
-            gap: $gap;
-
-            h1 {
-                font-size: $titleSize;
-            }
-
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: $gap;
-
-                .other-info-edit {
-                    display: flex;
-                    flex-direction: column;
-                    gap: $gap;
-                    div {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-
-                        input::-webkit-outer-spin-button,
-                        input::-webkit-inner-spin-button {
-                            -webkit-appearance: none;
-                            margin: 0;
-                        }
-                        input {
-                            padding: $padding;
-                            background-color: $backgroundColor;
-                            border: 1px solid $backgroundColor;
-                            outline: none;
-                            transition: border-color 0.15s ease-in;
-                            border-radius: $borderRadius;
-                            font-size: $inputTextSize;
-                            min-width: $minWidth;
-                            &:focus {
-                                border: 1px solid $blue;
-                            }
-                        }
-                        label {
-                            font-size: $inputTextSize;
-                        }
-                    }
-                }
-                #profile-edit-button {
-                    background-color: $blue;
-                    color: white;
-                    @include flex(row, center, center);
-                    gap: $gap;
-                    font-size: $inputTextSize;
-                    cursor: pointer;
-                    border: 1px solid $blue;
-                    transition: all 0.15s ease-in;
-                    padding: $padding;
-                    border: 1px solid $blue;
-                    outline: none;
-                    border-radius: $borderRadius;
-                    margin-top: $gap;
-
-                    &:hover {
-                        background-color: white;
-                        color: $blue;
-                    }
-                }
-            }
         }
     }
 }
