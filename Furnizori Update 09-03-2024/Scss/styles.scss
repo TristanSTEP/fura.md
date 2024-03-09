@@ -675,259 +675,169 @@ object-fit: cover;
              }
         // Furnizor page [DHL]. 
 
-.furnizor-page{
-    background: #f1f4ff;
-    margin: auto;
-    padding: $padding;
-    border-radius: $borderRadius;
-    background: url("../Image/truck\ DHL.jpg") ;
-    filter: brightness(93%);
-    @include flex(column, center, center);
-width: 60%;
-height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat !important;
 
+
+
+
+
+.body{
+    background-color: $backgroundColor;
+    overflow-x: hidden;
+}
+.furnizor{
+   background-image: url("../Image/dhltruck.jpg");
+   height: 500px;
+   width: 100vw;    
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   border-radius: $borderRadius;
+
+      h1 {
+        font-size: 40px;
+        text-align: right;
+        text-decoration: solid;
+        color: white;
+        text-shadow: 0 0 10px white;
+      }
+  
 }
 
-@media screen and (max-width: $mobile) {
-    .furnizor-page {
-        margin: auto;
-        height: 60vh; 
-        width: 80%;
-        filter: brightness(88%);
+    
+
+    .avatar {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        border: 1px solid $blue;
+        overflow: hidden;
+
+      
+        
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.15s ease-in;
+        }
+    }
+
+    .grid {
+        @include grid(2);
+        gap: $gap;
         border-radius: $borderRadius;
-        @include flex(column, end, center);
-        
-        h1 {
-            font-size: $titleSize2;
+        padding: 50px;
+        background-color: $backgroundColor;
+
+        .avatar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
         }
-    }
-}
 
-@media screen and (min-width: $mobile) and (max-width: $tablet) {
-    .furnizor-page {
-        margin: auto;
-        height: 55vh; 
-        width: 75%;
-        @include flex(column, end, center);
-        
-        h1 {
-            font-size: $titleSize;
-        }
-    }
-}
+        .text {
+           margin: auto;
 
-@media screen and (min-width: $tablet) and (max-width: $desktop) {
-    .furnizor-page {
-        margin: auto;
-        width: 60%;
-        height: 40vh;
-        @include flex(column, start, center);
-        
-        h1 {
-            font-size: $titleSize;
-        }
-    }
-}
+                h1 {
+                    font-size: 40px;
+                    text-decoration: solid;
+                   
 
+                }
 
-
-
-.logistics{
-    @include flex(column, center, center);
-    text-align: center;
+                h3 {
+                    font-size: 15px;
+                    text-decoration: dimgray;
                     
-    h3 {
-        color: $textColor2;
-        font-size: $titleSize;
-    
-      }
-}
-
-
-
-
-@media screen and (max-width: $mobile) {
-    .logistics{
-        margin: auto;
-        text-align: center;
-        
- border-radius: $borderRadius;
- @include flex(column, center, center);
-
- 
-     }
-     
-     h3 {
-        color: $textColor2;
-        font-size: $titleSize2;
-    
-      }
-    }
-
-    
-
-    @media screen and (min-width: $mobile) and (max-width: $tablet) {
-        .logistics{
-            margin: auto;
-            text-align: center;
-            
-     border-radius: $borderRadius;
-     @include flex(column, center, center);
-    
-     
-         }
-         
-         h3 {
-            color: $textColor2;
-            font-size: $titleSize2;
-        
-          }
-     
-         }
-     
-
-     @media screen and (min-width: $tablet) and (max-width: $desktop){
-        .logistics{
-            margin: auto;
-            text-align: center;
-            
-     border-radius: $borderRadius;
-     @include flex(column, center, center);
-    
-     
-         }
-         
-      
-     }
-    
-
-
-
-
-
-
-
-.furnizor2 {
-@include flex2(space-around,center);
-gap: 25px;
-}
-
-.info-furnizor {
-    border-radius: $borderRadius;
-    height: 75px;
-    width: $minWidth;
-    background: $blue;
-    border: $border;
-    box-shadow: $boxshadow;
-border: $blue;
-    @include flex(column, center, center);
-
-
-                 
-    h3 {
-        
-        color: $textwhite;
-        font-size: $titleSize;
-    
-      }
-
-
-      
-  p {
-    color: $textwhite;
-        font-size: $subtitleSize;
-        font-weight: 600;
-    
-    
-      }
-
-
-}
-
-@media screen and (max-width: $mobile) {
-    .furnizor2{
-        margin: auto;
-        
- border-radius: $borderRadius;
- @include flex(column, center, center);
-
- 
-     }
-
-    }
-
-    @media screen and (min-width: $mobile) and (max-width: $tablet) {
-        .furnizor2{
-            margin: auto;
-        
-            border-radius: $borderRadius;
-            @include flex(column, center, center);
-     }
-     
-         }
-     
-
-     @media screen and (min-width: $tablet) and (max-width: $desktop){
-        .furnizor2{
-            margin: auto;
-        
-            border-radius: $borderRadius;
-            @include flex2(center, center);
-         }
-     }
-    
-
-
-
-.backgrounds{
-    object-fit: cover;
-    padding: $padding;
-    background: #f1f4ff;
-    margin: auto;
-    padding: $padding;
-    border-radius: $borderRadius;
-    background: url("../Image/bkc.jpg") ;
-    filter: brightness(87%);
-    @include flex(column, start, center);
-    width: 40%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat !important;
-
-
-}
-
-@media screen and (max-width: $mobile) {
-    .backgrounds {
-        width: 65%;
-        height:50%;
-        margin: auto;
-        filter: brightness(88%);
-        border-radius: $borderRadius;
-    }
-}
-
-@media screen and (min-width: $mobile) and (max-width: $tablet) {
-    .backgrounds {
-     
-        margin: auto;
-        filter: brightness(88%);
-        border-radius: $borderRadius;
-    }
-}
-
-@media screen and (min-width: $tablet) and (max-width: $desktop) {
-    .backgrounds {
-        width: 65%;
-        height:50%;
-        margin: auto;
-        filter: brightness(88%);
-        border-radius: $borderRadius;
-        
-        h1 {
-            font-size: $titleSize;
+                }
         }
+
+        .info {
+            background-image: url("../Image/plane.jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            height: 500px;
+            margin: auto;
+            text-align: center;
+            padding: 100px;
+            opacity: 0.7;
+
+                
+                  h3{
+                    
+                        font-size: 40px;
+                       }
+                    h5{
+                        font-size: 20px;
+                 }
+
+     }
+     .info-furnizor {
+            background-image: url("../Image/box.jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            height: 500px;
+            width: 700px;
+            margin: auto;
+            text-align: center;
+            padding: 100px;
+            opacity: 0.7;
+     }
+            h3 {
+                font-size: 40px;
+            }
+
+            h5{
+                font-size: 20px;
+                text-decoration: solid;
+                
+            }
     }
-}
+    footer {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+
+             h3 {
+                font-size: $titleSize;
+             }
+
+            a {
+                height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid $blue;
+        overflow: hidden;
+
+      
+        
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.15s ease-in;
+        }
+             }
+    }
+       
