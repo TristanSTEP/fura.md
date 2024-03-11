@@ -2889,3 +2889,424 @@ main {
         }
     }
 }
+
+
+.addLocations{
+    width: 100vw;
+    height: 100vh;
+
+    form{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: $gap;
+        height: 90vh;
+        height: 95vh;
+        width: 80vw;
+        margin: auto;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        border-radius: $borderRadius;
+        box-shadow: 0 0 5px $blue;
+        padding: $padding;
+
+        .addCountry{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $gap;
+
+            h1{
+                font-size: $titleSize;
+            }
+
+            span{
+                display: flex;
+                gap: $gap;
+
+                input{
+                    width: 600px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+                }
+
+                button{
+                    background-color: $blue;
+                    color: white;
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+                    border-radius: $borderRadius;
+                    width: $minWidth;
+                    height: 50px;
+                    @include flex(row, center, center);
+        
+                    &:hover{
+                        background-color: white;
+                        color: $blue;
+                    }
+                }
+            }
+            
+        }
+
+        .addCity{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $gap;
+
+            h1{
+                font-size: $titleSize;
+            }
+
+            span{
+                display: flex;
+                gap: $gap;
+
+                select{
+                    width: 295px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+
+                    option{
+                        font-size: $inputTextSize;
+                    }
+                }
+
+                input{
+                    width: 295px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+                }
+
+                button{
+                    background-color: $blue;
+                    color: white;
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+                    width: $minWidth;
+                    border-radius: $borderRadius;
+                    width: $minWidth;
+                    height: 50px;
+                    @include flex(row, center, center);
+        
+                    &:hover{
+                        background-color: white;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+
+        .updateCountry{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $gap;
+
+            h1{
+                font-size: $titleSize;
+            }
+
+            span{
+                display: flex;
+                gap: $gap;
+
+                select{
+                    width: 295px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+
+                    option{
+                        font-size: $inputTextSize;
+                    }
+                }
+
+                input{
+                    width: 295px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+                }
+
+                button{
+                    background-color: $blue;
+                    color: white;
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+                    width: $minWidth;
+                    border-radius: $borderRadius;
+                    width: $minWidth;
+                    height: 50px;
+                    @include flex(row, center, center);
+        
+                    &:hover{
+                        background-color: white;
+                        color: $blue;
+                    }
+                }
+
+            }
+            
+        }
+
+        .updateCity{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $gap;
+
+            h1{
+                font-size: $titleSize;
+            }
+
+            span{
+                display: flex;
+                gap: $gap;
+
+                select{
+                    width: 193px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+
+                    option{
+                        font-size: $inputTextSize;
+                    } 
+                }
+
+                input{
+                    width: 193px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+    
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+                }
+
+                button{
+                    background-color: $blue;
+                    color: white;
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+                    width: $minWidth;
+                    border-radius: $borderRadius;
+                    width: $minWidth;
+                    height: 50px;
+                    @include flex(row, center, center);
+        
+                    &:hover{
+                        background-color: white;
+                        color: $blue;
+                    }
+                }
+            }
+
+        }
+
+        .deleteCountry{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $gap;
+
+            h1{
+                font-size: $titleSize;
+            }
+
+            span{
+                display: flex;
+                gap: $gap;
+
+                select{
+                    width: 600px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+
+                    option{
+                        font-size: $inputTextSize;
+                    } 
+                }
+
+                button{
+                    background-color: $blue;
+                    color: white;
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+                    width: $minWidth;
+                    border-radius: $borderRadius;
+                    width: $minWidth;
+                    height: 50px;
+                    @include flex(row, center, center);
+        
+                    &:hover{
+                        background-color: white;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+
+        .deleteCity{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $gap;
+
+            h1{
+                font-size: $titleSize;
+            }
+
+            span{
+                display: flex;
+                gap: $gap;
+
+                select{
+                    width: 295px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+
+                    option{
+                        font-size: $inputTextSize;
+                    }
+                }
+
+                input{
+                    width: 295px;
+                    border-radius: $borderRadius;
+                    padding: $padding;
+                    font-size:  $inputTextSize;
+                    background-color: $backgroundColor;
+                    outline: none;
+                    border: rgba(255, 255, 255, 0);
+                    transition: border-color 0.15s ease-in;
+
+                    &:focus {
+                        border: 1px solid $blue;
+                    }
+                }
+
+                button{
+                    background-color: $blue;
+                    color: white;
+                    gap: $gap;
+                    font-size: $inputTextSize;
+                    cursor: pointer;
+                    border: 1px solid $blue;
+                    transition: all 0.15s ease-in;
+                    width: $minWidth;
+                    border-radius: $borderRadius;
+                    width: $minWidth;
+                    height: 50px;
+                    @include flex(row, center, center);
+        
+                    &:hover{
+                        background-color: white;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+
+    }
+}

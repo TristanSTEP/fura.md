@@ -2343,4 +2343,381 @@ main .search-load form button i {
 .adauga-marfa form button:hover {
   background-color: white;
   color: #0437F2;
+}
+
+.addLocations {
+  width: 100vw;
+  height: 100vh;
+}
+.addLocations form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  height: 90vh;
+  height: 95vh;
+  width: 80vw;
+  margin: auto;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 0 5px #0437F2;
+  padding: 10px;
+}
+.addLocations form .addCountry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.addLocations form .addCountry h1 {
+  font-size: 2.5rem;
+}
+.addLocations form .addCountry span {
+  display: flex;
+  gap: 10px;
+}
+.addLocations form .addCountry span input {
+  width: 600px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .addCountry span input:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .addCountry span button {
+  background-color: #0437F2;
+  color: white;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.addLocations form .addCountry span button:hover {
+  background-color: white;
+  color: #0437F2;
+}
+.addLocations form .addCity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.addLocations form .addCity h1 {
+  font-size: 2.5rem;
+}
+.addLocations form .addCity span {
+  display: flex;
+  gap: 10px;
+}
+.addLocations form .addCity span select {
+  width: 295px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .addCity span select:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .addCity span select option {
+  font-size: 1.25rem;
+}
+.addLocations form .addCity span input {
+  width: 295px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .addCity span input:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .addCity span button {
+  background-color: #0437F2;
+  color: white;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+  width: 250px;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.addLocations form .addCity span button:hover {
+  background-color: white;
+  color: #0437F2;
+}
+.addLocations form .updateCountry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.addLocations form .updateCountry h1 {
+  font-size: 2.5rem;
+}
+.addLocations form .updateCountry span {
+  display: flex;
+  gap: 10px;
+}
+.addLocations form .updateCountry span select {
+  width: 295px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .updateCountry span select:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .updateCountry span select option {
+  font-size: 1.25rem;
+}
+.addLocations form .updateCountry span input {
+  width: 295px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .updateCountry span input:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .updateCountry span button {
+  background-color: #0437F2;
+  color: white;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+  width: 250px;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.addLocations form .updateCountry span button:hover {
+  background-color: white;
+  color: #0437F2;
+}
+.addLocations form .updateCity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.addLocations form .updateCity h1 {
+  font-size: 2.5rem;
+}
+.addLocations form .updateCity span {
+  display: flex;
+  gap: 10px;
+}
+.addLocations form .updateCity span select {
+  width: 193px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .updateCity span select:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .updateCity span select option {
+  font-size: 1.25rem;
+}
+.addLocations form .updateCity span input {
+  width: 193px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .updateCity span input:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .updateCity span button {
+  background-color: #0437F2;
+  color: white;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+  width: 250px;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.addLocations form .updateCity span button:hover {
+  background-color: white;
+  color: #0437F2;
+}
+.addLocations form .deleteCountry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.addLocations form .deleteCountry h1 {
+  font-size: 2.5rem;
+}
+.addLocations form .deleteCountry span {
+  display: flex;
+  gap: 10px;
+}
+.addLocations form .deleteCountry span select {
+  width: 600px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .deleteCountry span select:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .deleteCountry span select option {
+  font-size: 1.25rem;
+}
+.addLocations form .deleteCountry span button {
+  background-color: #0437F2;
+  color: white;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+  width: 250px;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.addLocations form .deleteCountry span button:hover {
+  background-color: white;
+  color: #0437F2;
+}
+.addLocations form .deleteCity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.addLocations form .deleteCity h1 {
+  font-size: 2.5rem;
+}
+.addLocations form .deleteCity span {
+  display: flex;
+  gap: 10px;
+}
+.addLocations form .deleteCity span select {
+  width: 295px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .deleteCity span select:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .deleteCity span select option {
+  font-size: 1.25rem;
+}
+.addLocations form .deleteCity span input {
+  width: 295px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  background-color: #f1f4ff;
+  outline: none;
+  border: rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-in;
+}
+.addLocations form .deleteCity span input:focus {
+  border: 1px solid #0437F2;
+}
+.addLocations form .deleteCity span button {
+  background-color: #0437F2;
+  color: white;
+  gap: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 1px solid #0437F2;
+  transition: all 0.15s ease-in;
+  width: 250px;
+  border-radius: 10px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.addLocations form .deleteCity span button:hover {
+  background-color: white;
+  color: #0437F2;
 }/*# sourceMappingURL=styles.css.map */
